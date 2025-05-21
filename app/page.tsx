@@ -11,16 +11,16 @@ export default function Home() {
       <div className="relative bg-[#B05834] text-white">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/hero-background.jpg"
+            src="/students_cover.jpg"
             alt="Cordoba Academy students"
             fill
-            className="object-cover opacity-30"
+            className="object-cover opacity-70"
             priority
           />
         </div>
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Today Students. Tomorrow Leaders.</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">Today's Students. Tomorrow's Leaders.</h1>
             <p className="text-xl md:text-2xl mb-8">
               Nurturing academic excellence and Islamic identity in a vibrant learning community.
             </p>
@@ -52,27 +52,27 @@ export default function Home() {
               <div className="bg-[#F5E8D8] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <BookOpen className="h-8 w-8 text-[#B05834]" />
               </div>
-              <h3 className="font-bold text-[#333333] text-lg mb-2">Academic Excellence</h3>
+              <h3 className="font-bold text-[#333333] text-lg mb-2">Academic Standard & Excellence</h3>
               <p className="text-[#666666]">
-                Rigorous curriculum that exceeds state standards and prepares students for future success.
+                Our students benefit from rigorous instruction using proven programs like Singapore Math, iReady, and state-certified curriculum support. Activities: Math competitions, reading challenges, and benchmark assessments.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="bg-[#F5E8D8] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-[#B05834]" />
               </div>
-              <h3 className="font-bold text-[#333333] text-lg mb-2">Islamic Identity</h3>
+              <h3 className="font-bold text-[#333333] text-lg mb-2">Islamic Integration</h3>
               <p className="text-[#666666]">
-                Integration of Islamic values and teachings across all aspects of the educational experience.
+                We infuse Islamic teachings and values throughout all subjects. Examples: Quran reading circles, Seerah project weeks, and Islamic history woven into social studies.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="bg-[#F5E8D8] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Heart className="h-8 w-8 text-[#B05834]" />
               </div>
-              <h3 className="font-bold text-[#333333] text-lg mb-2">Character Development</h3>
+              <h3 className="font-bold text-[#333333] text-lg mb-2">Relevant for Our Community</h3>
               <p className="text-[#666666]">
-                Emphasis on building strong moral character, leadership skills, and community service.
+                Curriculum addresses the needs and interests of our students and families. Examples: Community service projects, leadership workshops, and events like Noor Kids Night and cultural field trips.
               </p>
             </div>
           </div>
@@ -86,7 +86,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <Card className="bg-[#F5E8D8] border-none">
               <div className="relative h-48">
-                <Image src="/preschool.png" alt="Preschool Program" fill className="object-cover rounded-t-lg" />
+                <Image src="/maymuna-preschool.jpg" alt="Preschool Program" className="object-cover object-[center_20%] rounded-t-lg" fill/>
               </div>
               <CardHeader>
                 <CardTitle className="text-[#B05834]">Preschool</CardTitle>
@@ -110,7 +110,7 @@ export default function Home() {
 
             <Card className="bg-[#F5E8D8] border-none">
               <div className="relative h-48">
-                <Image src="/elementary.png" alt="K-6 Program" fill className="object-cover rounded-t-lg" />
+                <Image src="/k-6.jpg" alt="K-6 Program" fill className="object-cover rounded-t-lg" />
               </div>
               <CardHeader>
                 <CardTitle className="text-[#B05834]">K-6 Program</CardTitle>
@@ -135,7 +135,7 @@ export default function Home() {
             <Card className="bg-[#F5E8D8] border-none">
               <div className="relative h-48">
                 <Image
-                  src="/middle-school.png"
+                  src="/7-8_grade.jpg"
                   alt="7th-8th Grade Program"
                   fill
                   className="object-cover rounded-t-lg"
