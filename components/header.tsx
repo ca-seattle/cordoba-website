@@ -36,7 +36,7 @@ export default function Header() {
     <header className="container mx-auto px-4 py-3">
       <div className="flex items-center justify-between bg-[#E5E5E5] rounded-full px-6 py-2">
         <div className="flex items-center gap-2">
-          <Image src="/logo.png" alt="Cordoba Academy Logo" width={30} height={30} />
+          <Image src="/logo-full.png" alt="Cordoba Academy Logo" width={50} height={50} />
           <span className="text-[#333333] font-medium text-lg">Cordoba Academy</span>
         </div>
 
