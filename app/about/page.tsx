@@ -42,28 +42,28 @@ export default function AboutPage() {
     {
       name: "Shehzad Qureshi",
       title: "Treasurer",
-      image: "/board-chair.png",
+      image: "/avatar_male.png",
       bio: "Brother Shehzad holds a degree in Finance from Central Washingto University and has an extensive background in leadership and management. He previously served as a Senior Program Manager at Microsoft before transitioning into a senior management role with the City of Seattle, where he continues to make a meaningful impact.\nAs a member of one of the pioneering Muslim families in the Puget Sound region, Brother Shehzad has played a vital role in establishing some of the area's first Masaajid, including SeaTac Masjid, Northgate Masjid and later Masjid Umar al-Farooq in Mountlake Terrace. His lifelong commitment to strengthening the Muslim community extends beyond places of worship. He is deeply passionate about creating a nurturing Islamic environment for the next generation while also ensuring that the needs of our aging community are met.\nWith Islamic education at the heart of his vision, Brother Shehzad has been an active supporter of institutions like the Islamic School of Seattle and numerous other community initiatives throughout Seattle's history. His extensive experience, leadership, and dedication make him a valuable asset to Cordoba Academy's Board, helping to shape a future where education and faith go hand in hand.",
       link: "/about/board/shehzad-qureshi",
     },
     {
       name: "Faisal Ahmad",
       title: "Board Chair",
-      image: "/board-vice-chair.png",
+      image: "/faisal_ahmad.jpg",
       bio: "Brother Faisal was raised in North Seattle and earned a Bachelor's degree in Computer Science from Central Washington University and has built a successful career in Change, Process & Project Management. Beyond his professional expertise, he has been a dedicated activist in the Seattle Muslim community since 1995, working tirelessly to uplift and educate the next generation.\nHis contributions began with the Muslim Students Association (MSA) and the development of the renowned Islamic Quiz of Seattle, a cherished program that has inspired and engaged youth for years. He had the privilege of consulting with many Islamic Scholars across North America and internationally to help initiate and develop youth, educational, and mentorship programs in order to serve the Muslim community in the region.\nBrother Faisal's passion for Islamic education extends to his own family, having helped establish and run a homeschool family co-op before going on to co-found Cordoba Academy. His vision and dedication continue to shape the academy's mission, ensuring that young Muslims have access to a well-rounded education that fosters academic excellence, strong Islamic values, and instills in them confidence in ther Muslim identity.",
       link: "/about/board/faisal-ahmad",
     },
     {
       name: "Arif Samad",
       title: "Board Vice Chair",
-      image: "/board-treasurer.png",
+      image: "/avatar_male.png",
       bio: "Born and raised in Seattle, Brother Arif has had the unique privilege of witnessing the growth and evolution of the Muslim community in the region. From the Islamic School of Seattle to Umar al-Farooq Masjid, he and his family have played an integral role in shaping and strengthening the local Muslim community.\nA University of Washington Husky, Brother Arif earned a degree in Mechanical Engineering and began his career at Boeing, contributing to the development of the 747 aircraft. He later transitioned into Technology Consulting with Accenture in Washington, D.C., where he was actively involved in the ADAMS Masjid Northern Virginia Muslim community, service as a Cub Scouts Den Leader and leading fundraising and team-building activities, such as camping and the Pinewood Derby.\nSince returning to Seattle in 2010, Brother Arif has dedicated himself to education and innovation. He has served as an Analytics Certification instructor at the University of Washington's Continuing Education program and co-launched 'Minipreneurs', a design-thinking workshop that empowers children to develop and build IoT (Internet of Things) solutions for real-world challenges.\nCurrently serving as Director of Azure Data & AI Technical Strategy at Microsoft, Brother Arif is deeply passionate about STEM education and is committed to creating learning and leadership opportunities for Muslim youth. His dedication to empowering the next generation aligns with Cordoba Academy's mission, ensuring that young Muslims develop into strong, confident, and innovative leaders of tommorrow.",
       link: "/about/board/arif-samad",
     },
     {
       name: "Abdulkadir Sheikh (Imam Bazi)",
       title: "Religious Director & Principal",
-      image: "/board-secretary.png",
+      image: "/imam_bazi.jpg",
       bio: "Imam Bazi is a dedicated Islamic scholar, educator, and community leader who has been serving the greater Seattle area for over 15 years. His journey in both secular and Islamic education reflects his deep commitment to learning, teaching, and nurturing the next generation of Muslim Americans.\nA native Washingtonian, Imam Bazi began his academic journey at Green River College, where he pursued studies in Public Relations. However, his thirst for spiritual knowledge led him to Tarim, Yemen, where he studied at the esteemed Dar Al-Mustafa. There, he refined his memorization of the Holy Quran and further advanced his studies in the Higher Islamic sciences under world renowned scholars, while specializing in Tazkiyat ul-Nafs.\nUpon returning to Washington, he dedicated himself to serving the Muslim community, taking on roles as an Imam in various masajid. His leadership was instrumental in establishing and strengthening many local Islamic centers. Alongside his religious service, he also built a professional career as a Lead Supply Chain Analyst at Swedish Medical Center, demonstrating his ability to balance both professional and religious responsibilities with excellence.\nDespite his success in the corporate world, Imam Bazi's true passion lay in education and mentorship. He eventually left his profession to fully dedicate himself to Cordoba Academy, where he now serves as the principal. His vision is to instill a strong foundation of faith, knowledge, and character in students, ensuring they grow into confident Muslim leaders of tomorrow.\nFluent in Arabic, English, and Somali, Imam Bazi has been a guiding force in religious education and spiritual development within the Seattle Muslim community. His passion for tarbiyah, mentoring and educating youth, drives his work, as he strives to make Islamic knowledge accessible, engaging, and relevant to young minds. Known for his approachable and warm nature, he has touched the hearts of many, making learning a joyful and meaningful experience.\nUnder his leadership, Cordoba Academy continues to thrive as a place where faith and education go hand in hand, nurturing students to become thoughtful, empowered members of the Muslim community.",
       link: "/about/board/abdulkadir-sheikh",
     },
@@ -74,23 +74,37 @@ export default function AboutPage() {
     {
       name: "Amina Ahmed",
       title: "Vice Principal & Curriculum Supervisor",
-      image: "/quran-teacher.png",
+      image: "/avatar_female.png",
       bio: "Sister Amina was born in Canada and spent her formative years in Indonesia before returning to North America to pursue higher education. She earned her Bachelor's degree in Business Commerce and Administration from the University of British Columbia in Vancouver, BC. As an undergraduate student, she was deeply committed to community service, actively volunteering in various local initiatives, while maintaining her Muslim values and seeking a deeper connection to Allah.\nAfter becoming a mother, Sr. Amina devoted herself to homeschooling her children, driven by a deep commitment to staying connected to Islamic scholarship. She made it a priority to teach her children the Qur'an and instill in them a strong spiritual foundation, while also ensuring they received a high-quality, well-rounded education. Recognizing that children flourish in a nurturing and connected environment, she went on to establish a homeschooling co-op to support other families seeking the same balance of academic excellence and faith-based learning.\nIn 2015, she became one of the founders of Cordoba Academy, taking on the roles of Vice Principal and teacher and eventually receiving her certification in Early Childhood Development. She has been instrumental in shaping the school's curriculum, culture, and vision, laying the foundation for the inclusive, values-driven environment that defines Cordoba Academy today. Through her dedicated leadership and guidance, the school has grown into a thriving educational institution committed to academic excellence.",
       link: "/about/faculty/amina-ahmed",
     },
     {
       name: "Melinda Mahmud",
       title: "Senior Administration Manager",
-      image: "/elementary-teacher.png",
+      image: "/melinda_mahmud.jpg",
       bio: "Sister Melinda brings a strong background in business operations, project management, and organizational leadership, with a deep commitment to creating an efficient and supportive environment for students, staff, and families. Her experience spans both corporate and educational settings, including roles as a Business Manager at the Islamic School of Seattle and as a Business Operations Specialist at Boeing, where she honed her skills in fostering collaboration and driving continuous improvement.\nSister Melinda holds a Bachelor of Arts in Sociology with a minor in South Asian Languages from the University of Washington and an Associate of Arts in Nutrition from Shoreline Community College. She also earned a Project Management Certification from Seattle University and is a licensed aesthetician.\nWith a focus on aligning operations with the school’s values and mission, Sister Melinda ensures that every aspect of the environment is organized, collaborative, and supportive. Her goal is to create a space where students, staff, and families feel empowered and connected. By streamlining processes and enhancing day-to-day operations, she helps provide a nurturing atmosphere where education thrives, personal growth is encouraged, and the school community flourishes.",
       link: "/about/faculty/melinda-mahmud",
     },
     {
       name: "Saima Rizvi",
       title: "TITLE",
-      image: "/steam-coordinator.png",
-      bio: "With over 15 years of teaching experience across the U.S. and overseas, Saima Rizvi brings a wealth of knowledge, compassion, and creativity to her classroom. She holds a Bachelor’s degree in Biochemistry from Karachi University and has complemented her academic background with extensive professional development in early childhood education.\nSaima is certified in Early Childhood Education and has completed specialized training in areas such as positive reinforcement and redirection, emotional intelligence, and Montessori program assistance. Her educational journey reflects a deep commitment to nurturing the whole child—intellectually, emotionally, and creatively.\nHer teaching career has spanned esteemed institutions including the Multinational School in Riyadh, Ar Rowaad, Woodinville Montessori, and Precious Hearts Preschool. Currently, she is a valued educator at Cordoba Academy, where she continues to inspire young learners with her engaging and nurturing approach.\nTeaching at Cordoba allows Saima to serve the Muslim community in a meaningful way. She believes that being part of early childhood education is a privilege that paves the way for building a strong foundation. It allows her to nurture high-achieving young individuals who will, inshaAllah, become future leaders of the Muslim Ummah.\nIn addition to her role in education, Saima is also the founder of Greetings By Hand Co. LLC, a small business that reflects her artistic flair and entrepreneurial spirit.",
+      image: "/avatar_female.png",
+      bio: "With over 15 years of teaching experience across the U.S. and overseas, Saima Rizvi brings a wealth of knowledge, compassion, and creativity to her classroom. She holds a Bachelor's degree in Biochemistry from Karachi University and has complemented her academic background with extensive professional development in early childhood education.\nSaima is certified in Early Childhood Education and has completed specialized training in areas such as positive reinforcement and redirection, emotional intelligence, and Montessori program assistance. Her educational journey reflects a deep commitment to nurturing the whole child—intellectually, emotionally, and creatively.\nHer teaching career has spanned esteemed institutions including the Multinational School in Riyadh, Ar Rowaad, Woodinville Montessori, and Precious Hearts Preschool. Currently, she is a valued educator at Cordoba Academy, where she continues to inspire young learners with her engaging and nurturing approach.\nTeaching at Cordoba allows Saima to serve the Muslim community in a meaningful way. She believes that being part of early childhood education is a privilege that paves the way for building a strong foundation. It allows her to nurture high-achieving young individuals who will, inshaAllah, become future leaders of the Muslim Ummah.\nIn addition to her role in education, Saima is also the founder of Greetings By Hand Co. LLC, a small business that reflects her artistic flair and entrepreneurial spirit.",
       link: "/about/faculty/saima-rizvi",
+    },
+    {
+      name: "Qura Peera",
+      title: "TITLE",
+      image: "/avatar_female.png",
+      bio: "Sister Qura has a deep passion for the Quran and has dedicated her time to both learning and teaching it, spending 10+ years nurturing young learners in their faith and education. She loves the authenticity of children, believing that the best place to witness their natural curiosity and joy is in a classroom full of Kindergarteners and First Graders. For her Cordoba Academy is more than just a school, it's a community. She finds the building charming and deeply values the dedicated people who help it grow, making it a truly special place to teach and learn.",
+      link: "/about/faculty/qura-peera",
+    },
+    {
+      name: "Rahima",
+      title: "TITLE",
+      image: "/avatar_female.png",
+      bio: "Sister Rahima is originally from East Turkestan. She earned her Bachelors degree in Chemistry from Nanjing University and went on to serve as a lecturer of Chemistry at Xinjiang Medical University before moving to the United States to pursue graduate studies. After starting a family, Sr. Rahima obtained an Associate degree in Accounting and worked part-time in the field. Her passion for Islamic knowledge later led her to begin studying Arabic, Quran, and Islamic Studies.\nShe now teaches Quran at Cordoba Academy, where she shares her love for the Quran with her students. Sr. Rahima brings a strong academic background and a deep dedication to faith-based education, nurturing students with both knowledge and heart.",
+      link: "/about/faculty/rahima",
     },
   ];
 
@@ -428,28 +442,34 @@ export default function AboutPage() {
       <div className="bg-[#F5E8D8] py-12">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-[#B05834] mb-8">
-            Faculty & Staff Highlights
+            Faculty & Staff
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {facultyHighlights.map((faculty, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg overflow-hidden shadow-md"
+                className="bg-white p-6 rounded-lg shadow-md flex flex-col"
               >
-                <div className="relative h-60">
-                  <Image
-                    src={faculty.image || "/placeholder.svg"}
-                    alt={faculty.name}
-                    fill
-                    className="object-cover"
-                  />
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="relative w-16 h-16 rounded-full overflow-hidden">
+                    <Image
+                      src={faculty.image || "/placeholder.svg"}
+                      alt={faculty.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-[#333333]">{faculty.name}</h3>
+                    <p className="text-[#666666] text-sm">{faculty.title}</p>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="font-bold text-[#333333] text-xl mb-1">
-                    {faculty.name}
-                  </h3>
-                  <p className="text-[#666666] italic mb-3">{faculty.title}</p>
-                  <p className="text-[#666666] mb-4">{faculty.bio.split("\n")[0]}</p>
+
+                <p className="text-[#666666] mb-4">
+                  {faculty.bio.split("\n")[0]}
+                </p>
+
+                <div className="mt-auto">
                   <Link href={faculty.link}>
                     <Button
                       variant="outline"
@@ -462,6 +482,7 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+
           <div className="text-center mt-8">
             <Link href="/about/faculty">
               <Button className="bg-[#B05834] hover:bg-[#8A4526] text-white">

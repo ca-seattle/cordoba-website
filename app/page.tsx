@@ -14,7 +14,7 @@ export default function Home() {
             src="/students_cover.jpg"
             alt="Cordoba Academy students"
             fill
-            className="object-cover opacity-70"
+            className="object-cover opacity-80"
             priority
           />
         </div>
