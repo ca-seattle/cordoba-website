@@ -15,13 +15,6 @@ export default function AboutPage() {
   // Leadership team
   const leadershipTeam = [
     {
-      name: "Sr. Aisha Johnson",
-      title: "Principal",
-      image: "/principal.png",
-      bio: "Sr. Aisha brings over 15 years of experience in Islamic education to her role as Principal. She holds a Master's degree in Educational Leadership from the University of Washington and is passionate about creating an environment where students can excel academically while developing a strong Islamic identity. Under her leadership, Cordoba Academy has expanded its programs and enhanced its curriculum to meet the needs of our growing community.",
-      link: "/about/leadership/aisha-johnson",
-    },
-    {
       name: "Br. Yusuf Rahman",
       title: "Vice Principal",
       image: "/vice-principal.png",
