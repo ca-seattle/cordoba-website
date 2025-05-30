@@ -155,13 +155,13 @@ export default function AboutPage() {
       bio: "NO BIO AVAILABLE",
       link: "/about/faculty/afshan_qureshi",
     },
-    {
-      name: "Aisha Ahmad",
-      title: "5th Grade Quran Instructor",
-      image: "/aisha_ahmad.jpg",
-      bio: "NO BIO AVAILABLE",
-      link: "/about/faculty/aisha_ahmad",
-    },
+    // {
+    //   name: "Aisha Ahmad",
+    //   title: "5th Grade Quran Instructor",
+    //   image: "/aisha_ahmad.jpg",
+    //   bio: "NO BIO AVAILABLE",
+    //   link: "/about/faculty/aisha_ahmad",
+    // },
     {
       name: "Farzana Ahmed",
       title: "5th & 6th Grade ELA & SS Learning Coach",
@@ -176,13 +176,13 @@ export default function AboutPage() {
       bio: "Sr. Saima Samad holds a B.S. in Applied Mathematics from UMBC, along with certifications in Software Testing from the University of Washington and LEAP Management Training. With a background in quality assurance and software testing for companies like Oracle and Microsoft, she brings a detail-oriented, analytical, and problem-solving approach to the classroom, helping students develop critical thinking skills and a strong foundation in math and technology.\nHer passion for education led her to Fairfax County Public Schools as a substitute teacher across all grades and subjects, as well as a math and English tutor at Huntington Learning Center. She finds immense joy in helping students unlock their full potential and takes pride in seeing them strive, grow, and succeed.\nAt Cordoba Academy, she is inspired by the positive, encouraging, and supportive atmosphere, where students and teachers alike flourish together. She is honored to be part of a school that not only fosters academic excellence and personal growth but also nurtures faith and a strong Islamic identity in its students.",
       link: "/about/faculty/saima_samad",
     },
-    {
-      name: "Faizan Samad",
-      title: "6th Grade Science Learning Coach",
-      image: "/avatar_male.png",
-      bio: "NO BIO AVAILABLE",
-      link: "/about/faculty/faizan_samad",
-    },
+    // {
+    //   name: "Faizan Samad",
+    //   title: "6th Grade Science Learning Coach",
+    //   image: "/avatar_male.png",
+    //   bio: "NO BIO AVAILABLE",
+    //   link: "/about/faculty/faizan_samad",
+    // },
     // {
     //   name: "Dr Tahira",
     //   title: "Title",
