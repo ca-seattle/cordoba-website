@@ -27,16 +27,16 @@ export default function AboutPage() {
   // Leadership team
   const leadershipTeam = [
     {
-      name: "Maulana Umair Ahmad",
-      title: "Vice Principal",
-      image: "/vice-principal.png",
-      bio: "Br. Yusuf oversees curriculum development and teacher training at Cordoba Academy. With a background in both Islamic studies and educational psychology, he works to ensure our academic programs are rigorous, engaging, and aligned with Islamic values. He is dedicated to supporting teachers in implementing best practices and creating positive learning experiences for all students.",
+      name: "Shaykh Umair Ahmad",
+      title: "Executive Director of Mihraab Foundation",
+      image: "/shaykh_umair.jpg",
+      bio: "Shaykh Syed Umair Ahmad was born in Denver, CO and soon after moved to Seattle, WA where he completed high school and went on to earn a Bachelors Degree in Business Administration from Central Washington University. As a student, he served as President of the Muslim Student Association at North Seattle Community College where the club was awarded the Most Active student organization on campus. Shaykh Umair later served two years as President of MSA NorthWest and became a key contributor to Islamic Quiz of Seattle. He went on to become an active member in the Greater Seattle community, establishing youth programs in addition to teaching in his local masjid.\n\nWhile working as a Senior Sales Rep with Verizon Wireless he began his pursuit of sacred knowledge with Mufti Abdul Mujeeb Al-Nadwi and other local scholars. By the grace of Allah, in 2009 he embarked on his journey to South Africa where he attended Madrasah In'aamiyyah to study the Higher Islamic Sciences, which included Arabic Morphology, Arabic Grammar, Science of Recitation (Tajwīd), Jurisprudence (Fiqh), Principles of Jurisprudence (Usul al-Fiqh), Qur'ānic Exegesis (Tafsir), Principles of Qur'ānic Exegesis (Usul al-Tafsir), Prophetic Traditions (Hadith), and Principles of Prophetic Traditions (Usul al-Hadith).\n\nIn 2015, Shaykh Umair's studies culminated in him receiving an ijāzah al-tadris, which literally means “a license to teach,” as well as an unbroken chain of transmission by which to narrate the Prophetic Traditions (Ahadith) of such books as the Muwatta of Imam Malik and Imam Muhammad, six of the authenticated books of Prophetic Traditions (the Sihah al-Sittah: Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasa'i, and Ibn Majah), and the Sharh Ma'ani al-Athār of Imam al-Tahawi. He also holds an unbroken chain of recitation of the entire Qur'an in the rendition of Imam Hafs.\n\nHe began serving the Greater-Seattle community in 2015 through Mihraab Foundation as a Resident Scholar and Youth Director. From 2017 - 2021 he was the Director of Islamic Studies and teacher at Cordoba Academy, an Islāmic School in the North-Seattle area, now serving as an advisor to the Islāmic School. Currently Shaykh Umair is a teacher at Darul Uloom Seattle alongside serving as Resident Scholar and Executive Director of Mihraab Foundation.",
     },
     {
       name: "Qari Osman Shareef",
-      title: "Islamic Studies Director",
-      image: "/islamic-studies-director.png",
-      bio: "Sr. Fatima leads our Islamic Studies program, bringing her extensive knowledge of Quran, Hadith, and Islamic history to enrich our curriculum. She holds an Ijazah in Quran recitation and has studied Islamic sciences with scholars in both the United States and abroad. Her approach to Islamic education emphasizes practical application and character development alongside traditional knowledge.",
+      title: "Hifdh Director & Teacher of Mihraab Foundation",
+      image: "/osman.jpeg",
+      bio: "Raised in Chicago, IL, Qāri Mohammed Osman Shareef completed his memorization of the Holy Qur'ān at the Institute of Islamic Education in Elgin, IL at the age of 15. He soon traveled to South Africa where he obtained his diploma in Islāmic Theology at Madrasa In'aamiyyah in Camperdown, South Africa. From a young age Qāri Osman was always fascinated in the recitation of Qur'ān; his passion lead him to pursue an 'ijāzah (formal authorization) in the rendition of Imām Hafs (Riwāyah Hafs 'an Shu'ba) followed by an 'ijāzah in Saba' 'Asharah Qirā'ah (10 different methods of reciting the Holy Qur'ān) in South Africa. He graduated with an 'ijāzah al tadrīs (licensure to teach) and asānīd (unbroken chains of transmission) in Qirā'ah, Hadīth, Fiqh, and various other Sacred Sciences of Islām in 2014 at the age of 25.\n\nHe has taught hifdh in Dallas, TX at multiple institutions. From 2016 - 2021 he was teaching and producing huffādh (students who memorized the entire Holy Qur'ān) and the Director of the Qur'ān Academy at Islamic Foundation North in Libertyville, IL.\n\nHe is currently a Resident Scholar of Mihraab Foundation as well as the Director and Teacher of the Mihraab Hifdh Academy.",
     },
   ];
 
@@ -198,34 +198,39 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
               <div>
                 <p className="text-[#666666] mb-4">
-                  Cordoba Academy was founded in 2010 by a group of dedicated
-                  parents and community members who shared a vision for an
-                  educational institution that would provide academic excellence
-                  while nurturing Islamic identity and values.
+                  Cordoba Academy is a non-profit educational institution in Lynnwood, Washington, helping young Muslim-Americans 
+                  grow into confident, spiritual, and well-rounded individuals. Founded in 2015 by a group of committed parents and community 
+                  members, the school was built on a vision of blending academic excellence with strong Islamic values.
                 </p>
                 <p className="text-[#666666] mb-4">
-                  Starting with just 25 students in a small rented facility, the
-                  school has grown steadily over the years, expanding its
-                  programs and campus to meet the needs of our growing
-                  community. Today, Cordoba Academy serves over 200 students
-                  from preschool through 6th grade, with plans to expand to
-                  include 7th and 8th grades in the 2025-2026 academic year.
+                  Our name is inspired by the historic city of Cordoba, Spain—a symbol of learning, 
+                  innovation, and peaceful coexistence during the Islamic Golden Age. Like its namesake, 
+                  Cordoba Academy aims to be a place where knowledge, faith, and character flourish together.
+                </p>
+                <p className="text-[#666666] mb-4">
+                  We began by offering small community programs like summer camps and story times. 
+                  In 2017, we launched our first co-op classes in a local masjid. 
+                  In 2018, we transformed a small house into our first school, and by 2021, moved into our current 7,000+ sq ft facility, 
+                  equipped to support our growing student body and expanding programs.
+                </p>
+                <p className="text-[#666666] mb-4">
+                  Today, we offer a variety of educational experiences, including Islamic and Quranic studies, 
+                  Quranic literacy, STEM and coding classes, creative workshops, and seasonal camps. 
+                  Our goal is to foster academic success and spiritual growth through authentic scholarship and meaningful community connection.
                 </p>
                 <p className="text-[#666666]">
-                  Our name draws inspiration from the city of Cordoba, Spain,
-                  which was a center of learning, innovation, and peaceful
-                  coexistence during the Islamic Golden Age. Like its namesake,
-                  our school strives to be a place where knowledge, faith, and
-                  character flourish together.
+                  We envision raising future leaders—young Muslims who are intellectually curious, morally grounded, 
+                  and ready to make a positive impact in today's world.
                 </p>
               </div>
-              <div className="relative h-64 md:h-auto rounded-lg overflow-hidden">
+              <div className="relative h-64 md:h-full rounded-lg overflow-hidden flex items-center justify-center">
                 <Image
                   src="/timeline.png"
                   alt="Cordoba Academy History"
-                  height={350}
-                  width={350}
-                  className="object-cover"
+                  height={650}
+                  width={550}
+                  className="object-contain"
+                  priority
                 />
               </div>
             </div>
@@ -436,29 +441,68 @@ export default function AboutPage() {
             {leadershipTeam.map((leader, index) => (
               <div
                 key={index}
-                className="bg-[#F5E8D8] rounded-lg overflow-hidden"
+                className="bg-[#F5E8D8] p-6 rounded-lg shadow-md flex flex-col"
               >
-                <div className="relative h-60">
-                  <Image
-                    src={leader.image || "/placeholder.svg"}
-                    alt={leader.name}
-                    fill
-                    className="object-cover"
-                  />
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="relative w-16 h-16 flex-shrink-0">
+                    <div className="absolute inset-0 rounded-full overflow-hidden">
+                      <Image
+                        src={leader.image || "/placeholder.svg"}
+                        alt={leader.name}
+                        fill
+                        className="object-cover"
+                        sizes="64px"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-[#333333]">{leader.name}</h3>
+                    <p className="text-[#666666] text-sm">{leader.title}</p>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="font-bold text-[#333333] text-xl mb-1">
-                    {leader.name}
-                  </h3>
-                  <p className="text-[#666666] italic mb-3">{leader.title}</p>
-                  <p className="text-[#666666] mb-4">{leader.bio}</p>
 
-                  <Button
-                    variant="outline"
-                    className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
-                  >
-                    Read Full Bio
-                  </Button>
+                <p className="text-[#666666] mb-4">{leader.bio.split("\n")[0]}</p>
+
+                <div className="mt-auto">
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button
+                        variant="outline"
+                        className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
+                      >
+                        Read Full Bio
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto py-8 [&>button[data-state]]:h-10 [&>button[data-state]]:w-10 [&>button[data-state]_svg]:h-8 [&>button[data-state]_svg]:w-8">
+                      <DialogHeader>
+                        <DialogTitle className="text-2xl font-bold text-[#B05834] mb-4">
+                          {leader.name}
+                        </DialogTitle>
+                      </DialogHeader>
+                      <div className="flex items-center gap-4 mb-6">
+                        <div className="relative w-20 h-20 flex-shrink-0">
+                          <div className="absolute inset-0 rounded-full overflow-hidden">
+                            <Image
+                              src={leader.image || "/placeholder.svg"}
+                              alt={leader.name}
+                              fill
+                              className="object-cover"
+                              sizes="80px"
+                            />
+                          </div>
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-xl text-[#333333]">
+                            {leader.name}
+                          </h3>
+                          <p className="text-[#666666]">{leader.title}</p>
+                        </div>
+                      </div>
+                      <div className="text-[#666666] whitespace-pre-line">
+                        {leader.bio}
+                      </div>
+                    </DialogContent>
+                  </Dialog>
                 </div>
               </div>
             ))}
