@@ -34,7 +34,7 @@ export default function ParentPortalPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="https://schoolcues.com/login"
+                  href="https://portal.schoolcues.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block"

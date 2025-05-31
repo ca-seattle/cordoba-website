@@ -17,181 +17,42 @@ export default function AcademicsPage() {
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-lg p-8 shadow-md mb-8">
             <h2 className="text-2xl font-bold text-[#B05834] mb-6">Our Academic Programs</h2>
-            <p className="text-[#666666] mb-8">
+            <p className="text-[#666666] mb-6">
               Cordoba Academy offers a comprehensive educational experience that nurtures academic excellence, Islamic
               identity, and character development. Our programs are designed to meet the developmental needs of students
-              at each stage of their educational journey.
+              at each stage of their educational journey. Our K-8 academics are guided by traditional Muslim Scholars 
+              and Certified Educators, ensuring every subject is practically integrated with Islamic values and principles.
             </p>
 
-            <Tabs defaultValue="preschool" className="mb-8">
-              <TabsList className="grid grid-cols-1 md:grid-cols-4 h-auto">
-                <TabsTrigger value="preschool" className="py-3">
-                  Preschool
-                </TabsTrigger>
-                <TabsTrigger value="elementary" className="py-3">
-                  K-6 Program
-                </TabsTrigger>
-                <TabsTrigger value="middle-school" className="py-3">
-                  7th-8th Grade
-                </TabsTrigger>
-                <TabsTrigger value="after-school" className="py-3">
-                  After-School
-                </TabsTrigger>
-              </TabsList>
-              <TabsContent value="preschool" className="mt-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="text-xl font-bold text-[#FF4A00] mb-4">Preschool Program (Ages 3-5)</h3>
-                    <p className="text-[#666666] mb-4">
-                      Our play-based preschool program nurtures a love of learning while developing foundational
-                      academic, social, and Islamic skills that prepare children for success in kindergarten and beyond.
-                    </p>
-                    <ul className="space-y-2 mb-6">
-                      <li className="flex items-start gap-2">
-                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
-                        <span className="text-[#666666]">
-                          Play-based learning that develops the whole child—intellectually, socially, emotionally,
-                          physically, and spiritually
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
-                        <span className="text-[#666666]">
-                          Low student-to-teacher ratios ensuring personalized attention and care
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
-                        <span className="text-[#666666]">
-                          Integration of Islamic values and teachings throughout daily activities
-                        </span>
-                      </li>
-                    </ul>
-                    <Link href="/academics/preschool">
-                      <Button className="bg-[#B05834] hover:bg-[#8A4526] text-white">Learn More</Button>
-                    </Link>
-                  </div>
-                  <div className="relative h-64 md:h-auto rounded-lg overflow-hidden">
-                    <Image src="/preschool.png" alt="Preschool Program" fill className="object-cover" />
-                  </div>
-                </div>
-              </TabsContent>
-              <TabsContent value="elementary" className="mt-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="text-xl font-bold text-[#FF4A00] mb-4">K-6 Program</h3>
-                    <p className="text-[#666666] mb-4">
-                      Our elementary program provides a rigorous academic curriculum integrated with Islamic values and
-                      character development. Students develop strong foundations in core subjects while growing in their
-                      faith and character.
-                    </p>
-                    <ul className="space-y-2 mb-6">
-                      <li className="flex items-start gap-2">
-                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
-                        <span className="text-[#666666]">
-                          Comprehensive curriculum that exceeds state standards in all core subjects
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
-                        <span className="text-[#666666]">
-                          Integration of Islamic perspectives across all subject areas
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
-                        <span className="text-[#666666]">
-                          Hands-on, inquiry-based learning that encourages critical thinking
-                        </span>
-                      </li>
-                    </ul>
-                    <Link href="/academics/elementary">
-                      <Button className="bg-[#B05834] hover:bg-[#8A4526] text-white">Learn More</Button>
-                    </Link>
-                  </div>
-                  <div className="relative h-64 md:h-auto rounded-lg overflow-hidden">
-                    <Image src="/elementary.png" alt="Elementary Program" fill className="object-cover" />
-                  </div>
-                </div>
-              </TabsContent>
-              <TabsContent value="middle-school" className="mt-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="text-xl font-bold text-[#FF4A00] mb-4">7th-8th Grade Program (Coming 2025)</h3>
-                    <p className="text-[#666666] mb-4">
-                      Our new middle school program will prepare students for high school success while strengthening
-                      their Islamic identity. The program will feature rigorous academics, character development, and
-                      leadership opportunities.
-                    </p>
-                    <ul className="space-y-2 mb-6">
-                      <li className="flex items-start gap-2">
-                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
-                        <span className="text-[#666666]">
-                          Challenging curriculum with emphasis on critical thinking and real-world applications
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
-                        <span className="text-[#666666]">
-                          Focus on leadership development, character building, and community service
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
-                        <span className="text-[#666666]">
-                          Enrichment activities, including STREAM (Science, Technology, Religion, Engineering, Arts, and
-                          Math)
-                        </span>
-                      </li>
-                    </ul>
-                    <Link href="/academics/middle-school">
-                      <Button className="bg-[#B05834] hover:bg-[#8A4526] text-white">Learn More</Button>
-                    </Link>
-                  </div>
-                  <div className="relative h-64 md:h-auto rounded-lg overflow-hidden">
-                    <Image src="/middle-school.png" alt="Middle School Program" fill className="object-cover" />
-                  </div>
-                </div>
-              </TabsContent>
-              <TabsContent value="after-school" className="mt-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="text-xl font-bold text-[#FF4A00] mb-4">After-School Programs</h3>
-                    <p className="text-[#666666] mb-4">
-                      Our after-school programs provide extended learning opportunities and enrichment activities for
-                      students. These programs include homework help, Quran memorization, arts and crafts, sports, and
-                      more.
-                    </p>
-                    <ul className="space-y-2 mb-6">
-                      <li className="flex items-start gap-2">
-                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
-                        <span className="text-[#666666]">
-                          Extended care available from 3:30 PM to 5:30 PM, Monday through Friday
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
-                        <span className="text-[#666666]">
-                          Structured activities including homework help, Quran practice, and enrichment
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
-                        <span className="text-[#666666]">
-                          Supervised by qualified staff in a safe, nurturing environment
-                        </span>
-                      </li>
-                    </ul>
-                    <Link href="/academics/after-school">
-                      <Button className="bg-[#B05834] hover:bg-[#8A4526] text-white">Learn More</Button>
-                    </Link>
-                  </div>
-                  <div className="relative h-64 md:h-auto rounded-lg overflow-hidden">
-                    <Image src="/after-school.png" alt="After-School Programs" fill className="object-cover" />
-                  </div>
-                </div>
-              </TabsContent>
-            </Tabs>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              <div className="bg-[#F5E8D8] p-4 rounded-lg">
+                <h4 className="font-bold text-[#B05834] mb-2">Islamic Studies Faculty</h4>
+                <p className="text-[#666666]">
+                  Our Islamic Studies faculty members hold "sanad" (unbroken chain of transmission) accreditation to teach 
+                  Islamic Sciences, bringing years of experience as educators and community leaders. We utilize the globally 
+                  established Safar Academy Islamic studies curriculum, along with resources approved by local Ulema.
+                </p>
+              </div>
+              <div className="bg-[#F5E8D8] p-4 rounded-lg">
+                <h4 className="font-bold text-[#B05834] mb-2">K-8 Primary Studies</h4>
+                <p className="text-[#666666]">
+                  We partner with state-accredited Columbia Virtual Academy (CVA), who provide weekly checks with WA State 
+                  certified teachers to ensure we meet WA State standards as defined by the State Board of Education.
+                </p>
+              </div>
+            </div>
+
+            <div className="mb-8">
+              <div className="relative h-[500px] w-full">
+                <Image
+                  src="/holistic_model.png"
+                  alt="Cordoba Academy Holistic Learning Model"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </div>
 
             <div className="bg-[#F5E8D8] p-6 rounded-lg mb-8">
               <h3 className="text-xl font-bold text-[#FF4A00] mb-4">Our Educational Approach</h3>
@@ -244,6 +105,176 @@ export default function AcademicsPage() {
                 </div>
               </div>
             </div>
+
+            <Tabs defaultValue="preschool" className="mb-8">
+              <TabsList className="grid grid-cols-1 md:grid-cols-4 h-auto">
+                <TabsTrigger value="preschool" className="py-3">
+                  Preschool
+                </TabsTrigger>
+                <TabsTrigger value="elementary" className="py-3">
+                  K-6 Program
+                </TabsTrigger>
+                <TabsTrigger value="middle-school" className="py-3">
+                  7th-8th Grade
+                </TabsTrigger>
+                <TabsTrigger value="after-school" className="py-3">
+                  After-School
+                </TabsTrigger>
+              </TabsList>
+              <TabsContent value="preschool" className="mt-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <h3 className="text-xl font-bold text-[#FF4A00] mb-4">Preschool Program (Ages 3-5)</h3>
+                    <p className="text-[#666666] mb-4">
+                      Our play-based preschool program nurtures a love of learning in a safe, nurturing environment. Through a blend of 
+                      structured and play-based activities, we develop foundational academic, social, and Islamic skills that prepare 
+                      children for success in kindergarten and beyond.
+                    </p>
+                    <ul className="space-y-3 mb-6">
+                      <li className="flex items-start gap-2">
+                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#666666]">
+                          Daily Islamic routines and teachings integrated throughout activities, including azkar, dua, and Quran recitation
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#666666]">
+                          Experienced, caring educators providing personalized attention through low student-to-teacher ratios
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#666666]">
+                          Focus on social, emotional, and cognitive growth to develop the whole child
+                        </span>
+                      </li>
+                    </ul>
+                    <Link href="/academics/preschool">
+                      <Button className="bg-[#B05834] hover:bg-[#8A4526] text-white">Learn More</Button>
+                    </Link>
+                  </div>
+                  <div className="relative h-64 md:h-auto rounded-lg overflow-hidden">
+                    <Image src="/preschool_program.jpg" alt="Preschool Program" fill className="object-cover" />
+                  </div>
+                </div>
+              </TabsContent>
+              <TabsContent value="elementary" className="mt-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <h3 className="text-xl font-bold text-[#FF4A00] mb-4">K-6 Program</h3>
+                    <p className="text-[#666666] mb-4">
+                      Our elementary program provides a rigorous academic curriculum integrated with Islamic values and
+                      character development. Students develop strong foundations in core subjects while growing in their
+                      faith and character.
+                    </p>
+                    <ul className="space-y-2 mb-6">
+                      <li className="flex items-start gap-2">
+                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#666666]">
+                          Comprehensive curriculum that exceeds state standards in all core subjects
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#666666]">
+                          Integration of Islamic perspectives across all subject areas
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#666666]">
+                          Hands-on, inquiry-based learning that encourages critical thinking
+                        </span>
+                      </li>
+                    </ul>
+                    <Link href="/academics/elementary">
+                      <Button className="bg-[#B05834] hover:bg-[#8A4526] text-white">Learn More</Button>
+                    </Link>
+                  </div>
+                  <div className="relative h-64 md:h-auto rounded-lg overflow-hidden">
+                    <Image src="/elementary_program.jpeg" alt="Elementary Program" fill className="object-cover" />
+                  </div>
+                </div>
+              </TabsContent>
+              <TabsContent value="middle-school" className="mt-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <h3 className="text-xl font-bold text-[#FF4A00] mb-4">7th-8th Grade Program</h3>
+                    <p className="text-[#666666] mb-4">
+                      Our new middle school program will prepare students for high school success while strengthening
+                      their Islamic identity. The program will feature rigorous academics, character development, and
+                      leadership opportunities.
+                    </p>
+                    <ul className="space-y-2 mb-6">
+                      <li className="flex items-start gap-2">
+                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#666666]">
+                          Challenging curriculum with emphasis on critical thinking and real-world applications
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#666666]">
+                          Focus on leadership development, character building, and community service
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#666666]">
+                          Enrichment activities, including STREAM (Science, Technology, Religion, Engineering, Arts, and
+                          Math)
+                        </span>
+                      </li>
+                    </ul>
+                    <Link href="/academics/middle-school">
+                      <Button className="bg-[#B05834] hover:bg-[#8A4526] text-white">Learn More</Button>
+                    </Link>
+                  </div>
+                  <div className="relative h-64 md:h-auto rounded-lg overflow-hidden">
+                    <Image src="/middle_school_program.jpg" alt="Middle School Program" fill className="object-cover" />
+                  </div>
+                </div>
+              </TabsContent>
+              <TabsContent value="after-school" className="mt-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <h3 className="text-xl font-bold text-[#FF4A00] mb-4">After-School Programs</h3>
+                    <p className="text-[#666666] mb-4">
+                      Our after-school programs provide extended learning opportunities and enrichment activities for
+                      students. These programs include homework help, Quran memorization, arts and crafts, sports, and
+                      more.
+                    </p>
+                    <ul className="space-y-2 mb-6">
+                      <li className="flex items-start gap-2">
+                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#666666]">
+                          Extended care available from 3:30 PM to 5:30 PM, Monday through Friday
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#666666]">
+                          Structured activities including homework help, Quran practice, and enrichment
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#666666]">
+                          Supervised by qualified staff in a safe, nurturing environment
+                        </span>
+                      </li>
+                    </ul>
+                    <Link href="/academics/after-school">
+                      <Button className="bg-[#B05834] hover:bg-[#8A4526] text-white">Learn More</Button>
+                    </Link>
+                  </div>
+                  <div className="relative h-64 md:h-auto rounded-lg overflow-hidden">
+                    <Image src="/after-school.png" alt="After-School Programs" fill className="object-cover" />
+                  </div>
+                </div>
+              </TabsContent>
+            </Tabs>
 
             <h3 className="text-xl font-bold text-[#FF4A00] mb-6">Curriculum Overview</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
