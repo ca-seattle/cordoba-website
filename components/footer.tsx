@@ -12,7 +12,7 @@ export default function Footer() {
           {/* About */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Image src="/logo.png" alt="Cordoba Academy Logo" width={40} height={40} />
+              <Image src="/logo-full.png" alt="Cordoba Academy Logo" width={60} height={60} />
               <span className="font-bold text-xl">Cordoba Academy</span>
             </div>
             <p className="text-[#CCCCCC] mb-4">
@@ -20,7 +20,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/cordoba.academySEA/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#4D4D4D] p-2 rounded-full hover:bg-[#B05834] transition"
@@ -29,7 +29,7 @@ export default function Footer() {
                 <span className="sr-only">Facebook</span>
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/cordoba_academy_/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#4D4D4D] p-2 rounded-full hover:bg-[#B05834] transition"
@@ -38,7 +38,7 @@ export default function Footer() {
                 <span className="sr-only">Instagram</span>
               </a>
               <a
-                href="https://youtube.com"
+                href="https://www.youtube.com/@cordobaacademyinfo7088"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#4D4D4D] p-2 rounded-full hover:bg-[#B05834] transition"
