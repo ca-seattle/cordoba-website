@@ -82,7 +82,7 @@ export default function Home() {
       {/* Featured Programs */}
       <div className="bg-white py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-[#B05834] mb-8">Our Programs</h2>
+          <h2 className="text-3xl font-bold text-center text-[#B05834] mb-8">Academic Programs</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <Card className="bg-[#F5E8D8] border-none">
               <div className="relative h-48">
@@ -143,7 +143,7 @@ export default function Home() {
               </div>
               <CardHeader>
                 <CardTitle className="text-[#B05834]">7th-8th Grade</CardTitle>
-                <CardDescription>Middle School (Coming 2025)</CardDescription>
+                <CardDescription>Middle School</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-[#666666] mb-4">
