@@ -20,9 +20,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className} suppressHydrationWarning>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
           <div className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-grow pt-[72px]">{children}</main>
