@@ -32,50 +32,56 @@ export default function AboutPage() {
       image: "/shaykh_umair.jpg",
       bio: "Shaykh Syed Umair Ahmad was born in Denver, CO and soon after moved to Seattle, WA where he completed high school and went on to earn a Bachelors Degree in Business Administration from Central Washington University. As a student, he served as President of the Muslim Student Association at North Seattle Community College where the club was awarded the Most Active student organization on campus. Shaykh Umair later served two years as President of MSA NorthWest and became a key contributor to Islamic Quiz of Seattle. He went on to become an active member in the Greater Seattle community, establishing youth programs in addition to teaching in his local masjid.\n\nWhile working as a Senior Sales Rep with Verizon Wireless he began his pursuit of sacred knowledge with Mufti Abdul Mujeeb Al-Nadwi and other local scholars. By the grace of Allah, in 2009 he embarked on his journey to South Africa where he attended Madrasah In'aamiyyah to study the Higher Islamic Sciences, which included Arabic Morphology, Arabic Grammar, Science of Recitation (Tajwīd), Jurisprudence (Fiqh), Principles of Jurisprudence (Usul al-Fiqh), Qur'ānic Exegesis (Tafsir), Principles of Qur'ānic Exegesis (Usul al-Tafsir), Prophetic Traditions (Hadith), and Principles of Prophetic Traditions (Usul al-Hadith).\n\nIn 2015, Shaykh Umair's studies culminated in him receiving an ijāzah al-tadris, which literally means “a license to teach,” as well as an unbroken chain of transmission by which to narrate the Prophetic Traditions (Ahadith) of such books as the Muwatta of Imam Malik and Imam Muhammad, six of the authenticated books of Prophetic Traditions (the Sihah al-Sittah: Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasa'i, and Ibn Majah), and the Sharh Ma'ani al-Athār of Imam al-Tahawi. He also holds an unbroken chain of recitation of the entire Qur'an in the rendition of Imam Hafs.\n\nHe began serving the Greater-Seattle community in 2015 through Mihraab Foundation as a Resident Scholar and Youth Director. From 2017 - 2021 he was the Director of Islamic Studies and teacher at Cordoba Academy, an Islāmic School in the North-Seattle area, now serving as an advisor to the Islāmic School. Currently Shaykh Umair is a teacher at Darul Uloom Seattle alongside serving as Resident Scholar and Executive Director of Mihraab Foundation.",
     },
-    {
-      name: "Qari Osman Shareef",
-      title: "Hifdh Director & Teacher of Mihraab Foundation",
-      image: "/osman.jpeg",
-      bio: "Raised in Chicago, IL, Qāri Mohammed Osman Shareef completed his memorization of the Holy Qur'ān at the Institute of Islamic Education in Elgin, IL at the age of 15. He soon traveled to South Africa where he obtained his diploma in Islāmic Theology at Madrasa In'aamiyyah in Camperdown, South Africa. From a young age Qāri Osman was always fascinated in the recitation of Qur'ān; his passion lead him to pursue an 'ijāzah (formal authorization) in the rendition of Imām Hafs (Riwāyah Hafs 'an Shu'ba) followed by an 'ijāzah in Saba' 'Asharah Qirā'ah (10 different methods of reciting the Holy Qur'ān) in South Africa. He graduated with an 'ijāzah al tadrīs (licensure to teach) and asānīd (unbroken chains of transmission) in Qirā'ah, Hadīth, Fiqh, and various other Sacred Sciences of Islām in 2014 at the age of 25.\n\nHe has taught hifdh in Dallas, TX at multiple institutions. From 2016 - 2021 he was teaching and producing huffādh (students who memorized the entire Holy Qur'ān) and the Director of the Qur'ān Academy at Islamic Foundation North in Libertyville, IL.\n\nHe is currently a Resident Scholar of Mihraab Foundation as well as the Director and Teacher of the Mihraab Hifdh Academy.",
-    },
+    // {
+    //   name: "Qari Osman Shareef",
+    //   title: "Hifdh Director & Teacher of Mihraab Foundation",
+    //   image: "/osman.jpeg",
+    //   bio: "Raised in Chicago, IL, Qāri Mohammed Osman Shareef completed his memorization of the Holy Qur'ān at the Institute of Islamic Education in Elgin, IL at the age of 15. He soon traveled to South Africa where he obtained his diploma in Islāmic Theology at Madrasa In'aamiyyah in Camperdown, South Africa. From a young age Qāri Osman was always fascinated in the recitation of Qur'ān; his passion lead him to pursue an 'ijāzah (formal authorization) in the rendition of Imām Hafs (Riwāyah Hafs 'an Shu'ba) followed by an 'ijāzah in Saba' 'Asharah Qirā'ah (10 different methods of reciting the Holy Qur'ān) in South Africa. He graduated with an 'ijāzah al tadrīs (licensure to teach) and asānīd (unbroken chains of transmission) in Qirā'ah, Hadīth, Fiqh, and various other Sacred Sciences of Islām in 2014 at the age of 25.\n\nHe has taught hifdh in Dallas, TX at multiple institutions. From 2016 - 2021 he was teaching and producing huffādh (students who memorized the entire Holy Qur'ān) and the Director of the Qur'ān Academy at Islamic Foundation North in Libertyville, IL.\n\nHe is currently a Resident Scholar of Mihraab Foundation as well as the Director and Teacher of the Mihraab Hifdh Academy.",
+    // },
   ];
 
   // Board members
   const boardMembers = [
     {
-      name: "Shehzad Qureshi",
-      title: "Treasurer",
-      image: "/avatar_male.png",
-      bio: "Br. Shehzad holds a degree in Finance from Central Washington University and has an extensive background in leadership and management. He previously served as a Senior Program Manager at Microsoft before transitioning into a senior management role with the City of Seattle, where he continues to make a meaningful impact.\n\nAs a member of one of the pioneering Muslim families in the Puget Sound region, Br. Shehzad has played a vital role in establishing some of the area's first Masaajid, including SeaTac Masjid, Northgate Masjid and later Masjid Umar al-Farooq in Mountlake Terrace. His lifelong commitment to strengthening the Muslim community extends beyond places of worship. He is deeply passionate about creating a nurturing Islamic environment for the next generation while also ensuring that the needs of our aging community are met.\n\nWith Islamic education at the heart of his vision, Br. Shehzad has been an active supporter of institutions like the Islamic School of Seattle and numerous other community initiatives throughout Seattle's history. His extensive experience, leadership, and dedication make him a valuable asset to Cordoba Academy's Board, helping to shape a future where education and faith go hand in hand.",
+      name: "Abdulkadir Sheikh (Imam Bazi)",
+      title: "Director of Spiritual Development & Principal",
+      image: "/imam_bazi.jpg",
+      bio: "Imam Bazi is a dedicated Islamic scholar, educator, and community leader who has been serving the greater Seattle area for over 15 years. His journey in both secular and Islamic education reflects his deep commitment to learning, teaching, and nurturing the next generation of Muslim Americans.\n\nA native Washingtonian, Imam Bazi began his academic journey at Green River College, where he pursued studies in Public Relations. However, his thirst for spiritual knowledge led him to Tarim, Yemen, where he studied at the esteemed Dar Al-Mustafa. There, he refined his memorization of the Holy Quran and further advanced his studies in the Higher Islamic sciences under world renowned scholars, while specializing in Tazkiyat ul-Nafs.\n\nUpon returning to Washington, he dedicated himself to serving the Muslim community, taking on roles as an Imam in various masajid. His leadership was instrumental in establishing and strengthening many local Islamic centers. Alongside his religious service, he also built a professional career as a Lead Supply Chain Analyst at Swedish Medical Center, demonstrating his ability to balance both professional and religious responsibilities with excellence.\n\nDespite his success in the corporate world, Imam Bazi's true passion lay in education and mentorship. He eventually left his profession to fully dedicate himself to Cordoba Academy, where he now serves as the principal. His vision is to instill a strong foundation of faith, knowledge, and character in students, ensuring they grow into confident Muslim leaders of tomorrow.\n\nFluent in Arabic, English, and Somali, Imam Bazi has been a guiding force in religious education and spiritual development within the Seattle Muslim community. His passion for tarbiyah, mentoring and educating youth, drives his work, as he strives to make Islamic knowledge accessible, engaging, and relevant to young minds. Known for his approachable and warm nature, he has touched the hearts of many, making learning a joyful and meaningful experience.\n\nUnder his leadership, Cordoba Academy continues to thrive as a place where faith and education go hand in hand, nurturing students to become thoughtful, empowered members of the Muslim community.",
     },
     {
       name: "Faisal Ahmad",
-      title: "Board Chair & Islamic Studies Operations Director",
+      title: "Director of Operations",
       image: "/faisal_ahmad.jpg",
       bio: "Br. Faisal was raised in North Seattle and earned a Bachelor's degree in Computer Science from Central Washington University and has built a successful career in Change, Process & Project Management. Beyond his professional expertise, he has been a dedicated activist in the Seattle Muslim community since 1995, working tirelessly to uplift and educate the next generation.\n\nHis contributions began with the Muslim Students Association (MSA) and the development of the renowned Islamic Quiz of Seattle, a cherished program that has inspired and engaged youth for years. He had the privilege of consulting with many Islamic Scholars across North America and internationally to help initiate and develop youth, educational, and mentorship programs in order to serve the Muslim community in the region.\n\nBr. Faisal's passion for Islamic education extends to his own family, having helped establish and run a homeschool family co-op before going on to co-found Cordoba Academy. His vision and dedication continue to shape the academy's mission, ensuring that young Muslims have access to a well-rounded education that fosters academic excellence, strong Islamic values, and instills in them confidence in ther Muslim identity.",
     },
     {
+      name: "Amina Ahmed",
+      title: "Director of Student Success & Vice Principal",
+      image: "/avatar_female.png",
+      bio: "Sr. Amina was born in Canada and spent her formative years in Indonesia before returning to North America to pursue higher education. She earned her Bachelor's degree in Business Commerce and Administration from the University of British Columbia in Vancouver, BC. As an undergraduate student, she was deeply committed to community service, actively volunteering in various local initiatives, while maintaining her Muslim values and seeking a deeper connection to Allah.\n\nAfter becoming a mother, Sr. Amina devoted herself to homeschooling her children, driven by a deep commitment to staying connected to Islamic scholarship. She made it a priority to teach her children the Qur'an and instill in them a strong spiritual foundation, while also ensuring they received a high-quality, well-rounded education. Recognizing that children flourish in a nurturing and connected environment, she went on to establish a homeschooling co-op to support other families seeking the same balance of academic excellence and faith-based learning.\n\nIn 2015, she became one of the founders of Cordoba Academy, taking on the roles of Vice Principal and teacher and eventually receiving her certification in Early Childhood Development. She has been instrumental in shaping the school's curriculum, culture, and vision, laying the foundation for the inclusive, values-driven environment that defines Cordoba Academy today. Through her dedicated leadership and guidance, the school has grown into a thriving educational institution committed to academic excellence.",
+    },
+    {
+      name: "Shehzad Qureshi",
+      title: "Director of Finance",
+      image: "/avatar_male.png",
+      bio: "Br. Shehzad holds a degree in Finance from Central Washington University and has an extensive background in leadership and management. He previously served as a Senior Program Manager at Microsoft before transitioning into a senior management role with the City of Seattle, where he continues to make a meaningful impact.\n\nAs a member of one of the pioneering Muslim families in the Puget Sound region, Br. Shehzad has played a vital role in establishing some of the area's first Masaajid, including SeaTac Masjid, Northgate Masjid and later Masjid Umar al-Farooq in Mountlake Terrace. His lifelong commitment to strengthening the Muslim community extends beyond places of worship. He is deeply passionate about creating a nurturing Islamic environment for the next generation while also ensuring that the needs of our aging community are met.\n\nWith Islamic education at the heart of his vision, Br. Shehzad has been an active supporter of institutions like the Islamic School of Seattle and numerous other community initiatives throughout Seattle's history. His extensive experience, leadership, and dedication make him a valuable asset to Cordoba Academy's Board, helping to shape a future where education and faith go hand in hand.",
+    },
+    {
       name: "Arif Samad",
-      title: "Board Vice Chair",
+      title: "Director of Programs",
       image: "/avatar_male.png",
       bio: "Born and raised in Seattle, Br. Arif has had the unique privilege of witnessing the growth and evolution of the Muslim community in the region. From the Islamic School of Seattle to Umar al-Farooq Masjid, he and his family have played an integral role in shaping and strengthening the local Muslim community.\n\nA University of Washington Husky, Br. Arif earned a degree in Mechanical Engineering and began his career at Boeing, contributing to the development of the 747 aircraft. He later transitioned into Technology Consulting with Accenture in Washington, D.C., where he was actively involved in the ADAMS Masjid Northern Virginia Muslim community, service as a Cub Scouts Den Leader and leading fundraising and team-building activities, such as camping and the Pinewood Derby.\n\nSince returning to Seattle in 2010, Br. Arif has dedicated himself to education and innovation. He has served as an Analytics Certification instructor at the University of Washington's Continuing Education program and co-launched 'Minipreneurs', a design-thinking workshop that empowers children to develop and build IoT (Internet of Things) solutions for real-world challenges.\nCurrently serving as Director of Azure Data & AI Technical Strategy at Microsoft, Br. Arif is deeply passionate about STEM education and is committed to creating learning and leadership opportunities for Muslim youth. His dedication to empowering the next generation aligns with Cordoba Academy's mission, ensuring that young Muslims develop into strong, confident, and innovative leaders of tommorrow.",
     },
     {
-      name: "Abdulkadir Sheikh (Imam Bazi)",
-      title: "Religious Director & Principal",
-      image: "/imam_bazi.jpg",
-      bio: "Imam Bazi is a dedicated Islamic scholar, educator, and community leader who has been serving the greater Seattle area for over 15 years. His journey in both secular and Islamic education reflects his deep commitment to learning, teaching, and nurturing the next generation of Muslim Americans.\n\nA native Washingtonian, Imam Bazi began his academic journey at Green River College, where he pursued studies in Public Relations. However, his thirst for spiritual knowledge led him to Tarim, Yemen, where he studied at the esteemed Dar Al-Mustafa. There, he refined his memorization of the Holy Quran and further advanced his studies in the Higher Islamic sciences under world renowned scholars, while specializing in Tazkiyat ul-Nafs.\n\nUpon returning to Washington, he dedicated himself to serving the Muslim community, taking on roles as an Imam in various masajid. His leadership was instrumental in establishing and strengthening many local Islamic centers. Alongside his religious service, he also built a professional career as a Lead Supply Chain Analyst at Swedish Medical Center, demonstrating his ability to balance both professional and religious responsibilities with excellence.\n\nDespite his success in the corporate world, Imam Bazi's true passion lay in education and mentorship. He eventually left his profession to fully dedicate himself to Cordoba Academy, where he now serves as the principal. His vision is to instill a strong foundation of faith, knowledge, and character in students, ensuring they grow into confident Muslim leaders of tomorrow.\n\nFluent in Arabic, English, and Somali, Imam Bazi has been a guiding force in religious education and spiritual development within the Seattle Muslim community. His passion for tarbiyah, mentoring and educating youth, drives his work, as he strives to make Islamic knowledge accessible, engaging, and relevant to young minds. Known for his approachable and warm nature, he has touched the hearts of many, making learning a joyful and meaningful experience.\n\nUnder his leadership, Cordoba Academy continues to thrive as a place where faith and education go hand in hand, nurturing students to become thoughtful, empowered members of the Muslim community.",
+      name: "Farzana Ahmed",
+      title: "Director of Student Enrichment & Learning Coach",
+      image: "/farzana.jpg",
+      bio: "Sr. Farzana is a dedicated educator with a Bachelor of Education from Ontario Tech University and over 10 years of teaching experience. Sr. Farzana is passionate about making learning engaging and meaningful. As a certified Minecraft educator, she thrives on designing fun and dynamic lesson plans that seamlessly incorporate Islamic teachings, inspiring students to think critically about history and literature. She takes pride in turning students' initial disinterest in history into a lasting passion.\n\nSr. Farzana loves being part of Cordoba Academy's supportive and close-knit team, describing it as working alongside her best friends. She appreciates the school's deep commitment to raising future leaders and values the strong partnership it fosters between teachers and parents as it takes a village to raise a child.",
     },
   ];
 
   // Faculty & Staff Highlights
   const facultyHighlights = [
-    {
-      name: "Amina Ahmed",
-      title: "Vice Principal & Curriculum Supervisor",
-      image: "/avatar_female.png",
-      bio: "Sr. Amina was born in Canada and spent her formative years in Indonesia before returning to North America to pursue higher education. She earned her Bachelor's degree in Business Commerce and Administration from the University of British Columbia in Vancouver, BC. As an undergraduate student, she was deeply committed to community service, actively volunteering in various local initiatives, while maintaining her Muslim values and seeking a deeper connection to Allah.\n\nAfter becoming a mother, Sr. Amina devoted herself to homeschooling her children, driven by a deep commitment to staying connected to Islamic scholarship. She made it a priority to teach her children the Qur'an and instill in them a strong spiritual foundation, while also ensuring they received a high-quality, well-rounded education. Recognizing that children flourish in a nurturing and connected environment, she went on to establish a homeschooling co-op to support other families seeking the same balance of academic excellence and faith-based learning.\n\nIn 2015, she became one of the founders of Cordoba Academy, taking on the roles of Vice Principal and teacher and eventually receiving her certification in Early Childhood Development. She has been instrumental in shaping the school's curriculum, culture, and vision, laying the foundation for the inclusive, values-driven environment that defines Cordoba Academy today. Through her dedicated leadership and guidance, the school has grown into a thriving educational institution committed to academic excellence.",
-    },
     {
       name: "Melinda Mahmud",
       title: "Senior Administration Manager",
@@ -148,12 +154,6 @@ export default function AboutPage() {
     //   image: "/aisha_ahmad.jpg",
     //   bio: "NO BIO AVAILABLE",
     // },
-    {
-      name: "Farzana Ahmed",
-      title: "5th & 6th Grade ELA & SS Learning Coach",
-      image: "/farzana.jpg",
-      bio: "Sr. Farzana is a dedicated educator with a Bachelor of Education from Ontario Tech University and over 10 years of teaching experience. Sr. Farzana is passionate about making learning engaging and meaningful. As a certified Minecraft educator, she thrives on designing fun and dynamic lesson plans that seamlessly incorporate Islamic teachings, inspiring students to think critically about history and literature. She takes pride in turning students' initial disinterest in history into a lasting passion.\n\nSr. Farzana loves being part of Cordoba Academy's supportive and close-knit team, describing it as working alongside her best friends. She appreciates the school's deep commitment to raising future leaders and values the strong partnership it fosters between teachers and parents as it takes a village to raise a child.",
-    },
     {
       name: "Saima Samad",
       title: "6th Grade Math Learning Coach",
@@ -251,33 +251,31 @@ export default function AboutPage() {
                   </h2>
                 </div>
                 <p className="text-[#666666] mb-4">
-                  To provide an exceptional educational experience that nurtures
-                  academic excellence, Islamic identity, and character
-                  development in a safe, supportive environment.
+                  To nurture the intellectual, ethical, social, physical, emotional, and spiritual development of young American Muslims, producing confident, spiritual, and professional Muslim leaders who will be an asset to our society.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
                     <span className="text-[#666666]">
-                      Deliver a rigorous academic curriculum
+                      Nurture intellectual and academic excellence
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
                     <span className="text-[#666666]">
-                      Foster a strong Islamic identity
+                      Develop strong ethical and spiritual foundations
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
                     <span className="text-[#666666]">
-                      Develop moral character and leadership
+                      Foster social and emotional growth
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
                     <span className="text-[#666666]">
-                      Create a safe, nurturing environment
+                      Promote physical well-being and development
                     </span>
                   </li>
                 </ul>
@@ -290,33 +288,31 @@ export default function AboutPage() {
                   </h2>
                 </div>
                 <p className="text-[#666666] mb-4">
-                  To be a leading Islamic educational institution that empowers
-                  students to excel academically, embody Islamic values, and
-                  contribute positively to society.
+                  Our vision is to establish an institution dedicated to the dissemination of religious and worldly knowledge rooted in traditional Islamic values; providing a high quality of education to improve the quality of life of Muslim communities in America.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
                     <span className="text-[#666666]">
-                      Graduate well-rounded Muslim leaders
+                      Integrate religious and worldly knowledge
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
                     <span className="text-[#666666]">
-                      Set the standard for Islamic education
+                      Uphold traditional Islamic values
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
                     <span className="text-[#666666]">
-                      Build a vibrant, diverse community
+                      Deliver high-quality education
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
                     <span className="text-[#666666]">
-                      Inspire lifelong learning and service
+                      Enhance Muslim community life in America
                     </span>
                   </li>
                 </ul>
@@ -513,7 +509,7 @@ export default function AboutPage() {
       {/* Board of Directors */}
       <div className="container mx-auto px-4 py-12">
         <h2 className="text-3xl font-bold text-center text-[#B05834] mb-8">
-          Board of Directors
+          Executive Board of Directors
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {boardMembers.map((member, index) => (

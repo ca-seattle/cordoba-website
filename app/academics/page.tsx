@@ -95,7 +95,7 @@ export default function AcademicsPage() {
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-[#B05834] flex-shrink-0 mt-0.5" />
-                      <span className="text-[#666666]">Islamic perspectives integrated across all subject areas</span>
+                      <span className="text-[#666666]">Strong focus on cultivating love for Allah and His Messenger through the Sunnah, Seerah, and Shama'il</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-[#B05834] flex-shrink-0 mt-0.5" />
@@ -109,13 +109,13 @@ export default function AcademicsPage() {
             <Tabs defaultValue="preschool" className="mb-8">
               <TabsList className="grid grid-cols-1 md:grid-cols-4 h-auto">
                 <TabsTrigger value="preschool" className="py-3">
-                  Preschool
+                  Early Learning
                 </TabsTrigger>
                 <TabsTrigger value="elementary" className="py-3">
-                  K-6 Program
+                  K-5 Program
                 </TabsTrigger>
                 <TabsTrigger value="middle-school" className="py-3">
-                  7th-8th Grade
+                  6th-8th Grade
                 </TabsTrigger>
                 <TabsTrigger value="after-school" className="py-3">
                   After-School
@@ -124,9 +124,9 @@ export default function AcademicsPage() {
               <TabsContent value="preschool" className="mt-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <h3 className="text-xl font-bold text-[#FF4A00] mb-4">Preschool Program (Ages 3-5)</h3>
+                    <h3 className="text-xl font-bold text-[#FF4A00] mb-4">Early Childhood Learning (Ages 3-5)</h3>
                     <p className="text-[#666666] mb-4">
-                      Our play-based preschool program nurtures a love of learning in a safe, nurturing environment. Through a blend of 
+                      Our play-based early childhood learning program nurtures a love of learning in a safe, nurturing environment. Through a blend of 
                       structured and play-based activities, we develop foundational academic, social, and Islamic skills that prepare 
                       children for success in kindergarten and beyond.
                     </p>
@@ -150,9 +150,9 @@ export default function AcademicsPage() {
                         </span>
                       </li>
                     </ul>
-                    <Link href="/academics/preschool">
+                    {/* <Link href="/academics/preschool">
                       <Button className="bg-[#B05834] hover:bg-[#8A4526] text-white">Learn More</Button>
-                    </Link>
+                    </Link> */}
                   </div>
                   <div className="relative h-64 md:h-auto rounded-lg overflow-hidden">
                     <Image src="/preschool_program.jpg" alt="Preschool Program" fill className="object-cover" />
@@ -162,35 +162,51 @@ export default function AcademicsPage() {
               <TabsContent value="elementary" className="mt-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <h3 className="text-xl font-bold text-[#FF4A00] mb-4">K-6 Program</h3>
+                    <h3 className="text-xl font-bold text-[#FF4A00] mb-4">K-5 Program</h3>
                     <p className="text-[#666666] mb-4">
-                      Our elementary program provides a rigorous academic curriculum integrated with Islamic values and
-                      character development. Students develop strong foundations in core subjects while growing in their
-                      faith and character.
+                      Our elementary program offers a comprehensive curriculum covering Islamic Studies, the Quran, English Language Arts, Math, Science, and Social Studies. Through our partnership with CVA, we provide access to state resources and standardized testing, while our custom-designed curriculum incorporates Islamic values to best support our students' academic and spiritual growth. With small class sizes ensuring personalized attention, we emphasize critical thinking, creativity, and leadership, fostering strong character development.
                     </p>
                     <ul className="space-y-2 mb-6">
                       <li className="flex items-start gap-2">
                         <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
                         <span className="text-[#666666]">
-                          Comprehensive curriculum that exceeds state standards in all core subjects
+                          Daily Islamic routines and manners, including azkar, dua, and Quran recitation, to build lasting Islamic habits
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
                         <span className="text-[#666666]">
-                          Integration of Islamic perspectives across all subject areas
+                          Regular progress assessments using BAS for ELA, quarterly math tests, STARS testing, and i-Ready
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
                         <span className="text-[#666666]">
-                          Hands-on, inquiry-based learning that encourages critical thinking
+                          Innovative teaching methods integrating technology for 21st-century skills
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#666666]">
+                          Enrichment activities including STREAM (Science, Technology, Religion, Engineering, Arts, and Math)
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#666666]">
+                          Strong focus on cultivating love for Allah and His Messenger through the Sunnah, Seerah, and Shama'il
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#666666]">
+                          Memorization of 40 hadith on adab and akhlaq, history of pious predecessors, and futuwwa (chivalry)
                         </span>
                       </li>
                     </ul>
-                    <Link href="/academics/elementary">
+                    {/* <Link href="/academics/elementary">
                       <Button className="bg-[#B05834] hover:bg-[#8A4526] text-white">Learn More</Button>
-                    </Link>
+                    </Link> */}
                   </div>
                   <div className="relative h-64 md:h-auto rounded-lg overflow-hidden">
                     <Image src="/elementary_program.jpeg" alt="Elementary Program" fill className="object-cover" />
@@ -200,36 +216,45 @@ export default function AcademicsPage() {
               <TabsContent value="middle-school" className="mt-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <h3 className="text-xl font-bold text-[#FF4A00] mb-4">7th-8th Grade Program</h3>
+                    <h3 className="text-xl font-bold text-[#FF4A00] mb-4">6th-8th Grade Program</h3>
                     <p className="text-[#666666] mb-4">
-                      Our new middle school program will prepare students for high school success while strengthening
-                      their Islamic identity. The program will feature rigorous academics, character development, and
-                      leadership opportunities.
+                      Meeting a critical community need, Cordoba Academy will be the only Islamic middle school in Lynnwood, serving families from Tacoma to Marysville. Through our partnership with CVA, we provide access to state resources and standardized testing, while our custom-designed curriculum integrates Islamic values to support students' academic and spiritual growth. With small class sizes ensuring personalized attention, we emphasize leadership, independent thinking, and academic excellence through project-based learning and real-world applications.
                     </p>
                     <ul className="space-y-2 mb-6">
                       <li className="flex items-start gap-2">
                         <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
                         <span className="text-[#666666]">
-                          Challenging curriculum with emphasis on critical thinking and real-world applications
+                          Regular progress assessments using BAS for ELA, quarterly math tests, STARS testing, and i-Ready
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
                         <span className="text-[#666666]">
-                          Focus on leadership development, character building, and community service
+                          Innovative teaching methods incorporating technology for 21st-century skills
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
                         <span className="text-[#666666]">
-                          Enrichment activities, including STREAM (Science, Technology, Religion, Engineering, Arts, and
-                          Math)
+                          Enrichment activities including STREAM (Science, Technology, Religion, Engineering, Arts, and Math)
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#666666]">
+                          Strong focus on cultivating love for Allah and His Messenger through the Sunnah, Seerah, and Shama'il
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#666666]">
+                          Memorization of hadith on adab and akhlaq, history of pious predecessors, and futuwwa (chivalry)
                         </span>
                       </li>
                     </ul>
-                    <Link href="/academics/middle-school">
+                    {/* <Link href="/academics/middle-school">
                       <Button className="bg-[#B05834] hover:bg-[#8A4526] text-white">Learn More</Button>
-                    </Link>
+                    </Link> */}
                   </div>
                   <div className="relative h-64 md:h-auto rounded-lg overflow-hidden">
                     <Image src="/middle_school_program.jpg" alt="Middle School Program" fill className="object-cover" />

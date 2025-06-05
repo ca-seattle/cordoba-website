@@ -38,6 +38,125 @@ export default function Home() {
         </div>
       </div>
 
+      {/* News and Events */}
+      <div className="bg-white py-12">
+        <div className="container mx-auto px-4">
+          {/* <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+            <h2 className="text-3xl font-bold text-[#B05834]">News & Events</h2>
+            <Link href="/news">
+              <Button
+                variant="outline"
+                className="border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white flex items-center gap-2"
+              >
+                View All <ArrowRight size={16} />
+              </Button>
+            </Link>
+          </div> */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="bg-[#F5E8D8] rounded-lg overflow-hidden shadow-md">
+              <div className="relative h-96">
+                <Image src="/middle-school.png" alt="Middle School Expansion" fill className="object-contain" />
+              </div>
+              <div className="p-6">
+                <div className="flex items-center gap-2 text-[#666666] text-sm mb-2">
+                  <Calendar className="h-4 w-4" />
+                  <span>January 15, 2025</span>
+                </div>
+                <h3 className="text-lg font-bold text-[#FF4A00] mb-3">
+                  Cordoba Academy Announces Middle School Expansion
+                </h3>
+                <p className="text-[#666666] mb-4">
+                  We're excited to announce our expansion to include 7th and 8th grades starting in the 2025-2026
+                  academic year.
+                </p>
+                <Link href="/news/middle-school-expansion">
+                  <Button
+                    variant="outline"
+                    className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
+                  >
+                    Read More
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            <div className="bg-[#F5E8D8] rounded-lg overflow-hidden shadow-md">
+              <div className="relative h-96">
+                <Image src="/summer_camp_25.jpg" alt="Summer Camp Registration" fill className="object-contain" />
+              </div>
+              <div className="p-6">
+                <div className="flex items-center gap-2 text-[#666666] text-sm mb-2">
+                  <Calendar className="h-4 w-4" />
+                  <span>February 1, 2025</span>
+                </div>
+                <h3 className="text-lg font-bold text-[#FF4A00] mb-3">Summer Camp Registration Opens</h3>
+                <p className="text-[#666666] mb-4">
+                  Registration for our popular summer camp program is now open. Secure your child's spot for a summer of
+                  fun and learning.
+                </p>
+                <Link href="/programs/summer-camp">
+                  <Button
+                    variant="outline"
+                    className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
+                  >
+                    Read More
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            <div className="bg-[#F5E8D8] rounded-lg overflow-hidden shadow-md">
+              <div className="relative h-96">
+                <Image src="/open-house.png" alt="Open House" fill className="object-contain" />
+              </div>
+              <div className="p-6">
+                <div className="flex items-center gap-2 text-[#666666] text-sm mb-2">
+                  <Calendar className="h-4 w-4" />
+                  <span>February 15, 2025</span>
+                </div>
+                <h3 className="text-lg font-bold text-[#FF4A00] mb-3">Open House for Prospective Families</h3>
+                <p className="text-[#666666] mb-4">
+                  Join us for an informative open house event to learn about our programs, meet our staff, and tour our
+                  facilities.
+                </p>
+                <Link href="/events/open-house">
+                  <Button
+                    variant="outline"
+                    className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
+                  >
+                    Read More
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            <div className="bg-[#F5E8D8] rounded-lg overflow-hidden shadow-md">
+              <div className="relative h-96">
+                <Image src="/middle-school.png" alt="Parent Teacher Conference" fill className="object-contain" />
+              </div>
+              <div className="p-6">
+                <div className="flex items-center gap-2 text-[#666666] text-sm mb-2">
+                  <Calendar className="h-4 w-4" />
+                  <span>February 20, 2025</span>
+                </div>
+                <h3 className="text-lg font-bold text-[#FF4A00] mb-3">Parent Teacher Conference</h3>
+                <p className="text-[#666666] mb-4">
+                  Join us for our quarterly parent-teacher conference to discuss your child's progress and development.
+                </p>
+                <Link href="/events/parent-teacher-conference">
+                  <Button
+                    variant="outline"
+                    className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
+                  >
+                    Read More
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Welcome Section */}
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto text-center">
@@ -89,7 +208,7 @@ export default function Home() {
                 <Image src="/maymuna-preschool.jpg" alt="Preschool Program" className="object-cover object-[center_20%] rounded-t-lg" fill/>
               </div>
               <CardHeader>
-                <CardTitle className="text-[#B05834]">Preschool</CardTitle>
+                <CardTitle className="text-[#B05834]">Early Learning</CardTitle>
                 <CardDescription>Ages 3-5</CardDescription>
               </CardHeader>
               <CardContent>
@@ -110,11 +229,11 @@ export default function Home() {
 
             <Card className="bg-[#F5E8D8] border-none">
               <div className="relative h-48">
-                <Image src="/k-6.jpg" alt="K-6 Program" fill className="object-cover rounded-t-lg" />
+                <Image src="/k-6.jpg" alt="K-5 Program" fill className="object-cover rounded-t-lg" />
               </div>
               <CardHeader>
-                <CardTitle className="text-[#B05834]">K-6 Program</CardTitle>
-                <CardDescription>Kindergarten through 6th Grade</CardDescription>
+                <CardTitle className="text-[#B05834]">K-5 Program</CardTitle>
+                <CardDescription>Kindergarten through 5th Grade</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-[#666666] mb-4">
@@ -142,7 +261,7 @@ export default function Home() {
                 />
               </div>
               <CardHeader>
-                <CardTitle className="text-[#B05834]">7th-8th Grade</CardTitle>
+                <CardTitle className="text-[#B05834]">6th-8th Grade</CardTitle>
                 <CardDescription>Middle School</CardDescription>
               </CardHeader>
               <CardContent>
@@ -171,101 +290,6 @@ export default function Home() {
             <h2 className="text-2xl font-bold text-[#B05834] mb-4">Our Inspiration</h2>
             <p className="text-xl italic text-[#333333] mb-4">"And say, 'My Lord, increase me in knowledge.'"</p>
             <p className="text-[#666666]">Surah Ta-Ha, Verse 114</p>
-          </div>
-        </div>
-      </div>
-
-      {/* News and Events */}
-      <div className="bg-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-            <h2 className="text-3xl font-bold text-[#B05834]">News & Events</h2>
-            <Link href="/news">
-              <Button
-                variant="outline"
-                className="border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white flex items-center gap-2"
-              >
-                View All <ArrowRight size={16} />
-              </Button>
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-[#F5E8D8] rounded-lg overflow-hidden shadow-md">
-              <div className="relative h-48">
-                <Image src="/middle-school.png" alt="Middle School Expansion" fill className="object-cover" />
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 text-[#666666] text-sm mb-2">
-                  <Calendar className="h-4 w-4" />
-                  <span>January 15, 2025</span>
-                </div>
-                <h3 className="text-lg font-bold text-[#FF4A00] mb-3">
-                  Cordoba Academy Announces Middle School Expansion
-                </h3>
-                <p className="text-[#666666] mb-4">
-                  We're excited to announce our expansion to include 7th and 8th grades starting in the 2025-2026
-                  academic year.
-                </p>
-                <Link href="/news/middle-school-expansion">
-                  <Button
-                    variant="outline"
-                    className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
-                  >
-                    Read More
-                  </Button>
-                </Link>
-              </div>
-            </div>
-
-            <div className="bg-[#F5E8D8] rounded-lg overflow-hidden shadow-md">
-              <div className="relative h-48">
-                <Image src="/summer-camp.jpg" alt="Summer Camp Registration" fill className="object-cover" />
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 text-[#666666] text-sm mb-2">
-                  <Calendar className="h-4 w-4" />
-                  <span>February 1, 2025</span>
-                </div>
-                <h3 className="text-lg font-bold text-[#FF4A00] mb-3">Summer Camp Registration Opens</h3>
-                <p className="text-[#666666] mb-4">
-                  Registration for our popular summer camp program is now open. Secure your child's spot for a summer of
-                  fun and learning.
-                </p>
-                <Link href="/programs/summer-camp">
-                  <Button
-                    variant="outline"
-                    className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
-                  >
-                    Read More
-                  </Button>
-                </Link>
-              </div>
-            </div>
-
-            <div className="bg-[#F5E8D8] rounded-lg overflow-hidden shadow-md">
-              <div className="relative h-48">
-                <Image src="/open-house.png" alt="Open House" fill className="object-cover" />
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 text-[#666666] text-sm mb-2">
-                  <Calendar className="h-4 w-4" />
-                  <span>February 15, 2025</span>
-                </div>
-                <h3 className="text-lg font-bold text-[#FF4A00] mb-3">Open House for Prospective Families</h3>
-                <p className="text-[#666666] mb-4">
-                  Join us for an informative open house event to learn about our programs, meet our staff, and tour our
-                  facilities.
-                </p>
-                <Link href="/events/open-house">
-                  <Button
-                    variant="outline"
-                    className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
-                  >
-                    Read More
-                  </Button>
-                </Link>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -306,50 +330,48 @@ export default function Home() {
               <div>
                 <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
                 <p className="mb-4">
-                  To provide an exceptional educational experience that nurtures academic excellence, Islamic identity,
-                  and character development in a safe, supportive environment.
+                  To nurture the intellectual, ethical, social, physical, emotional, and spiritual development of young American Muslims, producing confident, spiritual, and professional Muslim leaders who will be an asset to our society.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-[#FF4A00] flex-shrink-0 mt-0.5" />
-                    <span>Deliver a rigorous academic curriculum</span>
+                    <span>Nurture intellectual and academic excellence</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-[#FF4A00] flex-shrink-0 mt-0.5" />
-                    <span>Foster a strong Islamic identity</span>
+                    <span>Develop strong ethical and spiritual foundations</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-[#FF4A00] flex-shrink-0 mt-0.5" />
-                    <span>Develop moral character and leadership</span>
+                    <span>Foster social and emotional growth</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-[#FF4A00] flex-shrink-0 mt-0.5" />
-                    <span>Create a safe, nurturing environment</span>
+                    <span>Promote physical well-being and development</span>
                   </li>
                 </ul>
               </div>
               <div>
                 <h2 className="text-2xl font-bold mb-4">Our Vision</h2>
                 <p className="mb-4">
-                  To be a leading Islamic educational institution that empowers students to excel academically, embody
-                  Islamic values, and contribute positively to society.
+                  Our vision is to establish an institution dedicated to the dissemination of religious and worldly knowledge rooted in traditional Islamic values; providing a high quality of education to improve the quality of life of Muslim communities in America.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-[#FF4A00] flex-shrink-0 mt-0.5" />
-                    <span>Graduate well-rounded Muslim leaders</span>
+                    <span>Integrate religious and worldly knowledge</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-[#FF4A00] flex-shrink-0 mt-0.5" />
-                    <span>Set the standard for Islamic education</span>
+                    <span>Uphold traditional Islamic values</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-[#FF4A00] flex-shrink-0 mt-0.5" />
-                    <span>Build a vibrant, diverse community</span>
+                    <span>Deliver high-quality education</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-[#FF4A00] flex-shrink-0 mt-0.5" />
-                    <span>Inspire lifelong learning and service</span>
+                    <span>Enhance Muslim community life in America</span>
                   </li>
                 </ul>
               </div>

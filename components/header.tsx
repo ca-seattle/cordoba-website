@@ -14,12 +14,12 @@ export default function Header() {
 
   // Update the navItems array to match the requested structure
   const navItems = [
-    { name: "Home", href: "/", icon: Home },
+    // { name: "Home", href: "/", icon: Home },
     { name: "Academics", href: "/academics", icon: BookOpen },
     { name: "Enrollment", href: "/enrollment", icon: UserPlus },
     { name: "Events & News", href: "/events", icon: Calendar },
     { name: "About Us", href: "/about", icon: Info },
-    { name: "Donate", href: "/donate", icon: Heart },
+    // { name: "Donate", href: "/donate", icon: Heart },
   ]
 
   // Update the secondaryItems array to include only Parent Portal
@@ -37,8 +37,10 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between bg-[#E5E5E5] rounded-full px-6 py-2">
           <div className="flex items-center gap-2">
-            <Image src="/logo-full.png" alt="Cordoba Academy Logo" width={50} height={50} />
-            <span className="text-[#333333] font-medium text-lg">Cordoba Academy</span>
+            <Link href="/" className="flex items-center gap-2">
+              <Image src="/logo-full.png" alt="Cordoba Academy Logo" width={50} height={50} />
+              <span className="text-[#333333] font-medium text-lg">Cordoba Academy</span>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
