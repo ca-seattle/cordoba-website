@@ -49,17 +49,23 @@ function getNextUpcomingDate(dates: string[]): Date | null {
 async function getEvents(): Promise<Event[]> {
   try {
     const response = await fetch('https://mwmliya547.execute-api.us-east-1.amazonaws.com/submit-website-event', {
-      next: { revalidate: 3600 } // Revalidate every hour
+      next: { revalidate: 3600 }, // Revalidate every hour
+      headers: {
+        'Accept': 'application/json',
+        'Cache-Control': 'no-cache'
+      }
     })
     
     if (!response.ok) {
       throw new Error('Failed to fetch events')
     }
 
-    const events: Event[] = await response.json()
+    const text = await response.text()    
+    const events: Event[] = JSON.parse(text)
+    console.log('Parsed events:', events)
     
     // Filter and sort events to get the top 4 upcoming events
-    return events
+    const filteredEvents = events
       .filter(event => {
         const nextDate = getNextUpcomingDate(event.event_dates)
         return nextDate !== null // Only include events with upcoming dates
@@ -69,7 +75,10 @@ async function getEvents(): Promise<Event[]> {
         const dateB = getNextUpcomingDate(b.event_dates)
         return (dateA?.getTime() || 0) - (dateB?.getTime() || 0)
       })
-      .slice(0, 4) // Get only the first 4 events
+      .slice(0, 4)
+
+    console.log('Filtered events:', filteredEvents)
+    return filteredEvents
   } catch (error) {
     console.error('Error fetching events:', error)
     return []
@@ -171,7 +180,7 @@ export default async function Home() {
                     <p className="text-[#666666] mb-4 whitespace-pre-line">
                       {event.event_description}
                     </p>
-                    {event.registration_link ? (
+                    {event.registration_link && (
                       <Link href={event.registration_link} target="_blank">
                         <Button
                           variant="outline"
@@ -180,7 +189,9 @@ export default async function Home() {
                           Register Now
                         </Button>
                       </Link>
-                    ) : (
+                    )}
+                    {/* Learn More button commented out for future use
+                    {!event.registration_link && (
                       <Button
                         variant="outline"
                         className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
@@ -188,6 +199,7 @@ export default async function Home() {
                         Learn More
                       </Button>
                     )}
+                    */}
                   </div>
                 </div>
               )
