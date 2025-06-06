@@ -204,6 +204,14 @@ export default async function Home() {
                 </div>
               )
             })}
+            {/* Add placeholder cards for remaining spaces */}
+            {Array.from({ length: Math.max(0, 4 - events.length) }).map((_, index) => (
+              <div key={`placeholder-${index}`} className="bg-[#F5E8D8] rounded-lg overflow-hidden shadow-md flex flex-col items-center justify-center p-8 text-center min-h-[200px]">
+                <Calendar className="h-12 w-12 text-[#B05834] mb-4 opacity-50" />
+                <h3 className="text-lg font-bold text-[#FF4A00] mb-2">Stay Tuned!</h3>
+                <p className="text-[#666666]">More exciting events coming soon...</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
