@@ -4,7 +4,90 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, ArrowRight, Calendar, BookOpen, Users, Heart } from "lucide-react"
 
-export default function Home() {
+// Define types for the event data
+type Organizer = {
+  name: string
+  phone: string
+  email: string
+}
+
+type Event = {
+  created_at: string
+  registration_link: string
+  end_date: string
+  event_description: string
+  frequency: string
+  start_time: string
+  end_time: string
+  organizer: Organizer
+  start_date: string
+  event_image_url: string
+  event_title: string
+  recurring: boolean
+  event_id: string
+  event_dates: string[]
+}
+
+// Function to get the next upcoming date from an array of dates
+function getNextUpcomingDate(dates: string[]): Date | null {
+  // Create today's date in PST
+  const today = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }))
+  today.setHours(0, 0, 0, 0)
+  
+  // Find the first date that hasn't passed
+  for (const date of dates) {
+    const [year, month, day] = date.split('-');
+    const eventDate = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+    if (eventDate >= today) {
+      return eventDate
+    }
+  }
+  
+  return null
+}
+
+async function getEvents(): Promise<Event[]> {
+  try {
+    const response = await fetch('https://mwmliya547.execute-api.us-east-1.amazonaws.com/submit-website-event', {
+      next: { revalidate: 3600 }, // Revalidate every hour
+      headers: {
+        'Accept': 'application/json',
+        'Cache-Control': 'no-cache'
+      }
+    })
+    
+    if (!response.ok) {
+      throw new Error('Failed to fetch events')
+    }
+
+    const text = await response.text()    
+    const events: Event[] = JSON.parse(text)
+    console.log('Parsed events:', events)
+    
+    // Filter and sort events to get the top 4 upcoming events
+    const filteredEvents = events
+      .filter(event => {
+        const nextDate = getNextUpcomingDate(event.event_dates)
+        return nextDate !== null // Only include events with upcoming dates
+      })
+      .sort((a, b) => {
+        const dateA = getNextUpcomingDate(a.event_dates)
+        const dateB = getNextUpcomingDate(b.event_dates)
+        return (dateA?.getTime() || 0) - (dateB?.getTime() || 0)
+      })
+      .slice(0, 4)
+
+    console.log('Filtered events:', filteredEvents)
+    return filteredEvents
+  } catch (error) {
+    console.error('Error fetching events:', error)
+    return []
+  }
+}
+
+export default async function Home() {
+  const events = await getEvents()
+
   return (
     <div className="bg-[#FFF2E6]">
       {/* Hero Section */}
@@ -53,106 +136,82 @@ export default function Home() {
             </Link>
           </div> */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="bg-[#F5E8D8] rounded-lg overflow-hidden shadow-md">
-              <div className="relative h-96">
-                <Image src="/middle-school.png" alt="Middle School Expansion" fill className="object-contain" />
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 text-[#666666] text-sm mb-2">
-                  <Calendar className="h-4 w-4" />
-                  <span>January 15, 2025</span>
-                </div>
-                <h3 className="text-lg font-bold text-[#FF4A00] mb-3">
-                  Cordoba Academy Announces Middle School Expansion
-                </h3>
-                <p className="text-[#666666] mb-4">
-                  We're excited to announce our expansion to include 7th and 8th grades starting in the 2025-2026
-                  academic year.
-                </p>
-                <Link href="/news/middle-school-expansion">
-                  <Button
-                    variant="outline"
-                    className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
-                  >
-                    Read More
-                  </Button>
-                </Link>
-              </div>
-            </div>
+            {events.map((event) => {
+              const nextEventDate = getNextUpcomingDate(event.event_dates)
+              if (!nextEventDate) return null // Skip if no upcoming dates
 
-            <div className="bg-[#F5E8D8] rounded-lg overflow-hidden shadow-md">
-              <div className="relative h-96">
-                <Image src="/summer_camp_25.jpg" alt="Summer Camp Registration" fill className="object-contain" />
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 text-[#666666] text-sm mb-2">
-                  <Calendar className="h-4 w-4" />
-                  <span>February 1, 2025</span>
+              return (
+                <div key={event.event_id} className="bg-[#F5E8D8] rounded-lg overflow-hidden shadow-md">
+                  <div className="relative h-96">
+                    <Image 
+                      src={event.event_image_url} 
+                      alt={event.event_title} 
+                      fill 
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 text-[#666666] text-sm mb-2">
+                      <Calendar className="h-4 w-4" />
+                      <span>
+                        {new Intl.DateTimeFormat('en-US', {
+                          timeZone: 'America/Los_Angeles',
+                          year: 'numeric',
+                          month: 'long',
+                          day: 'numeric',
+                        }).format(nextEventDate)}
+                        {' • '}
+                        {new Intl.DateTimeFormat('en-US', {
+                          timeZone: 'America/Los_Angeles',
+                          hour: 'numeric',
+                          minute: 'numeric',
+                        }).format(new Date(`2000-01-01T${event.start_time}`))}
+                        {' - '}
+                        {new Intl.DateTimeFormat('en-US', {
+                          timeZone: 'America/Los_Angeles',
+                          hour: 'numeric',
+                          minute: 'numeric',
+                        }).format(new Date(`2000-01-01T${event.end_time}`))}
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-bold text-[#FF4A00] mb-3">
+                      {event.event_title}
+                    </h3>
+                    <p className="text-[#666666] mb-4 whitespace-pre-line">
+                      {event.event_description}
+                    </p>
+                    {event.registration_link && (
+                      <Link href={event.registration_link} target="_blank">
+                        <Button
+                          variant="outline"
+                          className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
+                        >
+                          Register Now
+                        </Button>
+                      </Link>
+                    )}
+                    {/* Learn More button commented out for future use
+                    {!event.registration_link && (
+                      <Button
+                        variant="outline"
+                        className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
+                      >
+                        Learn More
+                      </Button>
+                    )}
+                    */}
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-[#FF4A00] mb-3">Summer Camp Registration Opens</h3>
-                <p className="text-[#666666] mb-4">
-                  Registration for our popular summer camp program is now open. Secure your child's spot for a summer of
-                  fun and learning.
-                </p>
-                <Link href="/programs/summer-camp">
-                  <Button
-                    variant="outline"
-                    className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
-                  >
-                    Read More
-                  </Button>
-                </Link>
+              )
+            })}
+            {/* Add placeholder cards for remaining spaces */}
+            {Array.from({ length: Math.max(0, 4 - events.length) }).map((_, index) => (
+              <div key={`placeholder-${index}`} className="bg-[#F5E8D8] rounded-lg overflow-hidden shadow-md flex flex-col items-center justify-center p-8 text-center min-h-[200px]">
+                <Calendar className="h-12 w-12 text-[#B05834] mb-4 opacity-50" />
+                <h3 className="text-lg font-bold text-[#FF4A00] mb-2">Stay Tuned!</h3>
+                <p className="text-[#666666]">More exciting events coming soon...</p>
               </div>
-            </div>
-
-            <div className="bg-[#F5E8D8] rounded-lg overflow-hidden shadow-md">
-              <div className="relative h-96">
-                <Image src="/open-house.png" alt="Open House" fill className="object-contain" />
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 text-[#666666] text-sm mb-2">
-                  <Calendar className="h-4 w-4" />
-                  <span>February 15, 2025</span>
-                </div>
-                <h3 className="text-lg font-bold text-[#FF4A00] mb-3">Open House for Prospective Families</h3>
-                <p className="text-[#666666] mb-4">
-                  Join us for an informative open house event to learn about our programs, meet our staff, and tour our
-                  facilities.
-                </p>
-                <Link href="/events/open-house">
-                  <Button
-                    variant="outline"
-                    className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
-                  >
-                    Read More
-                  </Button>
-                </Link>
-              </div>
-            </div>
-
-            <div className="bg-[#F5E8D8] rounded-lg overflow-hidden shadow-md">
-              <div className="relative h-96">
-                <Image src="/middle-school.png" alt="Parent Teacher Conference" fill className="object-contain" />
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 text-[#666666] text-sm mb-2">
-                  <Calendar className="h-4 w-4" />
-                  <span>February 20, 2025</span>
-                </div>
-                <h3 className="text-lg font-bold text-[#FF4A00] mb-3">Parent Teacher Conference</h3>
-                <p className="text-[#666666] mb-4">
-                  Join us for our quarterly parent-teacher conference to discuss your child's progress and development.
-                </p>
-                <Link href="/events/parent-teacher-conference">
-                  <Button
-                    variant="outline"
-                    className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
-                  >
-                    Read More
-                  </Button>
-                </Link>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
