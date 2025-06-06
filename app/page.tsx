@@ -28,6 +28,22 @@ type Event = {
   event_dates: string[]
 }
 
+// Add these functions before the getEvents function
+function formatDate(dateStr: string): string {
+  // Split the date string and create date in UTC to avoid timezone issues
+  const [year, month, day] = dateStr.split('-').map(Number);
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  return `${months[month - 1]} ${day}, ${year}`;
+}
+
+function formatTime(timeStr: string): string {
+  const [hours, minutes] = timeStr.split(':');
+  const hour = parseInt(hours);
+  const ampm = hour >= 12 ? 'PM' : 'AM';
+  const hour12 = hour % 12 || 12;
+  return `${hour12}:${minutes} ${ampm}`;
+}
+
 // Function to get the next upcoming date from an array of dates
 function getNextUpcomingDate(dates: string[]): Date | null {
   // Create today's date in PST
@@ -124,17 +140,17 @@ export default async function Home() {
       {/* News and Events */}
       <div className="bg-white py-12">
         <div className="container mx-auto px-4">
-          {/* <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+          <div className="flex flex-col md:flex-row justify-between items-center mb-8">
             <h2 className="text-3xl font-bold text-[#B05834]">News & Events</h2>
-            <Link href="/news">
+            {/* <Link href="/news">
               <Button
                 variant="outline"
                 className="border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white flex items-center gap-2"
               >
                 View All <ArrowRight size={16} />
               </Button>
-            </Link>
-          </div> */}
+            </Link> */}
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {events.map((event) => {
               const nextEventDate = getNextUpcomingDate(event.event_dates)
@@ -154,24 +170,7 @@ export default async function Home() {
                     <div className="flex items-center gap-2 text-[#666666] text-sm mb-2">
                       <Calendar className="h-4 w-4" />
                       <span>
-                        {new Intl.DateTimeFormat('en-US', {
-                          timeZone: 'America/Los_Angeles',
-                          year: 'numeric',
-                          month: 'long',
-                          day: 'numeric',
-                        }).format(nextEventDate)}
-                        {' • '}
-                        {new Intl.DateTimeFormat('en-US', {
-                          timeZone: 'America/Los_Angeles',
-                          hour: 'numeric',
-                          minute: 'numeric',
-                        }).format(new Date(`2000-01-01T${event.start_time}`))}
-                        {' - '}
-                        {new Intl.DateTimeFormat('en-US', {
-                          timeZone: 'America/Los_Angeles',
-                          hour: 'numeric',
-                          minute: 'numeric',
-                        }).format(new Date(`2000-01-01T${event.end_time}`))}
+                        {formatDate(event.event_dates[0])} • {formatTime(event.start_time)} - {formatTime(event.end_time)}
                       </span>
                     </div>
                     <h3 className="text-lg font-bold text-[#FF4A00] mb-3">
