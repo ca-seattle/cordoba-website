@@ -356,22 +356,22 @@ export default async function Home() {
       <div className="container mx-auto px-4 py-12">
         <h2 className="text-3xl font-bold text-center text-[#B05834] mb-8">What Parents Say</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <p className="text-[#666666] italic mb-4">
+          <div className="bg-white p-6 rounded-lg shadow-md flex flex-col h-full">
+            <p className="text-[#666666] italic mb-4 flex-grow">
               "Cordoba Academy has been a blessing for our family. The teachers are dedicated and caring, and the
               Islamic environment has helped our children develop strong faith alongside academic excellence."
             </p>
             <p className="font-bold text-[#333333]">Parent of 2nd and 4th Graders</p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <p className="text-[#666666] italic mb-4">
+          <div className="bg-white p-6 rounded-lg shadow-md flex flex-col h-full">
+            <p className="text-[#666666] italic mb-4 flex-grow">
               "We love how the school integrates Islamic values into all aspects of learning. Our daughter has thrived
               academically and spiritually since joining Cordoba Academy."
             </p>
             <p className="font-bold text-[#333333]">Parent of Kindergartener</p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <p className="text-[#666666] italic mb-4">
+          <div className="bg-white p-6 rounded-lg shadow-md flex flex-col h-full">
+            <p className="text-[#666666] italic mb-4 flex-grow">
               "The small class sizes and personalized attention have made a tremendous difference for our son. The
               teachers truly know each child and help them reach their full potential."
             </p>

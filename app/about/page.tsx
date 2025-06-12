@@ -584,7 +584,7 @@ export default function AboutPage() {
       </div>
 
       {/* Faculty & Staff Highlights */}
-      <div className="bg-[#F5E8D8] py-12">
+      <div id="faculty" className="bg-[#F5E8D8] py-12">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-[#B05834] mb-8">
             Faculty & Staff

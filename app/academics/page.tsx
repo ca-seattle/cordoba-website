@@ -440,7 +440,7 @@ export default function AcademicsPage() {
               </div>
             </div>
             <div className="text-center mt-8">
-              <Link href="/about/faculty">
+              <Link href="/about#faculty">
                 <Button className="bg-[#B05834] hover:bg-[#8A4526] text-white">Meet Our Faculty</Button>
               </Link>
             </div>
