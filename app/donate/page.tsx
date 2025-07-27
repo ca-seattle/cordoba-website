@@ -21,24 +21,24 @@ export default function DonatePage() {
     {
       title: "Scholarship Fund",
       description:
-        "Help make Islamic education accessible to all families by contributing to our need-based scholarship program.",
+        "Help make Islamic education accessible to deserving families through Zakat and Sadaqah eligible scholarships.",
       icon: BookOpen,
       color: "#B05834",
     },
     {
-      title: "Teacher Development",
+      title: "Facility Operations",
       description:
-        "Invest in our teachers through professional development opportunities that enhance classroom instruction.",
-      icon: Users,
+        "Support our monthly operating expenses and paying off our property.",
+      icon: Building,
       color: "#FF4A00",
     },
-    {
-      title: "Facility Improvements",
-      description:
-        "Support upgrades to our campus, including classroom technology, playground equipment, and building maintenance.",
-      icon: Building,
-      color: "#B05834",
-    },
+    // {
+    //   title: "Facility Improvements",
+    //   description:
+    //     "Support upgrades to our campus, including classroom technology, playground equipment, and building maintenance.",
+    //   icon: Building,
+    //   color: "#B05834",
+    // },
   ]
 
   // Donation amounts
@@ -81,7 +81,7 @@ export default function DonatePage() {
 
             <h3 className="text-xl font-bold text-[#FF4A00] mb-6">Ways to Give</h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               {donationOptions.map((option, index) => (
                 <Card key={index}>
                   <CardHeader className="flex flex-row items-center gap-4">
@@ -117,6 +117,12 @@ export default function DonatePage() {
                   <div>
                     Many employers match charitable contributions. Check with your company to potentially double your
                     impact.
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="font-bold text-[#333333] w-32 flex-shrink-0">Stock Gifts</div>
+                  <div>
+                    Make a tax-efficient donation by transferring appreciated stocks or securities directly to our organization.
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
@@ -297,7 +303,7 @@ export default function DonatePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="text-center">
               <div className="bg-[#F5E8D8] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl font-bold text-[#B05834]">25%</span>
+                <span className="text-2xl font-bold text-[#B05834]">25%</span>
               </div>
               <h3 className="font-bold text-[#333333] mb-2">Scholarship Support</h3>
               <p className="text-[#666666]">
@@ -307,7 +313,7 @@ export default function DonatePage() {
             </div>
             <div className="text-center">
               <div className="bg-[#F5E8D8] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl font-bold text-[#B05834]">100%</span>
+                <span className="text-2xl font-bold text-[#B05834]">100%</span>
               </div>
               <h3 className="font-bold text-[#333333] mb-2">Faculty Development</h3>
               <p className="text-[#666666]">
@@ -316,7 +322,7 @@ export default function DonatePage() {
             </div>
             <div className="text-center">
               <div className="bg-[#F5E8D8] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl font-bold text-[#B05834]">15+</span>
+                <span className="text-2xl font-bold text-[#B05834]">15+</span>
               </div>
               <h3 className="font-bold text-[#333333] mb-2">Enrichment Programs</h3>
               <p className="text-[#666666]">

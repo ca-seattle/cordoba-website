@@ -296,9 +296,9 @@ export default function AcademicsPage() {
                         </span>
                       </li>
                     </ul>
-                    <Link href="/academics/after-school">
+                    {/* <Link href="/academics/after-school">
                       <Button className="bg-[#B05834] hover:bg-[#8A4526] text-white">Learn More</Button>
-                    </Link>
+                    </Link> */}
                   </div>
                   <div className="relative h-64 md:h-auto rounded-lg overflow-hidden">
                     <Image src="/after-school.jpg" alt="After-School Programs" fill className="object-cover" />
@@ -503,9 +503,9 @@ export default function AcademicsPage() {
               classrooms, meet our teachers, and learn more about our approach to Islamic education.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/enrollment/tour">
+              {/* <Link href="/enrollment/tour">
                 <Button className="bg-white text-[#B05834] hover:bg-[#F5E8D8] w-full sm:w-auto">Schedule a Tour</Button>
-              </Link>
+              </Link> */}
               <Link href="/enrollment">
                 <Button className="bg-[#FF4A00] hover:bg-[#FF4A00]/80 text-white w-full sm:w-auto">Apply Now</Button>
               </Link>

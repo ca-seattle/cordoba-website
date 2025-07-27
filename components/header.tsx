@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
-import { Home, BookOpen, UserPlus, Calendar, Info, Heart, Menu, X, User } from "lucide-react"
+import { Phone, BookOpen, UserPlus, Calendar, Info, Heart, Menu, X, User } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
 
@@ -19,7 +19,7 @@ export default function Header() {
     { name: "Enrollment", href: "/enrollment", icon: UserPlus },
     // { name: "Events & News", href: "/events", icon: Calendar },
     { name: "About Us", href: "/about", icon: Info },
-    // { name: "Donate", href: "/donate", icon: Heart },
+    { name: "Contact Us", href: "/contact", icon: Phone },
   ]
 
   // Update the secondaryItems array to include Parent Portal and Donate

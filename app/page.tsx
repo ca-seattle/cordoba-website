@@ -450,11 +450,11 @@ export default async function Home() {
             <Link href="/enrollment">
               <Button className="bg-[#B05834] hover:bg-[#8A4526] text-white">Enroll Now</Button>
             </Link>
-            <Link href="/enrollment/tour">
+            {/* <Link href="/enrollment/tour">
               <Button variant="outline" className="border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white">
                 Schedule a Tour
               </Button>
-            </Link>
+            </Link> */}
             <Link href="/contact">
               <Button variant="outline" className="border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white">
                 Contact Us

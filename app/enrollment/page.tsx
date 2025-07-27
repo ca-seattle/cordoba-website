@@ -107,7 +107,7 @@ export default function EnrollmentPage() {
 
             <div className="bg-[#F5E8D8] p-6 rounded-lg mb-8">
               <h3 className="text-xl font-bold text-[#FF4A00] mb-4">2025-2026 Enrollment Timeline</h3>
-              <ul className="space-y-4">
+              {/* <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <div className="w-24 flex-shrink-0 font-bold text-[#B05834]">January 15</div>
                   <div className="text-[#666666]">Re-enrollment begins for current families</div>
@@ -138,7 +138,17 @@ export default function EnrollmentPage() {
                   <div className="w-24 flex-shrink-0 font-bold text-[#B05834]">May-August</div>
                   <div className="text-[#666666]">Rolling admissions based on space availability</div>
                 </li>
-              </ul>
+              </ul> */}
+            </div>
+
+            <div className="bg-[#F5E8D8] p-6 rounded-lg mb-8">
+              <h3 className="text-xl font-bold text-[#FF4A00] mb-4">Statement of Non-Discrimination</h3>
+              <p className="text-[#666666]">
+                Cordoba Academy admits students of any race, color, national and ethnic origin to all the rights, privileges, programs, and activities 
+                generally accorded or made available to students at the school. It does not discriminate on the basis of race, color, national and 
+                ethnic origin in the administration of its educational policies, admissions policies, scholarship and loan programs, and athletic 
+                and other school-administered programs.
+              </p>
             </div>
 
             <h3 className="text-xl font-bold text-[#FF4A00] mb-4">Tuition & Fees</h3>
@@ -150,26 +160,22 @@ export default function EnrollmentPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <Card>
                 <CardHeader className="bg-[#F5E8D8]">
-                  <CardTitle className="text-[#B05834]">Preschool Program</CardTitle>
+                  <CardTitle className="text-[#B05834]">Preschool Program (Half-Day)</CardTitle>
                   <CardDescription>Ages 3-5</CardDescription>
                 </CardHeader>
                 <CardContent className="pt-6">
                   <div className="space-y-4">
                     <div className="flex justify-between">
-                      <span className="text-[#666666]">5 Half Days (AM)</span>
-                      <span className="font-bold text-[#333333]">$7,500/year</span>
+                      <span className="text-[#666666]">Monthly Tuition</span>
+                      <span className="font-bold text-[#333333]">$525/month</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-[#666666]">5 Full Days</span>
-                      <span className="font-bold text-[#333333]">$9,500/year</span>
+                      <span className="text-[#666666]">Payment Period</span>
+                      <span className="font-bold text-[#333333]">10 months</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-[#666666]">3 Full Days (M/W/F)</span>
-                      <span className="font-bold text-[#333333]">$7,200/year</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-[#666666]">2 Full Days (T/Th)</span>
-                      <span className="font-bold text-[#333333]">$5,000/year</span>
+                      <span className="text-[#666666]">Sibling Discount</span>
+                      <span className="font-bold text-[#333333]">10% off</span>
                     </div>
                   </div>
                 </CardContent>
@@ -276,9 +282,9 @@ export default function EnrollmentPage() {
               excellence and Islamic identity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/enrollment/tour">
+              {/* <Link href="/enrollment/tour">
                 <Button className="bg-white text-[#B05834] hover:bg-[#F5E8D8] w-full sm:w-auto">Schedule a Tour</Button>
-              </Link>
+              </Link> */}
               <Link href="https://portal.schoolcues.com/Portal/PreEnrollment/Index/EEB26BB8-40BA-4195-BAD5-36353AB41C77" target="_blank" rel="noopener noreferrer">
                 <Button className="bg-[#FF4A00] hover:bg-[#FF4A00]/80 text-white w-full sm:w-auto">Apply Now</Button>
               </Link>

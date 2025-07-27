@@ -678,7 +678,7 @@ export default function AboutPage() {
       </div>
 
       {/* Employment Opportunities */}
-      <div className="container mx-auto px-4 py-12">
+      {/* <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-lg p-8 shadow-md">
             <h2 className="text-2xl font-bold text-[#B05834] mb-6">
@@ -768,7 +768,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Call to Action */}
       <div className="bg-[#B05834] py-12 text-white">
@@ -780,9 +780,9 @@ export default function AboutPage() {
               Schedule a tour to see our facilities, meet our staff, and learn
               more about our programs.
             </p>
-            <Link href="/enrollment/tour">
+            <Link href="/contact">
               <Button className="bg-white text-[#B05834] hover:bg-[#F5E8D8]">
-                Schedule a Tour
+                Contact Us
               </Button>
             </Link>
           </div>
