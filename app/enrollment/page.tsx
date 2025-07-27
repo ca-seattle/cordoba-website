@@ -9,39 +9,26 @@ export default function EnrollmentPage() {
   // Enrollment steps
   const enrollmentSteps = [
     {
-      title: "Inquire",
-      description: "Complete our inquiry form to express interest and receive information about our programs.",
-      icon: HelpCircle,
+      title: "Admissions Inquiry Form",
+      description: "Begin your journey by completing our Admissions Inquiry Form, which helps us understand your child's background, including their academic history, interests, and goals. This information allows us to better evaluate how we can support your child's educational journey.",
+      icon: FileText,
       link: "/enrollment/inquire",
     },
     {
-      title: "Tour",
-      description: "Schedule a campus tour to see our facilities, meet our staff, and learn about our programs.",
-      icon: School,
-      link: "/enrollment/tour",
-    },
-    {
-      title: "Apply",
-      description: "Submit an application for admission, including student information and previous school records.",
-      icon: FileText,
-      link: "/enrollment/apply",
-    },
-    {
-      title: "Assessment",
-      description: "Students complete an age-appropriate assessment to determine proper placement.",
-      icon: CheckCircle,
-      link: "/enrollment/assessment",
-    },
-    {
       title: "Interview",
-      description: "Parents and students meet with school leadership to discuss expectations and answer questions.",
+      description: "Connect with our team in a personal interview where we get to know both you and your child. This valuable conversation helps us understand your educational goals while allowing us to share our school's values, philosophy, and expectations to ensure we're the right fit for your family.",
       icon: Users,
       link: "/enrollment/interview",
     },
     {
-      title: "Enrollment",
-      description:
-        "Upon acceptance, complete enrollment forms and submit tuition deposit to secure your child's place.",
+      title: "Evaluation",
+      description: "Our comprehensive evaluation process considers your child's academic performance, social skills, motivation, and your family's commitment to education. We carefully assess each candidate to ensure they're positioned to thrive in our unique learning environment.",
+      icon: CheckCircle,
+      link: "/enrollment/assessment",
+    },
+    {
+      title: "Registration Application",
+      description: "Selected candidates will be invited to complete our full registration application. This final step allows us to gather all necessary information before making our admissions decision.",
       icon: Calendar,
       link: "/enrollment/complete",
     },
@@ -70,6 +57,15 @@ export default function EnrollmentPage() {
 
             <h3 className="text-xl font-bold text-[#FF4A00] mb-6">Enrollment Process</h3>
 
+            <div className="bg-[#F5E8D8] p-6 rounded-lg mb-8">
+              <p className="text-[#666666] mb-4">
+                Our admissions process for Grades K–8 is selective and thoughtfully designed to create a thriving learning community. With limited spaces available in each grade and many applications received yearly, we carefully evaluate each candidate to ensure they will both benefit from our program and contribute positively to our school community.
+              </p>
+              <p className="text-[#666666]">
+                While we welcome all inquiries, please note that submitting an Admissions Inquiry Form does not guarantee enrollment. This selective process helps us maintain an environment where every student can flourish academically, spiritually, and socially.
+              </p>
+            </div>
+
             <div className="space-y-8 mb-8">
               {enrollmentSteps.map((step, index) => {
                 const IconComponent = step.icon
@@ -97,6 +93,16 @@ export default function EnrollmentPage() {
                   </div>
                 )
               })}
+            </div>
+
+            <div className="bg-white border-2 border-[#F5E8D8] p-6 rounded-lg mb-8">
+              <h3 className="text-xl font-bold text-[#FF4A00] mb-4">Waitlist Policy</h3>
+              <p className="text-[#666666] mb-4">
+                Qualified candidates who complete our admissions process may be offered a place on our waitlist when class capacity is reached. Waitlist status is maintained for the current academic year only.
+              </p>
+              <p className="text-[#666666]">
+                While we will contact families if space becomes available, placement on the waitlist does not guarantee enrollment. Families on the waitlist who are not admitted will need to reapply for the following school year.
+              </p>
             </div>
 
             <div className="bg-[#F5E8D8] p-6 rounded-lg mb-8">
@@ -177,8 +183,12 @@ export default function EnrollmentPage() {
                 <CardContent className="pt-6">
                   <div className="space-y-4">
                     <div className="flex justify-between">
-                      <span className="text-[#666666]">Annual Tuition</span>
-                      <span className="font-bold text-[#333333]">$9,800/year</span>
+                      <span className="text-[#666666]">Monthly Tuition</span>
+                      <span className="font-bold text-[#333333]">$600/month</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-[#666666]">Payment Period</span>
+                      <span className="font-bold text-[#333333]">10 months</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-[#666666]">Sibling Discount</span>
@@ -196,8 +206,12 @@ export default function EnrollmentPage() {
                 <CardContent className="pt-6">
                   <div className="space-y-4">
                     <div className="flex justify-between">
-                      <span className="text-[#666666]">Annual Tuition</span>
-                      <span className="font-bold text-[#333333]">$10,500/year</span>
+                      <span className="text-[#666666]">Monthly Tuition</span>
+                      <span className="font-bold text-[#333333]">$725/month</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-[#666666]">Payment Period</span>
+                      <span className="font-bold text-[#333333]">10 months</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-[#666666]">Sibling Discount</span>
@@ -210,21 +224,21 @@ export default function EnrollmentPage() {
               <Card>
                 <CardHeader className="bg-[#F5E8D8]">
                   <CardTitle className="text-[#B05834]">Additional Fees</CardTitle>
-                  <CardDescription>One-time and annual fees</CardDescription>
+                  <CardDescription>Annual Registration and Other Fees</CardDescription>
                 </CardHeader>
                 <CardContent className="pt-6">
                   <div className="space-y-4">
                     <div className="flex justify-between">
-                      <span className="text-[#666666]">Application Fee (new students)</span>
+                      <span className="text-[#666666]">Registration Fee (annual)</span>
                       <span className="font-bold text-[#333333]">$100</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-[#666666]">Registration Fee (annual)</span>
-                      <span className="font-bold text-[#333333]">$300</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-[#666666]">Materials Fee (annual)</span>
-                      <span className="font-bold text-[#333333]">$250</span>
+                    <div className="mt-6 p-4 bg-[#F5E8D8] rounded-lg">
+                      <p className="text-[#666666] mb-2 font-medium">
+                        Please note that additional nonrefundable yearly fees are required and must be paid upfront.
+                      </p>
+                      <p className="text-[#666666] text-sm">
+                        These fees will be outlined in the enrollment package.
+                      </p>
                     </div>
                   </div>
                 </CardContent>
@@ -241,8 +255,11 @@ export default function EnrollmentPage() {
                 need-based financial aid to eligible families. Financial aid applications are reviewed separately from
                 admission applications and do not affect admission decisions.
               </p>
-              <Link href="/enrollment/financial-aid">
-                <Button className="bg-[#B05834] hover:bg-[#8A4526] text-white">Learn About Financial Aid</Button>
+              <p className="text-[#666666] mb-6">
+                If you have questions about tuition, fees, or financial aid options, please don't hesitate to reach out. Our admissions team is here to assist you in making Islamic education accessible for your family.
+              </p>
+              <Link href="/contact">
+                <Button className="bg-[#B05834] hover:bg-[#8A4526] text-white">Contact Us</Button>
               </Link>
             </div>
           </div>
@@ -259,15 +276,10 @@ export default function EnrollmentPage() {
               excellence and Islamic identity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/enrollment/inquire">
-                <Button className="bg-white text-[#B05834] hover:bg-[#F5E8D8] w-full sm:w-auto">
-                  Request Information
-                </Button>
-              </Link>
               <Link href="/enrollment/tour">
                 <Button className="bg-white text-[#B05834] hover:bg-[#F5E8D8] w-full sm:w-auto">Schedule a Tour</Button>
               </Link>
-              <Link href="/enrollment/apply">
+              <Link href="https://portal.schoolcues.com/Portal/PreEnrollment/Index/EEB26BB8-40BA-4195-BAD5-36353AB41C77" target="_blank" rel="noopener noreferrer">
                 <Button className="bg-[#FF4A00] hover:bg-[#FF4A00]/80 text-white w-full sm:w-auto">Apply Now</Button>
               </Link>
             </div>
@@ -316,35 +328,6 @@ export default function EnrollmentPage() {
         </div>
       </div>
 
-      {/* Testimonials */}
-      <div className="bg-white py-12">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-[#B05834] mb-8">What Parents Say</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-[#F5E8D8] p-6 rounded-lg">
-              <p className="text-[#666666] italic mb-4">
-                "Enrolling our children at Cordoba Academy was one of the best decisions we've made. The balance of
-                academic rigor and Islamic education is exactly what we were looking for."
-              </p>
-              <p className="font-bold text-[#333333]">Ahmed & Fatima, Parents of 2nd and 4th Graders</p>
-            </div>
-            <div className="bg-[#F5E8D8] p-6 rounded-lg">
-              <p className="text-[#666666] italic mb-4">
-                "The enrollment process was smooth and supportive. The staff took the time to answer all our questions
-                and made us feel welcome from day one."
-              </p>
-              <p className="font-bold text-[#333333]">Sarah, Parent of Kindergartener</p>
-            </div>
-            <div className="bg-[#F5E8D8] p-6 rounded-lg">
-              <p className="text-[#666666] italic mb-4">
-                "We transferred mid-year from a public school, and the transition was seamless. Our son has thrived
-                academically and spiritually at Cordoba Academy."
-              </p>
-              <p className="font-bold text-[#333333]">Omar & Aisha, Parents of 3rd Grader</p>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Contact Section */}
       <div className="container mx-auto px-4 py-12">

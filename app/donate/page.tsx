@@ -60,8 +60,23 @@ export default function DonatePage() {
               your contributions are tax-deductible to the extent allowed by law.
             </p>
 
-            <div className="relative h-60 rounded-lg overflow-hidden mb-8">
-              <Image src="/donate-hero.png" alt="Students at Cordoba Academy" fill className="object-cover" />
+            <div className="bg-[#F5E8D8] rounded-lg p-8 mb-8">
+              <div className="max-w-3xl mx-auto">
+                <p className="text-[#666666] mb-6 leading-relaxed">
+                  We appeal today to ask for your support in our mission to provide educational resources to as many Muslim students as possible. Your donation will help us create a safe space for Muslim youth to foster their identity and provide impactful educational programs including summer camps, field trips, and professional workshops fostering community engagement.
+                </p>
+                <div className="border-l-4 border-[#FF4A00] pl-6 py-2 mb-6">
+                  <p className="text-[#333333] italic font-medium">
+                    "The believer's shade on the Day of Resurrection will be his charity."
+                  </p>
+                  <p className="text-[#666666] text-sm mt-2">
+                    — Prophet Muhammad ﷺ (Al-Tirmidhi)
+                  </p>
+                </div>
+                <p className="text-[#666666]">
+                  Your tax-deductible donation will go directly towards our programs and initiatives. We value every contribution, no matter how big or small, and we assure you that it will be put to good use in serving our community.
+                </p>
+              </div>
             </div>
 
             <h3 className="text-xl font-bold text-[#FF4A00] mb-6">Ways to Give</h3>

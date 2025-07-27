@@ -22,8 +22,11 @@ export default function Header() {
     // { name: "Donate", href: "/donate", icon: Heart },
   ]
 
-  // Update the secondaryItems array to include only Parent Portal
-  const secondaryItems = [{ name: "Parent Portal", href: "/parent-portal", icon: User }]
+  // Update the secondaryItems array to include Parent Portal and Donate
+  const secondaryItems = [
+    { name: "Parent Portal", href: "/parent-portal", icon: User },
+    { name: "Donate", href: "/donate", icon: Heart },
+  ]
 
   const isActive = (href: string) => {
     if (href === "/") {
@@ -134,6 +137,15 @@ export default function Header() {
                 const active = isActive(item.href)
                 const IconComponent = item.icon
 
+                // Special styling for Donate button in desktop view
+                if (item.name === "Donate") {
+                  return (
+                    <Link key={item.name} href={item.href}>
+                      <Button className="bg-[#FF4A00] hover:bg-[#B05834] text-white">Donate</Button>
+                    </Link>
+                  )
+                }
+
                 return (
                   <Link
                     key={item.name}
@@ -147,9 +159,6 @@ export default function Header() {
                   </Link>
                 )
               })}
-              <Link href="/donate">
-                <Button className="bg-[#FF4A00] hover:bg-[#B05834] text-white">Donate</Button>
-              </Link>
             </div>
           </nav>
         </div>
