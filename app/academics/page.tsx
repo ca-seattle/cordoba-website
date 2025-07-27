@@ -266,27 +266,33 @@ export default function AcademicsPage() {
                   <div>
                     <h3 className="text-xl font-bold text-[#FF4A00] mb-4">After-School Programs</h3>
                     <p className="text-[#666666] mb-4">
-                      Our after-school programs provide extended learning opportunities and enrichment activities for
-                      students. These programs include homework help, Quran memorization, arts and crafts, sports, and
-                      more.
+                      Our after-school program focuses specifically on Quran recitation and memorization, providing students 
+                      with dedicated time and instruction to strengthen their connection with the Holy Quran. This program 
+                      offers personalized guidance to help students develop proper tajweed and build their memorization skills.
                     </p>
                     <ul className="space-y-2 mb-6">
                       <li className="flex items-start gap-2">
                         <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
                         <span className="text-[#666666]">
-                          Extended care available from 3:30 PM to 5:30 PM, Monday through Friday
+                          Individualized Quran recitation and memorization instruction
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
                         <span className="text-[#666666]">
-                          Structured activities including homework help, Quran practice, and enrichment
+                          Focus on proper tajweed and pronunciation techniques
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
                         <span className="text-[#666666]">
-                          Supervised by qualified staff in a safe, nurturing environment
+                          Supervised by qualified Quran teachers in a supportive environment
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <BookOpen className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#666666]">
+                          Progress tracking and regular assessments of memorization goals
                         </span>
                       </li>
                     </ul>
@@ -295,7 +301,7 @@ export default function AcademicsPage() {
                     </Link>
                   </div>
                   <div className="relative h-64 md:h-auto rounded-lg overflow-hidden">
-                    <Image src="/after-school.png" alt="After-School Programs" fill className="object-cover" />
+                    <Image src="/after-school.jpg" alt="After-School Programs" fill className="object-cover" />
                   </div>
                 </div>
               </TabsContent>
@@ -449,7 +455,7 @@ export default function AcademicsPage() {
       </div>
 
       {/* Summer Programs */}
-      <div className="container mx-auto px-4 py-12">
+      {/* <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-[#B05834] mb-8">Summer Programs</h2>
           <div className="bg-white rounded-lg p-8 shadow-md">
@@ -485,7 +491,7 @@ export default function AcademicsPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Call to Action */}
       <div className="bg-[#B05834] py-12">

@@ -15,9 +15,9 @@ export default function ContactPage() {
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="flex justify-center">
             {/* Contact Information */}
-            <div>
+            <div className="max-w-2xl">
               <div className="bg-white rounded-lg p-8 shadow-md mb-8">
                 <h2 className="text-2xl font-bold text-[#B05834] mb-6">
                   Get in Touch
@@ -79,7 +79,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="bg-[#F5E8D8] p-6 rounded-lg">
+              {/* <div className="bg-[#F5E8D8] p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-[#FF4A00] mb-4">
                   Department Contacts
                 </h3>
@@ -112,11 +112,11 @@ export default function ContactPage() {
                     <p className="text-[#666666]">(425) 775-3578 ext. 3</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white rounded-lg p-8 shadow-md">
+            {/* <div className="bg-white rounded-lg p-8 shadow-md">
               <h2 className="text-2xl font-bold text-[#B05834] mb-6">
                 Send Us a Message
               </h2>
@@ -228,7 +228,7 @@ export default function ContactPage() {
                   We'll respond to your inquiry within 1-2 business days.
                 </p>
               </form>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

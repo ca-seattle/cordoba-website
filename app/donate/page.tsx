@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Heart, BookOpen, Users, Building, Gift, Calendar } from "lucide-react"
+import { Heart, BookOpen, Users, Building, Gift, Calendar, CreditCard, Smartphone } from "lucide-react"
 import PageHero from "@/components/page-hero"
 
 export default function DonatePage() {
@@ -120,7 +120,66 @@ export default function DonatePage() {
 
             <h3 className="text-xl font-bold text-[#FF4A00] mb-6">Make a Donation</h3>
 
-            <div className="bg-[#F5E8D8] p-6 rounded-lg">
+            {/* Mobile Payment Options */}
+            <div className="bg-white border-2 border-[#E5D5C5] p-6 rounded-lg mb-6">
+              <h4 className="text-lg font-bold text-[#B05834] mb-4">Donation Options</h4>
+              <p className="text-[#666666] mb-6">Scan the QR codes or use the links below to donate instantly via PayPal, Venmo or Zelle.</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="bg-[#F5E8D8] p-4 rounded-lg mb-4 h-24 flex flex-col justify-between">
+                    <Image src="/paypal.png" alt="PayPal" width={90} height={45} className="mx-auto" />
+                    <p className="text-[#666666] text-sm">One-time or Monthly</p>
+                  </div>
+                  <div className="bg-white border-2 border-[#E5D5C5] p-4 rounded-lg mb-3 h-48 flex items-center justify-center">
+                    <div className="text-center">
+                    <a
+                      href="https://www.paypal.com/donate/?hosted_button_id=AJFCNVUGCZEJU"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:opacity-80 transition-opacity"
+                    >
+                      <Image src="/paypal_qr.png" alt="PayPal QR Code" width={120} height={120} className="mx-auto mb-1.5 mt-5" />
+                      </a>
+                      <form action="https://www.paypal.com/donate" method="post" target="_blank">
+                        <input type="hidden" name="hosted_button_id" value="AJFCNVUGCZEJU" />
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                        <img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                      </form>
+                    </div>
+                  </div>
+                  <p className="text-[#666666] text-sm">Click or scan to donate via PayPal</p>
+                </div>
+                <div className="text-center">
+                  <div className="bg-[#F5E8D8] p-4 rounded-lg mb-4 h-24 flex flex-col justify-between">
+                    <Image src="/venmo_blue.png" alt="Venmo" width={80} height={40} className="mx-auto mt-2" />
+                    <p className="text-[#666666] text-sm">@cordobaacadmy</p>
+                  </div>
+                  <div className="bg-white border-2 border-[#E5D5C5] p-4 rounded-lg mb-3 h-48 flex items-center justify-center">
+                    <a
+                      href="https://account.venmo.com/u/cordobaacadmy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:opacity-80 transition-opacity"
+                    >
+                      <Image src="/venmo_qr.jpg" alt="Venmo QR Code" width={160} height={160} className="mx-auto" />
+                    </a>
+                  </div>
+                  <p className="text-[#666666] text-sm">Click or scan to donate via Venmo</p>
+                </div>
+                <div className="text-center">
+                  <div className="bg-[#F5E8D8] p-4 rounded-lg mb-4 h-24 flex flex-col justify-between">
+                    <Image src="/zelle.png" alt="Zelle" width={80} height={40} className="mx-auto" />
+                    <p className="text-[#666666] text-sm">donate@cordobaacademy.org</p>
+                  </div>
+                  <div className="bg-white border-2 border-[#E5D5C5] p-4 rounded-lg mb-3 h-48 flex items-center justify-center">
+                    <Image src="/zelle_qr.jpg" alt="Zelle QR Code" width={160} height={160} className="mx-auto" />
+                  </div>
+                  <p className="text-[#666666] text-sm">Scan to donate via Zelle</p>
+                </div>
+              </div>
+            </div>
+
+            {/* <div className="bg-[#F5E8D8] p-6 rounded-lg">
               <form className="space-y-6">
                 <div>
                   <Label htmlFor="donation-fund" className="text-[#333333] font-bold">
@@ -211,7 +270,7 @@ export default function DonatePage() {
                   Your donation is secure and encrypted. You will receive a tax receipt via email.
                 </p>
               </form>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -298,27 +357,27 @@ export default function DonatePage() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-[#B05834] mb-8">Why Donors Give</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-[#F5E8D8] p-6 rounded-lg">
-              <p className="text-[#666666] italic mb-4">
+            <div className="bg-[#F5E8D8] p-6 rounded-lg flex flex-col">
+              <p className="text-[#666666] italic mb-4 flex-1">
                 "I support Cordoba Academy because I believe in investing in the future of our community. The school
                 provides an environment where children can excel academically while developing a strong Islamic
                 identity."
               </p>
-              <p className="font-bold text-[#333333]">Kareem J., Monthly Donor</p>
+              <p className="font-bold text-[#333333] mt-auto">Kareem J., Monthly Donor</p>
             </div>
-            <div className="bg-[#F5E8D8] p-6 rounded-lg">
-              <p className="text-[#666666] italic mb-4">
+            <div className="bg-[#F5E8D8] p-6 rounded-lg flex flex-col">
+              <p className="text-[#666666] italic mb-4 flex-1">
                 "As a grandparent, I want to ensure that quality Islamic education is available for generations to come.
                 My donations to the scholarship fund help make this education accessible to all families."
               </p>
-              <p className="font-bold text-[#333333]">Amina & Yusuf S., Scholarship Fund Donors</p>
+              <p className="font-bold text-[#333333] mt-auto">Amina & Yusuf S., Scholarship Fund Donors</p>
             </div>
-            <div className="bg-[#F5E8D8] p-6 rounded-lg">
-              <p className="text-[#666666] italic mb-4">
+            <div className="bg-[#F5E8D8] p-6 rounded-lg flex flex-col">
+              <p className="text-[#666666] italic mb-4 flex-1">
                 "I'm a community member without children at the school, but I recognize the importance of supporting
                 institutions that build strong Muslim Americans. Cordoba Academy is developing the leaders of tomorrow."
               </p>
-              <p className="font-bold text-[#333333]">Ibrahim M., Annual Fund Supporter</p>
+              <p className="font-bold text-[#333333] mt-auto">Ibrahim M., Annual Fund Supporter</p>
             </div>
           </div>
         </div>
@@ -341,23 +400,23 @@ export default function DonatePage() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-[#B05834] mb-4">Questions About Giving?</h2>
           <p className="text-[#666666] mb-6">
-            Our development team is here to help with any questions about donations, planned giving, or other ways to
+            Our team is here to help with any questions about donations, planned giving, or other ways to
             support Cordoba Academy.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
               <Button className="bg-[#B05834] hover:bg-[#8A4526] text-white w-full sm:w-auto">
-                Contact Development
+                Contact Us
               </Button>
             </Link>
-            <Link href="/donate/faq">
+            {/* <Link href="/donate/faq">
               <Button
                 variant="outline"
                 className="border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white w-full sm:w-auto"
               >
                 Donation FAQs
               </Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

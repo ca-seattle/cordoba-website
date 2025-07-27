@@ -63,11 +63,11 @@ export default function Footer() {
                   Enrollment
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/events" className="text-[#CCCCCC] hover:text-white transition">
                   Events & News
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/about" className="text-[#CCCCCC] hover:text-white transition">
                   About Us
@@ -119,19 +119,31 @@ export default function Footer() {
             <h3 className="font-bold text-lg mb-4 border-b border-[#4D4D4D] pb-2">Newsletter</h3>
             <p className="text-[#CCCCCC] mb-4">Subscribe to our newsletter to receive updates and announcements.</p>
             <div className="flex flex-col gap-2">
-              <Input
+              {/* <Input
                 type="email"
                 placeholder="Your email address"
                 className="bg-[#4D4D4D] border-[#4D4D4D] text-white placeholder:text-[#999999]"
-              />
-              <Button className="bg-[#FF4A00] hover:bg-[#B05834] text-white">Subscribe</Button>
+              /> */}
+              <Button 
+                asChild
+                className="bg-[#FF4A00] hover:bg-[#B05834] text-white"
+              >
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSc0VLXCIqaiCSH04LyVW65g_6qoh0DR7-dY5O_g7EmOQaQsPQ/viewform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Subscribe
+                </a>
+              </Button>
             </div>
           </div>
         </div>
 
         <div className="border-t border-[#4D4D4D] mt-8 pt-8 text-center text-[#CCCCCC]">
           <p>&copy; {new Date().getFullYear()} Cordoba Academy. All rights reserved.</p>
-          <div className="flex justify-center gap-4 mt-2">
+          <p className="text-xs text-[#999999] mt-1">Registered 501c3 EIN #47-4297945</p>
+          {/* <div className="flex justify-center gap-4 mt-2">
             <Link href="/privacy-policy" className="hover:text-white transition">
               Privacy Policy
             </Link>
@@ -141,7 +153,7 @@ export default function Footer() {
             <Link href="/sitemap" className="hover:text-white transition">
               Sitemap
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

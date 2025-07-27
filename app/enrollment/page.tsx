@@ -65,7 +65,7 @@ export default function EnrollmentPage() {
             </p>
 
             <div className="relative h-60 rounded-lg overflow-hidden mb-8">
-              <Image src="/enrollment-hero.png" alt="Students at Cordoba Academy" fill className="object-cover" />
+              <Image src="/enrollment_cover.jpg" alt="Students at Cordoba Academy" fill className="object-cover" style={{ objectPosition: 'center 60%' }} />
             </div>
 
             <h3 className="text-xl font-bold text-[#FF4A00] mb-6">Enrollment Process</h3>
@@ -85,14 +85,14 @@ export default function EnrollmentPage() {
                         Step {index + 1}: {step.title}
                       </h4>
                       <p className="text-[#666666] mb-2">{step.description}</p>
-                      <Link href={step.link}>
+                      {/* <Link href={step.link}>
                         <Button
                           variant="outline"
                           className="border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
                         >
                           Learn More
                         </Button>
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                 )

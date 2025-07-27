@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { Home, BookOpen, UserPlus, Calendar, Info, Heart, Menu, X, User } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
 
 export default function Header() {
   const pathname = usePathname()
@@ -17,7 +17,7 @@ export default function Header() {
     // { name: "Home", href: "/", icon: Home },
     { name: "Academics", href: "/academics", icon: BookOpen },
     { name: "Enrollment", href: "/enrollment", icon: UserPlus },
-    { name: "Events & News", href: "/events", icon: Calendar },
+    // { name: "Events & News", href: "/events", icon: Calendar },
     { name: "About Us", href: "/about", icon: Info },
     // { name: "Donate", href: "/donate", icon: Heart },
   ]
@@ -53,16 +53,13 @@ export default function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="bg-[#FFF2E6] w-[300px] p-0">
+                <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
                 <div className="flex flex-col h-full">
-                  <div className="flex items-center justify-between p-4 border-b border-[#E5D5C5]">
+                  <div className="flex items-center p-4 border-b border-[#E5D5C5]">
                     <div className="flex items-center gap-2">
-                      <Image src="/logo.png" alt="Cordoba Academy Logo" width={30} height={30} />
+                      <Image src="/logo-dome.png" alt="Cordoba Academy Logo" width={30} height={30} />
                       <span className="text-[#333333] font-medium">Cordoba Academy</span>
                     </div>
-                    <Button variant="ghost" className="p-0 h-auto" onClick={() => setMobileMenuOpen(false)}>
-                      <X size={24} className="text-[#333333]" />
-                      <span className="sr-only">Close menu</span>
-                    </Button>
                   </div>
                   <nav className="flex-1 overflow-auto py-4">
                     <ul className="space-y-2 px-2">
