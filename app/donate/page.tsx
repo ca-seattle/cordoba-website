@@ -1,12 +1,33 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Heart, BookOpen, Users, Building, Gift, Calendar, CreditCard, Smartphone } from "lucide-react"
-import PageHero from "@/components/page-hero"
+import type { Metadata } from "next"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Heart,
+  BookOpen,
+  Building,
+  Gift,
+  Calendar,
+} from "lucide-react";
+import PageHero from "@/components/page-hero";
+
+export const metadata: Metadata = {
+  title: "Donate",
+  description: "Support Islamic education in the Seattle area. Your donations help Cordoba Academy provide quality education to students in Seattle, Lynnwood & Mountlake Terrace communities.",
+  openGraph: {
+    title: "Support Cordoba Academy | Donate to Islamic Education",
+    description: "Make a difference in Islamic education. Your support helps us provide quality education to students in Seattle, Lynnwood & Mountlake Terrace.",
+    images: ['/logo-full.png']
+  },
+  keywords: ['Donate Islamic School Seattle', 'Support Muslim Education', 'Islamic School Donation Lynnwood', 'Support Cordoba Academy']
+};
 
 export default function DonatePage() {
   // Donation options
@@ -39,61 +60,92 @@ export default function DonatePage() {
     //   icon: Building,
     //   color: "#B05834",
     // },
-  ]
+  ];
 
   // Donation amounts
-  const donationAmounts = ["$25", "$50", "$100", "$250", "$500", "$1,000", "Other"]
+  const donationAmounts = [
+    "$25",
+    "$50",
+    "$100",
+    "$250",
+    "$500",
+    "$1,000",
+    "Other",
+  ];
 
   return (
     <div className="bg-[#FFF2E6]">
       {/* Hero Section */}
-      <PageHero title="Support Our Mission" subtitle="Your generosity helps shape the future of our students" />
+      <PageHero
+        title="Support Our Mission"
+        subtitle="Your generosity helps shape the future of our students"
+      />
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-lg p-8 shadow-md mb-8">
-            <h2 className="text-2xl font-bold text-[#B05834] mb-6">Make a Difference Today</h2>
+            <h2 className="text-2xl font-bold text-[#B05834] mb-6">
+              Make a Difference Today
+            </h2>
             <p className="text-[#666666] mb-6">
-              Your support enables Cordoba Academy to provide an exceptional educational experience that nurtures
-              academic excellence, Islamic identity, and character development. As a 501(c)(3) nonprofit organization,
-              your contributions are tax-deductible to the extent allowed by law.
+              Your support enables Cordoba Academy to provide an exceptional
+              educational experience that nurtures academic excellence, Islamic
+              identity, and character development. As a 501(c)(3) nonprofit
+              organization, your contributions are tax-deductible to the extent
+              allowed by law.
             </p>
 
             <div className="bg-[#F5E8D8] rounded-lg p-8 mb-8">
               <div className="max-w-3xl mx-auto">
                 <p className="text-[#666666] mb-6 leading-relaxed">
-                  We appeal today to ask for your support in our mission to provide educational resources to as many Muslim students as possible. Your donation will help us create a safe space for Muslim youth to foster their identity and provide impactful educational programs including summer camps, field trips, and professional workshops fostering community engagement.
+                  We appeal today to ask for your support in our mission to
+                  provide educational resources to as many Muslim students as
+                  possible. Your donation will help us create a safe space for
+                  Muslim youth to foster their identity and provide impactful
+                  educational programs including summer camps, field trips, and
+                  professional workshops fostering community engagement.
                 </p>
                 <div className="border-l-4 border-[#FF4A00] pl-6 py-2 mb-6">
                   <p className="text-[#333333] italic font-medium">
-                    "The believer's shade on the Day of Resurrection will be his charity."
+                    "The believer's shade on the Day of Resurrection will be his
+                    charity."
                   </p>
                   <p className="text-[#666666] text-sm mt-2">
                     — Prophet Muhammad ﷺ (Al-Tirmidhi)
                   </p>
                 </div>
                 <p className="text-[#666666]">
-                  Your tax-deductible donation will go directly towards our programs and initiatives. We value every contribution, no matter how big or small, and we assure you that it will be put to good use in serving our community.
+                  Your tax-deductible donation will go directly towards our
+                  programs and initiatives. We value every contribution, no
+                  matter how big or small, and we assure you that it will be put
+                  to good use in serving our community.
                 </p>
               </div>
             </div>
 
-            <h3 className="text-xl font-bold text-[#FF4A00] mb-6">Ways to Give</h3>
+            <h3 className="text-xl font-bold text-[#FF4A00] mb-6">
+              Ways to Give
+            </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               {donationOptions.map((option, index) => (
                 <Card key={index}>
                   <CardHeader className="flex flex-row items-center gap-4">
                     <div className="bg-[#F5E8D8] rounded-full p-2">
-                      <option.icon className="h-5 w-5" style={{ color: option.color }} />
+                      <option.icon
+                        className="h-5 w-5"
+                        style={{ color: option.color }}
+                      />
                     </div>
                     <div>
                       <CardTitle>{option.title}</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-[#666666]">{option.description}</CardDescription>
+                    <CardDescription className="text-[#666666]">
+                      {option.description}
+                    </CardDescription>
                   </CardContent>
                 </Card>
               ))}
@@ -102,100 +154,189 @@ export default function DonatePage() {
             <div className="bg-[#F5E8D8] p-6 rounded-lg mb-8">
               <div className="flex items-center gap-4 mb-4">
                 <Gift className="h-8 w-8 text-[#B05834]" />
-                <h3 className="text-xl font-bold text-[#FF4A00]">Other Ways to Support</h3>
+                <h3 className="text-xl font-bold text-[#FF4A00]">
+                  Other Ways to Support
+                </h3>
               </div>
               <ul className="space-y-4 text-[#666666]">
                 <li className="flex items-start gap-3">
-                  <div className="font-bold text-[#333333] w-32 flex-shrink-0">Planned Giving</div>
+                  <div className="font-bold text-[#333333] w-32 flex-shrink-0">
+                    Planned Giving
+                  </div>
                   <div>
-                    Include Cordoba Academy in your will or estate planning to create a lasting legacy of support for
-                    Islamic education.
+                    Include Cordoba Academy in your will or estate planning to
+                    create a lasting legacy of support for Islamic education.
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="font-bold text-[#333333] w-32 flex-shrink-0">Matching Gifts</div>
+                  <div className="font-bold text-[#333333] w-32 flex-shrink-0">
+                    Matching Gifts
+                  </div>
                   <div>
-                    Many employers match charitable contributions. Check with your company to potentially double your
-                    impact.
+                    Many employers match charitable contributions. Check with
+                    your company to potentially double your impact.
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="font-bold text-[#333333] w-32 flex-shrink-0">Stock Gifts</div>
+                  <div className="font-bold text-[#333333] w-32 flex-shrink-0">
+                    Stock Gifts
+                  </div>
                   <div>
-                    Make a tax-efficient donation by transferring appreciated stocks or securities directly to our organization.
+                    Make a tax-efficient donation by transferring appreciated
+                    stocks or securities directly to our organization.
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="font-bold text-[#333333] w-32 flex-shrink-0">In-Kind Donations</div>
+                  <div className="font-bold text-[#333333] w-32 flex-shrink-0">
+                    In-Kind Donations
+                  </div>
                   <div>
-                    Donate goods or services that support our educational mission, such as books, technology, or
-                    professional expertise.
+                    Donate goods or services that support our educational
+                    mission, such as books, technology, or professional
+                    expertise.
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="font-bold text-[#333333] w-32 flex-shrink-0">Volunteer</div>
-                  <div>Contribute your time and talents to support our students, teachers, and school events.</div>
+                  <div className="font-bold text-[#333333] w-32 flex-shrink-0">
+                    Volunteer
+                  </div>
+                  <div>
+                    Contribute your time and talents to support our students,
+                    teachers, and school events.
+                  </div>
                 </li>
               </ul>
             </div>
 
-            <h3 className="text-xl font-bold text-[#FF4A00] mb-6">Make a Donation</h3>
+            <h3 className="text-xl font-bold text-[#FF4A00] mb-6">
+              Make a Donation
+            </h3>
 
             {/* Mobile Payment Options */}
             <div className="bg-white border-2 border-[#E5D5C5] p-6 rounded-lg mb-6">
-              <h4 className="text-lg font-bold text-[#B05834] mb-4">Donation Options</h4>
-              <p className="text-[#666666] mb-6">Scan the QR codes or use the links below to donate instantly via PayPal, Venmo or Zelle.</p>
+              <h4 className="text-lg font-bold text-[#B05834] mb-4">
+                Donation Options
+              </h4>
+              <p className="text-[#666666] mb-6">
+                Scan the QR codes or use the links below to donate instantly via
+                PayPal, Venmo or Zelle.
+              </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center">
                   <div className="bg-[#F5E8D8] p-4 rounded-lg mb-4 h-24 flex flex-col justify-between">
-                    <Image src="/paypal.png" alt="PayPal" width={90} height={45} className="mx-auto" />
-                    <p className="text-[#666666] text-sm">One-time or Monthly</p>
+                    <Image
+                      src="/paypal.png"
+                      alt="PayPal"
+                      width={90}
+                      height={45}
+                      className="mx-auto"
+                    />
+                    <p className="text-[#666666] text-sm">
+                      One-time or Monthly
+                    </p>
                   </div>
                   <div className="bg-white border-2 border-[#E5D5C5] p-4 rounded-lg mb-3 h-48 flex items-center justify-center">
                     <div className="text-center">
-                    <a
-                      href="https://www.paypal.com/donate/?hosted_button_id=AJFCNVUGCZEJU"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:opacity-80 transition-opacity"
-                    >
-                      <Image src="/paypal_qr.png" alt="PayPal QR Code" width={120} height={120} className="mx-auto mb-1.5 mt-5" />
-                      </a>
-                      <form action="https://www.paypal.com/donate" method="post" target="_blank">
-                        <input type="hidden" name="hosted_button_id" value="AJFCNVUGCZEJU" />
-                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                        <img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                      <Link
+                        href="https://www.paypal.com/donate/?hosted_button_id=AJFCNVUGCZEJU"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:opacity-80 transition-opacity"
+                      >
+                        <Image
+                          src="/paypal_qr.png"
+                          alt="PayPal QR Code"
+                          width={120}
+                          height={120}
+                          className="mx-auto mb-1.5 mt-5"
+                        />
+                      </Link>
+                      <form
+                        action="https://www.paypal.com/donate"
+                        method="post"
+                        target="_blank"
+                      >
+                        <input
+                          type="hidden"
+                          name="hosted_button_id"
+                          value="AJFCNVUGCZEJU"
+                        />
+                        <input
+                          type="image"
+                          src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"
+                          name="submit"
+                          title="PayPal - The safer, easier way to pay online!"
+                          alt="Donate with PayPal button"
+                        />
+                        <img
+                          alt=""
+                          src="https://www.paypal.com/en_US/i/scr/pixel.gif"
+                          width="1"
+                          height="1"
+                        />
                       </form>
                     </div>
                   </div>
-                  <p className="text-[#666666] text-sm">Click or scan to donate via PayPal</p>
+                  <p className="text-[#666666] text-sm">
+                    Click or scan to donate via PayPal
+                  </p>
                 </div>
                 <div className="text-center">
                   <div className="bg-[#F5E8D8] p-4 rounded-lg mb-4 h-24 flex flex-col justify-between">
-                    <Image src="/venmo_blue.png" alt="Venmo" width={80} height={40} className="mx-auto mt-2" />
+                    <Image
+                      src="/venmo_blue.png"
+                      alt="Venmo"
+                      width={80}
+                      height={40}
+                      className="mx-auto mt-2"
+                    />
                     <p className="text-[#666666] text-sm">@cordobaacadmy</p>
                   </div>
                   <div className="bg-white border-2 border-[#E5D5C5] p-4 rounded-lg mb-3 h-48 flex items-center justify-center">
-                    <a
+                    <Link
                       href="https://account.venmo.com/u/cordobaacadmy"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:opacity-80 transition-opacity"
                     >
-                      <Image src="/venmo_qr.jpg" alt="Venmo QR Code" width={160} height={160} className="mx-auto" />
-                    </a>
+                      <Image
+                        src="/venmo_qr.jpg"
+                        alt="Venmo QR Code"
+                        width={160}
+                        height={160}
+                        className="mx-auto"
+                      />
+                    </Link>
                   </div>
-                  <p className="text-[#666666] text-sm">Click or scan to donate via Venmo</p>
+                  <p className="text-[#666666] text-sm">
+                    Click or scan to donate via Venmo
+                  </p>
                 </div>
                 <div className="text-center">
                   <div className="bg-[#F5E8D8] p-4 rounded-lg mb-4 h-24 flex flex-col justify-between">
-                    <Image src="/zelle.png" alt="Zelle" width={80} height={40} className="mx-auto" />
-                    <p className="text-[#666666] text-sm">donate@cordobaacademy.org</p>
+                    <Image
+                      src="/zelle.png"
+                      alt="Zelle"
+                      width={80}
+                      height={40}
+                      className="mx-auto"
+                    />
+                    <p className="text-[#666666] text-sm">
+                      donate@cordobaacademy.org
+                    </p>
                   </div>
                   <div className="bg-white border-2 border-[#E5D5C5] p-4 rounded-lg mb-3 h-48 flex items-center justify-center">
-                    <Image src="/zelle_qr.jpg" alt="Zelle QR Code" width={160} height={160} className="mx-auto" />
+                    <Image
+                      src="/zelle_qr.jpg"
+                      alt="Zelle QR Code"
+                      width={160}
+                      height={160}
+                      className="mx-auto"
+                    />
                   </div>
-                  <p className="text-[#666666] text-sm">Scan to donate via Zelle</p>
+                  <p className="text-[#666666] text-sm">
+                    Scan to donate via Zelle
+                  </p>
                 </div>
               </div>
             </div>
@@ -299,34 +440,44 @@ export default function DonatePage() {
       {/* Impact Section */}
       <div className="bg-white py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-[#B05834] mb-8">Your Impact</h2>
+          <h2 className="text-3xl font-bold text-center text-[#B05834] mb-8">
+            Your Impact
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="text-center">
               <div className="bg-[#F5E8D8] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-[#B05834]">25%</span>
               </div>
-              <h3 className="font-bold text-[#333333] mb-2">Scholarship Support</h3>
+              <h3 className="font-bold text-[#333333] mb-2">
+                Scholarship Support
+              </h3>
               <p className="text-[#666666]">
-                of our students receive need-based financial assistance, making Islamic education accessible to all
-                families.
+                of our students receive need-based financial assistance, making
+                Islamic education accessible to all families.
               </p>
             </div>
             <div className="text-center">
               <div className="bg-[#F5E8D8] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-[#B05834]">100%</span>
               </div>
-              <h3 className="font-bold text-[#333333] mb-2">Faculty Development</h3>
+              <h3 className="font-bold text-[#333333] mb-2">
+                Faculty Development
+              </h3>
               <p className="text-[#666666]">
-                of our teachers participate in professional development opportunities to enhance their teaching skills.
+                of our teachers participate in professional development
+                opportunities to enhance their teaching skills.
               </p>
             </div>
             <div className="text-center">
               <div className="bg-[#F5E8D8] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-[#B05834]">15+</span>
               </div>
-              <h3 className="font-bold text-[#333333] mb-2">Enrichment Programs</h3>
+              <h3 className="font-bold text-[#333333] mb-2">
+                Enrichment Programs
+              </h3>
               <p className="text-[#666666]">
-                including Quran competition, STEAM activities, and community service projects funded by donations.
+                including Quran competition, STEAM activities, and community
+                service projects funded by donations.
               </p>
             </div>
           </div>
@@ -340,25 +491,36 @@ export default function DonatePage() {
             <div className="md:w-1/3">
               <div className="flex items-center gap-3 mb-4">
                 <Calendar className="h-8 w-8 text-[#B05834]" />
-                <h3 className="text-xl font-bold text-[#FF4A00]">Annual Fund</h3>
+                <h3 className="text-xl font-bold text-[#FF4A00]">
+                  Annual Fund
+                </h3>
               </div>
               <div className="relative h-40 rounded-lg overflow-hidden">
-                <Image src="/annual-fund.png" alt="Annual Fund" fill className="object-cover" />
+                <Image
+                  src="/annual-fund.png"
+                  alt="Annual Fund"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
             <div className="md:w-2/3">
               <p className="text-[#666666] mb-4">
-                Our Annual Fund is the cornerstone of our fundraising efforts, providing essential support for our
-                operating budget. Your contribution to the Annual Fund helps bridge the gap between tuition revenue and
-                the actual cost of educating each student.
+                Our Annual Fund is the cornerstone of our fundraising efforts,
+                providing essential support for our operating budget. Your
+                contribution to the Annual Fund helps bridge the gap between
+                tuition revenue and the actual cost of educating each student.
               </p>
               <p className="text-[#666666] mb-6">
-                This year, our goal is to raise $250,000 to support teacher salaries, classroom resources, facility
-                maintenance, and financial aid. Every gift, regardless of size, makes a difference in the lives of our
-                students.
+                This year, our goal is to raise $250,000 to support teacher
+                salaries, classroom resources, facility maintenance, and
+                financial aid. Every gift, regardless of size, makes a
+                difference in the lives of our students.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-[#B05834] hover:bg-[#8A4526] text-white">Donate to Annual Fund</Button>
+                <Button className="bg-[#B05834] hover:bg-[#8A4526] text-white">
+                  Donate to Annual Fund
+                </Button>
                 <Link href="/donate/annual-report">
                   <Button
                     variant="outline"
@@ -376,29 +538,42 @@ export default function DonatePage() {
       {/* Testimonials */}
       <div className="bg-white py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-[#B05834] mb-8">Why Donors Give</h2>
+          <h2 className="text-3xl font-bold text-center text-[#B05834] mb-8">
+            Why Donors Give
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-[#F5E8D8] p-6 rounded-lg flex flex-col">
               <p className="text-[#666666] italic mb-4 flex-1">
-                "I support Cordoba Academy because I believe in investing in the future of our community. The school
-                provides an environment where children can excel academically while developing a strong Islamic
-                identity."
+                "I support Cordoba Academy because I believe in investing in the
+                future of our community. The school provides an environment
+                where children can excel academically while developing a strong
+                Islamic identity."
               </p>
-              <p className="font-bold text-[#333333] mt-auto">Kareem J., Monthly Donor</p>
+              <p className="font-bold text-[#333333] mt-auto">
+                Kareem J., Monthly Donor
+              </p>
             </div>
             <div className="bg-[#F5E8D8] p-6 rounded-lg flex flex-col">
               <p className="text-[#666666] italic mb-4 flex-1">
-                "As a grandparent, I want to ensure that quality Islamic education is available for generations to come.
-                My donations to the scholarship fund help make this education accessible to all families."
+                "As a grandparent, I want to ensure that quality Islamic
+                education is available for generations to come. My donations to
+                the scholarship fund help make this education accessible to all
+                families."
               </p>
-              <p className="font-bold text-[#333333] mt-auto">Amina & Yusuf S., Scholarship Fund Donors</p>
+              <p className="font-bold text-[#333333] mt-auto">
+                Amina & Yusuf S., Scholarship Fund Donors
+              </p>
             </div>
             <div className="bg-[#F5E8D8] p-6 rounded-lg flex flex-col">
               <p className="text-[#666666] italic mb-4 flex-1">
-                "I'm a community member without children at the school, but I recognize the importance of supporting
-                institutions that build strong Muslim Americans. Cordoba Academy is developing the leaders of tomorrow."
+                "I'm a community member without children at the school, but I
+                recognize the importance of supporting institutions that build
+                strong Muslim Americans. Cordoba Academy is developing the
+                leaders of tomorrow."
               </p>
-              <p className="font-bold text-[#333333] mt-auto">Ibrahim M., Annual Fund Supporter</p>
+              <p className="font-bold text-[#333333] mt-auto">
+                Ibrahim M., Annual Fund Supporter
+              </p>
             </div>
           </div>
         </div>
@@ -409,20 +584,25 @@ export default function DonatePage() {
         <div className="bg-[#B05834] rounded-lg p-8 text-white max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Double Your Impact</h2>
           <p className="mb-6 max-w-2xl mx-auto">
-            Many employers match charitable contributions made by their employees. Check with your company's HR
-            department to see if they offer a matching gift program and potentially double your impact!
+            Many employers match charitable contributions made by their
+            employees. Check with your company's HR department to see if they
+            offer a matching gift program and potentially double your impact!
           </p>
-          <Button className="bg-white text-[#B05834] hover:bg-[#F5E8D8]">Check Employer Match</Button>
+          <Button className="bg-white text-[#B05834] hover:bg-[#F5E8D8]">
+            Check Employer Match
+          </Button>
         </div>
       </div>
 
       {/* Contact Section */}
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-[#B05834] mb-4">Questions About Giving?</h2>
+          <h2 className="text-2xl font-bold text-[#B05834] mb-4">
+            Questions About Giving?
+          </h2>
           <p className="text-[#666666] mb-6">
-            Our team is here to help with any questions about donations, planned giving, or other ways to
-            support Cordoba Academy.
+            Our team is here to help with any questions about donations, planned
+            giving, or other ways to support Cordoba Academy.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
@@ -442,5 +622,5 @@ export default function DonatePage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

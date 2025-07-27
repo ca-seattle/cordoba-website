@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -17,7 +16,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { CheckCircle, BookOpen, Heart, Users, Star, X } from "lucide-react";
+import { CheckCircle, BookOpen, Heart, Users, Star } from "lucide-react";
 import PageHero from "@/components/page-hero";
 import { useState } from "react";
 

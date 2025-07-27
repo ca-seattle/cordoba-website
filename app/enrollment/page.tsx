@@ -1,9 +1,21 @@
+import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { CheckCircle, Calendar, FileText, DollarSign, Users, School, HelpCircle } from "lucide-react"
+import { CheckCircle, Calendar, FileText, DollarSign, Users, Handshake } from "lucide-react"
 import PageHero from "@/components/page-hero"
+
+export const metadata: Metadata = {
+  title: "Enrollment",
+  description: "Enroll your child at Cordoba Academy, a leading Islamic school serving Seattle, Lynnwood & Mountlake Terrace. Join our nurturing educational community that combines academic excellence with Islamic values.",
+  openGraph: {
+    title: "Enroll at Cordoba Academy | Islamic School Enrollment",
+    description: "Begin your child's journey at Cordoba Academy. Serving Seattle, Lynnwood & Mountlake Terrace communities with quality Islamic education.",
+    images: ['/enrollment_cover.jpg']
+  },
+  keywords: ['Islamic School Enrollment Seattle', 'Islamic School Admission Lynnwood', 'Muslim School Registration', 'Islamic Education Enrollment', 'Private School Admission Seattle']
+};
 
 export default function EnrollmentPage() {
   // Enrollment steps
@@ -61,9 +73,23 @@ export default function EnrollmentPage() {
               <p className="text-[#666666] mb-4">
                 Our admissions process for Grades K–8 is selective and thoughtfully designed to create a thriving learning community. With limited spaces available in each grade and many applications received yearly, we carefully evaluate each candidate to ensure they will both benefit from our program and contribute positively to our school community.
               </p>
-              <p className="text-[#666666]">
+              <p className="text-[#666666] mb-6">
                 While we welcome all inquiries, please note that submitting an Admissions Inquiry Form does not guarantee enrollment. This selective process helps us maintain an environment where every student can flourish academically, spiritually, and socially.
               </p>
+              <div className="bg-white rounded-lg p-4 border-2 border-[#F5E8D8] flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <Handshake className="h-5 w-5 text-[#B05834]" />
+                  <span className="text-[#666666]">Review our Commitment Statement</span>
+                </div>
+                <Link
+                  href="/commitment_statement.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-2 bg-[#B05834] text-white rounded-md hover:bg-[#8A4526] transition-colors inline-flex items-center gap-2 text-sm"
+                >
+                  View PDF
+                </Link>
+              </div>
             </div>
 
             <div className="space-y-8 mb-8">

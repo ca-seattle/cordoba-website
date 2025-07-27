@@ -1,10 +1,19 @@
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+import type { Metadata } from "next"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import PageHero from "@/components/page-hero";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description: "Get in touch with Cordoba Academy, your local Islamic school in Lynnwood, serving Seattle & Mountlake Terrace areas. Contact us for enrollment information, campus visits, or general inquiries.",
+  openGraph: {
+    title: "Contact Cordoba Academy | Islamic School in Seattle Area",
+    description: "Reach out to Cordoba Academy in Lynnwood. We serve the Seattle, Lynnwood & Mountlake Terrace communities with excellence in Islamic education.",
+    images: ['/logo-full.png']
+  },
+  keywords: ['Contact Islamic School Seattle', 'Cordoba Academy Contact', 'Islamic School Lynnwood Contact', 'Muslim School Information Seattle']
+};
 
 export default function ContactPage() {
   return (

@@ -1,8 +1,20 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ExternalLink, FileText, Calendar, Bell, Users, BookOpen, MessageSquare } from "lucide-react"
 import PageHero from "@/components/page-hero"
+
+export const metadata: Metadata = {
+  title: "Parent Portal",
+  description: "Access Cordoba Academy's Parent Portal for school updates, grades, and resources. Serving families in Seattle, Shoreline, Edmonds, Lynnwood, Bothell & Mountlake Terrace with comprehensive Islamic education tools.",
+  openGraph: {
+    title: "Parent Portal | Cordoba Academy",
+    description: "Stay connected with your child's Islamic education journey at Cordoba Academy. Access grades, announcements, and resources for parents in the Seattle area.",
+    images: ['/logo-full.png']
+  },
+  keywords: ['Islamic School Parent Portal', 'Muslim School Resources Seattle', 'Cordoba Academy Parents', 'Islamic Education Portal Lynnwood']
+};
 
 export default function ParentPortalPage() {
   return (
@@ -33,14 +45,14 @@ export default function ParentPortalPage() {
                 and stay updated on school announcements.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
+                <Link
                   href="https://portal.schoolcues.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block"
                 >
                   <Button className="w-full bg-[#B05834] hover:bg-[#8A4526] text-white">Login to School Cues</Button>
-                </a>
+                </Link>
                 {/* <Link href="/parent-portal/help">
                   <Button
                     variant="outline"
@@ -54,7 +66,7 @@ export default function ParentPortalPage() {
 
             <h3 className="text-xl font-bold text-[#FF4A00] mb-4">Parent Resources</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <Card className="flex flex-col">
+              {/* <Card className="flex flex-col">
                 <CardHeader className="flex flex-row items-center gap-4">
                   <div className="bg-[#F5E8D8] rounded-full p-2">
                     <FileText className="h-5 w-5 text-[#B05834]" />
@@ -79,6 +91,32 @@ export default function ParentPortalPage() {
                     </Link>
                   </div>
                 </CardContent>
+              </Card> */}
+
+              <Card className="flex flex-col">
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <div className="bg-[#F5E8D8] rounded-full p-2">
+                    <FileText className="h-5 w-5 text-[#B05834]" />
+                  </div>
+                  <div>
+                    <CardTitle>Student-Teacher Handbook</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent className="flex flex-col flex-1">
+                  <CardDescription className="text-[#666666] mb-4">
+                    Review school policies, academic expectations, dress code, and other essential information for the academic year.
+                  </CardDescription>
+                  <div className="mt-auto">
+                    <Link href="/handbook.pdf" target="_blank" rel="noopener noreferrer">
+                      <Button
+                        variant="outline"
+                        className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
+                      >
+                        View Handbook
+                      </Button>
+                    </Link>
+                  </div>
+                </CardContent>
               </Card>
 
               <Card className="flex flex-col">
@@ -95,7 +133,8 @@ export default function ParentPortalPage() {
                     View the academic calendar, including holidays, events, and important dates for the school year.
                   </CardDescription>
                   <div className="mt-auto">
-                    <Link href="/events/calendar">
+                    {/* <Link href="/events/calendar"> */}
+                    <Link href="/academic_calendar.pdf" target="_blank" rel="noopener noreferrer">
                       <Button
                         variant="outline"
                         className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
@@ -121,8 +160,9 @@ export default function ParentPortalPage() {
                     Stay updated with the latest school announcements, news, and important information.
                   </CardDescription>
                   <div className="mt-auto">
-                    <Link href="/parent-portal/announcements">
+                    <Link href="">
                       <Button
+                        disabled
                         variant="outline"
                         className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
                       >
@@ -147,8 +187,9 @@ export default function ParentPortalPage() {
                     Learn about our Parent Association, upcoming meetings, and opportunities to get involved.
                   </CardDescription>
                   <div className="mt-auto">
-                    <Link href="/parent-portal/association">
+                    <Link href="">
                       <Button
+                        disabled
                         variant="outline"
                         className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
                       >
@@ -174,8 +215,9 @@ export default function ParentPortalPage() {
                     educational materials.
                   </CardDescription>
                   <div className="mt-auto">
-                    <Link href="/parent-portal/curriculum">
+                    <Link href="">
                       <Button
+                        disabled
                         variant="outline"
                         className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
                       >
@@ -200,8 +242,9 @@ export default function ParentPortalPage() {
                     Communicate with your child's teachers and schedule parent-teacher conferences.
                   </CardDescription>
                   <div className="mt-auto">
-                    <Link href="/parent-portal/contact-teachers">
+                    <Link href="">
                       <Button
+                        disabled
                         variant="outline"
                         className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
                       >
@@ -227,38 +270,8 @@ export default function ParentPortalPage() {
         </div>
       </div>
 
-      {/* Parent Testimonials */}
-      <div className="bg-white py-12">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-[#B05834] mb-8">Parent Testimonials</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-[#F5E8D8] p-6 rounded-lg flex flex-col">
-              <p className="text-[#666666] italic mb-4 flex-1">
-                "The Parent Portal has been an invaluable tool for staying connected with my child's education. I
-                appreciate being able to track progress and communicate with teachers so easily."
-              </p>
-              <p className="font-bold text-[#333333] mt-auto">Parent of 2nd Grader</p>
-            </div>
-            <div className="bg-[#F5E8D8] p-6 rounded-lg flex flex-col">
-              <p className="text-[#666666] italic mb-4 flex-1">
-                "I love how the School Cues system keeps me informed about everything happening at Cordoba Academy. The
-                calendar feature helps our family stay organized with school events."
-              </p>
-              <p className="font-bold text-[#333333] mt-auto">Parent of 4th and 6th Graders</p>
-            </div>
-            <div className="bg-[#F5E8D8] p-6 rounded-lg flex flex-col">
-              <p className="text-[#666666] italic mb-4 flex-1">
-                "As a working parent, the Parent Portal gives me peace of mind by allowing me to check in on my child's
-                progress anytime. The communication tools have strengthened our partnership with teachers."
-              </p>
-              <p className="font-bold text-[#333333] mt-auto">Parent of Kindergartener</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Call to Action */}
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 pb-10">
         <div className="bg-[#B05834] rounded-lg p-8 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Get Involved</h2>
           <p className="max-w-2xl mx-auto mb-6">
