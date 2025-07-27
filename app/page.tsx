@@ -274,7 +274,7 @@ export default async function Home() {
                   Our play-based preschool program nurtures a love of learning while developing foundational academic,
                   social, and Islamic skills.
                 </p>
-                <Link href="/academics?tab=preschool#programs">
+                <Link href="/academics#programs">
                   <Button
                     variant="outline"
                     className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
@@ -298,7 +298,7 @@ export default async function Home() {
                   Our elementary program provides a rigorous academic curriculum integrated with Islamic values and
                   character development.
                 </p>
-                <Link href="/academics?tab=elementary#programs">
+                <Link href="/academics#programs">
                   <Button
                     variant="outline"
                     className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
@@ -327,7 +327,7 @@ export default async function Home() {
                   Our new middle school program will prepare students for high school success while strengthening their
                   Islamic identity.
                 </p>
-                <Link href="/academics?tab=middle-school#programs">
+                <Link href="/academics#programs">
                   <Button
                     variant="outline"
                     className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"

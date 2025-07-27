@@ -1,8 +1,5 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useSearchParams, useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -10,14 +7,6 @@ import { BookOpen, Users, Calendar, Award, CheckCircle } from "lucide-react";
 import PageHero from "@/components/page-hero";
 
 export default function AcademicsPage() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const currentTab = searchParams.get("tab") || "preschool";
-
-  const handleTabChange = (value: string) => {
-    router.push(`/academics?tab=${value}`, { scroll: false });
-  };
-
   return (
     <div className="bg-[#FFF2E6]">
       {/* Hero Section */}
@@ -156,12 +145,7 @@ export default function AcademicsPage() {
 
             {/* Programs Tabs */}
             <div id="programs">
-              <Tabs
-                defaultValue={currentTab}
-                value={currentTab}
-                onValueChange={handleTabChange}
-                className="mb-8"
-              >
+              <Tabs defaultValue="preschool" className="mb-8">
                 <TabsList className="grid grid-cols-1 md:grid-cols-4 h-auto">
                   <TabsTrigger value="preschool" className="py-3">
                     Early Learning
