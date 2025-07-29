@@ -93,7 +93,7 @@ export default function ParentPortalPage() {
                 </CardContent>
               </Card> */}
 
-              <Card className="flex flex-col">
+              {/* <Card className="flex flex-col">
                 <CardHeader className="flex flex-row items-center gap-4">
                   <div className="bg-[#F5E8D8] rounded-full p-2">
                     <FileText className="h-5 w-5 text-[#B05834]" />
@@ -117,7 +117,7 @@ export default function ParentPortalPage() {
                     </Link>
                   </div>
                 </CardContent>
-              </Card>
+              </Card> */}
 
               <Card className="flex flex-col">
                 <CardHeader className="flex flex-row items-center gap-4">
@@ -146,7 +146,7 @@ export default function ParentPortalPage() {
                 </CardContent>
               </Card>
 
-              <Card className="flex flex-col">
+              {/* <Card className="flex flex-col">
                 <CardHeader className="flex flex-row items-center gap-4">
                   <div className="bg-[#F5E8D8] rounded-full p-2">
                     <Bell className="h-5 w-5 text-[#B05834]" />
@@ -171,9 +171,9 @@ export default function ParentPortalPage() {
                     </Link>
                   </div>
                 </CardContent>
-              </Card>
+              </Card> */}
 
-              <Card className="flex flex-col">
+              {/* <Card className="flex flex-col">
                 <CardHeader className="flex flex-row items-center gap-4">
                   <div className="bg-[#F5E8D8] rounded-full p-2">
                     <Users className="h-5 w-5 text-[#B05834]" />
@@ -198,9 +198,9 @@ export default function ParentPortalPage() {
                     </Link>
                   </div>
                 </CardContent>
-              </Card>
+              </Card> */}
 
-              <Card className="flex flex-col">
+              {/* <Card className="flex flex-col">
                 <CardHeader className="flex flex-row items-center gap-4">
                   <div className="bg-[#F5E8D8] rounded-full p-2">
                     <BookOpen className="h-5 w-5 text-[#B05834]" />
@@ -226,9 +226,9 @@ export default function ParentPortalPage() {
                     </Link>
                   </div>
                 </CardContent>
-              </Card>
+              </Card> */}
 
-              <Card className="flex flex-col">
+              {/* <Card className="flex flex-col">
                 <CardHeader className="flex flex-row items-center gap-4">
                   <div className="bg-[#F5E8D8] rounded-full p-2">
                     <MessageSquare className="h-5 w-5 text-[#B05834]" />
@@ -253,7 +253,7 @@ export default function ParentPortalPage() {
                     </Link>
                   </div>
                 </CardContent>
-              </Card>
+              </Card> */}
             </div>
 
             {/* <div className="bg-[#F5E8D8] p-6 rounded-lg">

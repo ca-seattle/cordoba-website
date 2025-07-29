@@ -344,13 +344,6 @@ export default function EnrollmentPage() {
             </p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-sm">
-            <h3 className="font-bold text-[#333333] mb-2">Is before and after-school care available?</h3>
-            <p className="text-[#666666]">
-              Yes, we offer before-school care from 7:30 AM and after-school care until 5:30 PM for an additional fee.
-              Our after-school program includes homework help, enrichment activities, and supervised play.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-sm">
             <h3 className="font-bold text-[#333333] mb-2">Do you provide transportation?</h3>
             <p className="text-[#666666]">
               We do not currently provide transportation services. Families are responsible for arranging transportation

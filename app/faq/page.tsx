@@ -19,7 +19,7 @@ export default function FAQPage() {
     {
       question: "What are your school hours?",
       answer:
-        "Our school day runs from 8:30 AM to 3:30 PM, Monday through Friday. Before-school care is available from 7:30 AM, and after-school care is available until 5:30 PM for an additional fee.",
+        "Our school day runs from 8:30 AM to 3:30 PM, Monday through Friday.",
     },
     {
       question: "Is Cordoba Academy accredited?",

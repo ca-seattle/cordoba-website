@@ -296,8 +296,7 @@ export default function ContactPage() {
               </h3>
               <p className="text-[#666666]">
                 Our school day runs from 8:30 AM to 3:30 PM, Monday through
-                Friday. Before-school care is available from 7:30 AM, and
-                after-school care is available until 5:30 PM.
+                Friday.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">

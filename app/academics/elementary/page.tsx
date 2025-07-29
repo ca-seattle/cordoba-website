@@ -530,13 +530,6 @@ export default function ElementaryPage() {
               night, including Quran practice.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-sm">
-            <h3 className="font-bold text-[#333333] mb-2">Do you offer before and after-school care?</h3>
-            <p className="text-[#666666]">
-              Yes, we offer before-school care from 7:30 AM and after-school care until 5:30 PM for an additional fee.
-              Our after-school program includes homework help, enrichment activities, and supervised play.
-            </p>
-          </div>
         </div>
       </div>
     </div>
