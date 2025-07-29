@@ -167,11 +167,20 @@ export default async function Home() {
                     />
                   </div>
                   <div className="p-6">
-                    <div className="flex items-center gap-2 text-[#666666] text-sm mb-2">
+                    <div className="flex items-start gap-2 text-[#666666] text-sm mb-2">
                       <Calendar className="h-4 w-4" />
-                      <span>
-                        {formatDate(event.event_dates[0])} • {formatTime(event.start_time)} - {formatTime(event.end_time)}
-                      </span>
+                      <div className="flex flex-col">
+                        {event.recurring ? (
+                          <>
+                            <span>
+                              {formatDate(event.event_dates[0])} – {formatDate(event.event_dates[event.event_dates.length - 1])} ({event.frequency})
+                            </span>
+                          </>
+                        ) : (
+                          <span>{formatDate(event.event_dates[0])}</span>
+                        )}
+                        <span>{formatTime(event.start_time)} - {formatTime(event.end_time)}</span>
+                      </div>
                     </div>
                     <h3 className="text-lg font-bold text-[#FF4A00] mb-3">
                       {event.event_title}
