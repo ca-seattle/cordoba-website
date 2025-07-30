@@ -33,7 +33,7 @@ function formatDate(dateStr: string): string {
   // Split the date string and create date in UTC to avoid timezone issues
   const [year, month, day] = dateStr.split('-').map(Number);
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  return `${months[month - 1]} ${day}, ${year}`;
+  return `${months[month - 1]} ${day}`;
 }
 
 function formatTime(timeStr: string): string {
