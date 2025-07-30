@@ -19,7 +19,7 @@ export default function FAQPage() {
     {
       question: "What are your school hours?",
       answer:
-        "Our school day runs from 8:30 AM to 3:30 PM, Monday through Friday.",
+        "Our school day runs from 8:30 AM to 3:30 PM, Monday through Thursday and 8:30 AM to 11:30 AM, Friday.",
     },
     {
       question: "Is Cordoba Academy accredited?",
@@ -70,11 +70,11 @@ export default function FAQPage() {
       answer:
         "Yes, Arabic language instruction is an integral part of our curriculum. Students receive regular Arabic classes appropriate for their age and proficiency level, focusing on reading, writing, speaking, and listening skills. Our goal is for students to develop functional Arabic language skills that support their understanding of the Quran and Islamic texts.",
     },
-    {
-      question: "What extracurricular activities do you offer?",
-      answer:
-        "We offer a variety of extracurricular activities that enhance our academic program and provide opportunities for students to explore their interests and develop new skills. These include Quran Club, STEAM Club, Art Club, Sports, Student Council, and Community Service projects. Our after-school program also includes enrichment activities and homework help.",
-    },
+    // {
+    //   question: "What extracurricular activities do you offer?",
+    //   answer:
+    //     "We offer a variety of extracurricular activities that enhance our academic program and provide opportunities for students to explore their interests and develop new skills. These include Quran Club, STEAM Club, Art Club, Sports, Student Council, and Community Service projects. Our after-school program also includes enrichment activities and homework help.",
+    // },
     {
       question: "How much homework do students receive?",
       answer:
@@ -87,7 +87,7 @@ export default function FAQPage() {
     {
       question: "What is the admissions process?",
       answer:
-        "Our admissions process includes the following steps: 1) Submit an application with required documents, 2) Schedule a student assessment, 3) Family interview, 4) Admissions decision, and 5) Enrollment and registration. We encourage families to begin the process early, as spaces fill quickly, especially for certain grade levels.",
+        "Our admissions process includes the following steps: 1) Submit an Admission Inquiry form, 2) Family interview, 3) Fit evaluation, 4) Enrollment and registration. We encourage families to begin the process early, as spaces fill quickly, especially for certain grade levels.",
     },
     {
       question: "What are the age requirements for enrollment?",
@@ -107,7 +107,7 @@ export default function FAQPage() {
     {
       question: "What is the tuition for the 2024-2025 school year?",
       answer:
-        "Tuition for the 2024-2025 school year is as follows: Preschool (5 half days): $7,500/year, Preschool (5 full days): $9,500/year, K-6 Program: $9,800/year. Additional fees include a one-time application fee for new students ($100), annual registration fee ($300), and materials fee ($250). Sibling discounts and flexible payment plans are available.",
+        "Tuition for the 2024-2025 school year is as follows: Preschool (5 half days): $525/month (10 months), K-6 Program: $600/month (10 months), 7-8th Grade Program: $725/month (10 months). Additional fees include an annual registration fee ($100). Sibling discounts and flexible payment plans are available.",
     },
     {
       question: "Do you offer financial aid?",
@@ -126,12 +126,12 @@ export default function FAQPage() {
     {
       question: "How can parents get involved at Cordoba Academy?",
       answer:
-        "There are many ways for parents to get involved, including: 1) Joining the Parent Association, 2) Volunteering in classrooms or for school events, 3) Chaperoning field trips, 4) Serving on school committees, 5) Supporting fundraising efforts, and 6) Sharing expertise through guest presentations or career day. We value parent involvement and believe it strengthens our school community.",
+        "There are many ways for parents to get involved, including: 1) Joining the Parent Teacher Association, 2) Volunteering in classrooms or for school events, 3) Chaperoning field trips, 4) Serving on school committees, 5) Supporting fundraising efforts, and 6) Sharing expertise through guest presentations or career day. We value parent involvement and believe it strengthens our school community.",
     },
     {
-      question: "What is the Parent Association?",
+      question: "What is the Parent Teacher Association?",
       answer:
-        "The Parent Association (PA) is a volunteer organization that supports the school through community building, volunteer coordination, fundraising, and parent education. All parents are automatically members of the PA and are encouraged to participate in meetings and activities. The PA plays a vital role in enhancing the educational experience for all students.",
+        "The Parent Teacher Association (PTA) is a volunteer organization that supports the school through community building, volunteer coordination, fundraising, and parent education. All parents are automatically members of the PTA and are encouraged to participate in meetings and activities. The PTA plays a vital role in enhancing the educational experience for all students.",
     },
     {
       question: "Are there volunteer requirements for parents?",

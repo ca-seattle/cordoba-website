@@ -484,7 +484,7 @@ export default function DonatePage() {
         </div>
       </div>
 
-      {/* Annual Fund */}
+      {/* Annual Fund
       <div className="container mx-auto px-4 py-12">
         <div className="bg-[#F5E8D8] rounded-lg p-8 max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row gap-8">
@@ -533,10 +533,10 @@ export default function DonatePage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Testimonials */}
-      <div className="bg-white py-12">
+      {/* <div className="bg-white py-12">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-[#B05834] mb-8">
             Why Donors Give
@@ -577,7 +577,7 @@ export default function DonatePage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Corporate Matching */}
       <div className="container mx-auto px-4 py-12">

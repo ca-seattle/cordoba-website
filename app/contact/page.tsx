@@ -295,8 +295,8 @@ export default function ContactPage() {
                 What are your school hours?
               </h3>
               <p className="text-[#666666]">
-                Our school day runs from 8:30 AM to 3:30 PM, Monday through
-                Friday.
+                Our school day runs from 8:30 AM to 3:30 PM, Monday through Thursday 
+                and 8:30 AM to 11:30 AM, Friday.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
