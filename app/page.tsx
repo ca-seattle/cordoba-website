@@ -272,7 +272,7 @@ export default async function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <Card className="bg-[#F5E8D8] border-none">
               <div className="relative h-48">
-                <Image src="/maymuna-preschool.jpg" alt="Preschool Program" className="object-cover object-[center_20%] rounded-t-lg" fill/>
+                <Image src="/early_learning.jpeg" alt="Preschool Program" className="object-cover object-[center_20%] rounded-t-lg" fill/>
               </div>
               <CardHeader>
                 <CardTitle className="text-[#B05834]">Early Learning</CardTitle>
