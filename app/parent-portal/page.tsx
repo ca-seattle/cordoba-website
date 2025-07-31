@@ -276,7 +276,7 @@ export default function ParentPortalPage() {
           <h2 className="text-3xl font-bold mb-4">Get Involved</h2>
           <p className="max-w-2xl mx-auto mb-6">
             There are many ways to get involved in your child's education and the Cordoba Academy community. From
-            volunteering in the classroom to joining the Parent Association, your participation makes a difference.
+            volunteering in the classroom to joining the Parent Teacher Association, your participation makes a difference.
           </p>
           {/* <Link href="/parent-portal/volunteer">
             <Button className="bg-white text-[#B05834] hover:bg-[#F5E8D8]">Learn About Volunteer Opportunities</Button>
