@@ -38,11 +38,11 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white py-3">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between bg-[#E5E5E5] rounded-full px-6 py-2">
+        <div className="flex items-center justify-between bg-navbar-background rounded-full px-6 py-2">
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center gap-2">
               <Image src="/logo-full.png" alt="Cordoba Academy Logo" width={50} height={50} />
-              <span className="text-[#333333] font-medium text-lg">Cordoba Academy</span>
+              <span className="text-brand-text-dark font-medium text-lg">Cordoba Academy</span>
             </Link>
           </div>
 
@@ -51,17 +51,17 @@ export default function Header() {
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" className="p-0 h-auto">
-                  <Menu size={24} className="text-[#333333]" />
+                  <Menu size={24} className="text-brand-text-dark" />
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="bg-[#FFF2E6] w-[300px] p-0">
+              <SheetContent side="right" className="bg-brand-secondary w-[300px] p-0">
                 <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
                 <div className="flex flex-col h-full">
-                  <div className="flex items-center p-4 border-b border-[#E5D5C5]">
+                  <div className="flex items-center p-4 border-b border-navbar-border">
                     <div className="flex items-center gap-2">
                       <Image src="/logo-dome.png" alt="Cordoba Academy Logo" width={30} height={30} />
-                      <span className="text-[#333333] font-medium">Cordoba Academy</span>
+                      <span className="text-brand-text-dark font-medium">Cordoba Academy</span>
                     </div>
                   </div>
                   <nav className="flex-1 overflow-auto py-4">
@@ -75,17 +75,17 @@ export default function Header() {
                             <Link
                               href={item.href}
                               className={`flex items-center gap-3 px-4 py-3 rounded-md ${
-                                active ? "bg-[#E5D5C5] text-[#333333]" : "text-[#666666] hover:bg-[#E5D5C5]/50"
+                                active ? "bg-navbar-border text-brand-text-dark" : "text-brand-text-muted hover:bg-navbar-border/50"
                               }`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
-                              <IconComponent size={20} className={active ? "text-[#FF4A00]" : "text-[#969696]"} />
+                              <IconComponent size={20} className={active ? "text-brand-accent-orange" : "text-navbar-text"} />
                               <span>{item.name}</span>
                             </Link>
                           </li>
                         )
                       })}
-                      <li className="border-t border-[#E5D5C5] mt-4 pt-4">
+                      <li className="border-t border-navbar-border mt-4 pt-4">
                         {secondaryItems.map((item) => {
                           const active = isActive(item.href)
                           const IconComponent = item.icon
@@ -95,11 +95,11 @@ export default function Header() {
                               key={item.name}
                               href={item.href}
                               className={`flex items-center gap-3 px-4 py-3 rounded-md ${
-                                active ? "bg-[#E5D5C5] text-[#333333]" : "text-[#666666] hover:bg-[#E5D5C5]/50"
+                                active ? "bg-navbar-border text-brand-text-dark" : "text-brand-text-muted hover:bg-navbar-text/50"
                               }`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
-                              <IconComponent size={20} className={active ? "text-[#FF4A00]" : "text-[#969696]"} />
+                              <IconComponent size={20} className={active ? "text-brand-accent-orange" : "text-navbar-text"} />
                               <span>{item.name}</span>
                             </Link>
                           )
@@ -123,9 +123,9 @@ export default function Header() {
                   <li key={item.name}>
                     <Link
                       href={item.href}
-                      className={`flex items-center gap-1.5 ${active ? "text-[#333333]" : "text-[#969696] hover:text-[#333333]"}`}
+                      className={`flex items-center gap-1.5 ${active ? "text-brand-text-dark" : "text-navbar-text hover:text-brand-text-dark"}`}
                     >
-                      <IconComponent size={18} className={active ? "text-[#FF4A00]" : "text-[#969696]"} />
+                      <IconComponent size={18} className={active ? "text-brand-accent-orange" : "text-navbar-text"} />
                       <span>{item.name}</span>
                     </Link>
                   </li>
@@ -141,7 +141,7 @@ export default function Header() {
                 if (item.name === "Donate") {
                   return (
                     <Link key={item.name} href={item.href}>
-                      <Button className="bg-[#FF4A00] hover:bg-[#B05834] text-white">Donate</Button>
+                      <Button className="bg-brand-accent-orange hover:bg-brand-primary text-white">Donate</Button>
                     </Link>
                   )
                 }
@@ -151,10 +151,10 @@ export default function Header() {
                     key={item.name}
                     href={item.href}
                     className={`flex items-center gap-1.5 ${
-                      active ? "text-[#333333]" : "text-[#969696] hover:text-[#333333]"
+                      active ? "text-brand-text-dark" : "text-navbar-text hover:text-brand-text-dark"
                     }`}
                   >
-                    <IconComponent size={18} className={active ? "text-[#FF4A00]" : "text-[#969696]"} />
+                    <IconComponent size={18} className={active ? "text-brand-accent-orange" : "text-navbar-text"} />
                     <span>{item.name}</span>
                   </Link>
                 )

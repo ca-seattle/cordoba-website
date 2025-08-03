@@ -56,6 +56,12 @@ body {
     --brand-accent-orange: #FF4A00; /* Orange accent */
     --brand-text-dark: #333333; /* Dark text */
     --brand-text-muted: #666666; /* Muted text */
+
+    --navbar-background: #E5E5E5;
+    --navbar-border: #E5D5C5;
+    --navbar-text: #969696;
+
+    --footer-text: #CCCCCC;
   }
 }
 
