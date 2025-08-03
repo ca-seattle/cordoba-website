@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-    darkMode: ["class"],
     content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -60,6 +59,16 @@ const config: Config = {
   				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
   				border: 'hsl(var(--sidebar-border))',
   				ring: 'hsl(var(--sidebar-ring))'
+  			},
+  			/* Cordoba Academy Brand Colors */
+  			brand: {
+  				primary: 'var(--brand-primary)',
+  				'primary-dark': 'var(--brand-primary-dark)',
+  				secondary: 'var(--brand-secondary)',
+  				accent: 'var(--brand-accent)',
+  				'accent-orange': 'var(--brand-accent-orange)',
+  				'text-dark': 'var(--brand-text-dark)',
+  				'text-muted': 'var(--brand-text-muted)'
   			}
   		},
   		borderRadius: {
