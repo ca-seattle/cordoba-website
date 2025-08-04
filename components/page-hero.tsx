@@ -8,7 +8,7 @@ interface PageHeroProps {
 
 export default function PageHero({ title, subtitle, backgroundImage }: PageHeroProps) {
   return (
-    <div className="relative bg-[#B05834] text-white">
+    <div className="relative bg-brand-primary text-white">
       {backgroundImage && (
         <div className="absolute inset-0 z-0">
           <Image

@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input"
 
 export default function Footer() {
   return (
-    <footer className="bg-[#333333] text-white">
+    <footer className="bg-brand-text-dark text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About */}
@@ -15,7 +15,7 @@ export default function Footer() {
               <Image src="/logo-full.png" alt="Cordoba Academy Logo" width={60} height={60} />
               <span className="font-bold text-xl">Cordoba Academy</span>
             </div>
-            <p className="text-[#CCCCCC] mb-4">
+            <p className="text-footer-text mb-4">
               Nurturing academic excellence and Islamic identity in a vibrant learning community.
             </p>
             <div className="flex gap-4">
@@ -23,7 +23,7 @@ export default function Footer() {
                 href="https://www.facebook.com/cordoba.academySEA/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#4D4D4D] p-2 rounded-full hover:bg-[#B05834] transition"
+                className="bg-brand-text-muted p-2 rounded-full hover:bg-brand-primary transition"
               >
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
@@ -32,7 +32,7 @@ export default function Footer() {
                 href="https://www.instagram.com/cordoba_academy_/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#4D4D4D] p-2 rounded-full hover:bg-[#B05834] transition"
+                className="bg-brand-text-muted  p-2 rounded-full hover:bg-brand-primary transition"
               >
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
@@ -41,7 +41,7 @@ export default function Footer() {
                 href="https://www.youtube.com/@cordobaacademyinfo7088"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#4D4D4D] p-2 rounded-full hover:bg-[#B05834] transition"
+                className="bg-brand-text-muted  p-2 rounded-full hover:bg-brand-primary transition"
               >
                 <Youtube className="h-5 w-5" />
                 <span className="sr-only">YouTube</span>
@@ -51,15 +51,15 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-bold text-lg mb-4 border-b border-[#4D4D4D] pb-2">Quick Links</h3>
+            <h3 className="font-bold text-lg mb-4 border-b border-brand-text-muted pb-2">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/academics" className="text-[#CCCCCC] hover:text-white transition">
+                <Link href="/academics" className="text-footer-text hover:text-white transition">
                   Academics
                 </Link>
               </li>
               <li>
-                <Link href="/enrollment" className="text-[#CCCCCC] hover:text-white transition">
+                <Link href="/enrollment" className="text-footer-text hover:text-white transition">
                   Enrollment
                 </Link>
               </li>
@@ -69,22 +69,22 @@ export default function Footer() {
                 </Link>
               </li> */}
               <li>
-                <Link href="/about" className="text-[#CCCCCC] hover:text-white transition">
+                <Link href="/about" className="text-footer-text hover:text-white transition">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/parent-portal" className="text-[#CCCCCC] hover:text-white transition">
+                <Link href="/parent-portal" className="text-footer-text hover:text-white transition">
                   Parent Portal
                 </Link>
               </li>
               <li>
-                <Link href="/donate" className="text-[#CCCCCC] hover:text-white transition">
+                <Link href="/donate" className="text-footer-text hover:text-white transition">
                   Donate
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-[#CCCCCC] hover:text-white transition">
+                <Link href="/contact" className="text-footer-text hover:text-white transition">
                   Contact
                 </Link>
               </li>
@@ -93,31 +93,31 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-bold text-lg mb-4 border-b border-[#4D4D4D] pb-2">Contact Us</h3>
+            <h3 className="font-bold text-lg mb-4 border-b border-brand-text-muted pb-2">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-[#FF4A00] flex-shrink-0 mt-0.5" />
-                <span className="text-[#CCCCCC]">
+                <MapPin className="h-5 w-5 text-brand-accent-orange flex-shrink-0 mt-0.5" />
+                <span className="text-footer-text">
                   3210 200th Pl SW
                   <br />
                   Lynnwood, WA 98036
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <Phone className="h-5 w-5 text-[#FF4A00] flex-shrink-0 mt-0.5" />
-                <span className="text-[#CCCCCC]">(425) 954-3687</span>
+                <Phone className="h-5 w-5 text-brand-accent-orange flex-shrink-0 mt-0.5" />
+                <span className="text-footer-text">(425) 954-3687</span>
               </li>
               <li className="flex items-start gap-3">
-                <Mail className="h-5 w-5 text-[#FF4A00] flex-shrink-0 mt-0.5" />
-                <span className="text-[#CCCCCC]">info@cordobaacademy.org</span>
+                <Mail className="h-5 w-5 text-brand-accent-orange flex-shrink-0 mt-0.5" />
+                <span className="text-footer-text">info@cordobaacademy.org</span>
               </li>
             </ul>
           </div>
 
           {/* Newsletter */}
           <div>
-            <h3 className="font-bold text-lg mb-4 border-b border-[#4D4D4D] pb-2">Newsletter</h3>
-            <p className="text-[#CCCCCC] mb-4">Subscribe to our newsletter to receive updates and announcements.</p>
+            <h3 className="font-bold text-lg mb-4 border-b border-brand-text-muted pb-2">Newsletter</h3>
+            <p className="text-footer-text mb-4">Subscribe to our newsletter to receive updates and announcements.</p>
             <div className="flex flex-col gap-2">
               {/* <Input
                 type="email"
@@ -126,7 +126,7 @@ export default function Footer() {
               /> */}
               <Button 
                 asChild
-                className="bg-[#FF4A00] hover:bg-[#B05834] text-white"
+                className="bg-brand-accent-orange hover:bg-brand-primary text-white"
               >
                 <a
                   href="https://docs.google.com/forms/d/e/1FAIpQLSc0VLXCIqaiCSH04LyVW65g_6qoh0DR7-dY5O_g7EmOQaQsPQ/viewform"
@@ -140,9 +140,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-[#4D4D4D] mt-8 pt-8 text-center text-[#CCCCCC]">
+        <div className="border-t border-brand-text-muted mt-8 pt-8 text-center text-footer-text">
           <p>&copy; {new Date().getFullYear()} Cordoba Academy. All rights reserved.</p>
-          <p className="text-xs text-[#999999] mt-1">Registered 501c3 EIN #47-4297945</p>
+          <p className="text-xs text-navbar-text mt-1">Registered 501c3 EIN #47-4297945</p>
           {/* <div className="flex justify-center gap-4 mt-2">
             <Link href="/privacy-policy" className="hover:text-white transition">
               Privacy Policy

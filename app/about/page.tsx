@@ -180,7 +180,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="bg-[#FFF2E6]">
+    <div className="bg-brand-secondary">
       {/* Hero Section */}
       <PageHero
         title="About Us"
@@ -191,35 +191,46 @@ export default function AboutPage() {
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-lg p-8 shadow-md mb-8">
-            <h2 className="text-2xl font-bold text-[#B05834] mb-6">
+            <h2 className="text-2xl font-bold text-brand-primary mb-6">
               Our Story
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
               <div>
-                <p className="text-[#666666] mb-4">
-                  Cordoba Academy is a non-profit educational institution in Lynnwood, Washington, helping young Muslim-Americans 
-                  grow into confident, spiritual, and well-rounded individuals. Founded in 2015 by a group of committed parents and community 
-                  members, the school was built on a vision of blending academic excellence with strong Islamic values.
+                <p className="text-brand-text-muted mb-4">
+                  Cordoba Academy is a non-profit educational institution in
+                  Lynnwood, Washington, helping young Muslim-Americans grow into
+                  confident, spiritual, and well-rounded individuals. Founded in
+                  2015 by a group of committed parents and community members,
+                  the school was built on a vision of blending academic
+                  excellence with strong Islamic values.
                 </p>
-                <p className="text-[#666666] mb-4">
-                  Our name is inspired by the historic city of Cordoba, Spain—a symbol of learning, 
-                  innovation, and peaceful coexistence during the Islamic Golden Age. Like its namesake, 
-                  Cordoba Academy aims to be a place where knowledge, faith, and character flourish together.
+                <p className="text-brand-text-muted mb-4">
+                  Our name is inspired by the historic city of Cordoba, Spain—a
+                  symbol of learning, innovation, and peaceful coexistence
+                  during the Islamic Golden Age. Like its namesake, Cordoba
+                  Academy aims to be a place where knowledge, faith, and
+                  character flourish together.
                 </p>
-                <p className="text-[#666666] mb-4">
-                  We began by offering small community programs like summer camps and story times. 
-                  In 2017, we launched our first co-op classes in a local masjid. 
-                  In 2018, we transformed a small house into our first school, and by 2021, moved into our current 7,000+ sq ft facility, 
-                  equipped to support our growing student body and expanding programs.
+                <p className="text-brand-text-muted mb-4">
+                  We began by offering small community programs like summer
+                  camps and story times. In 2017, we launched our first co-op
+                  classes in a local masjid. In 2018, we transformed a small
+                  house into our first school, and by 2021, moved into our
+                  current 7,000+ sq ft facility, equipped to support our growing
+                  student body and expanding programs.
                 </p>
-                <p className="text-[#666666] mb-4">
-                  Today, we offer a variety of educational experiences, including Islamic and Quranic studies, 
-                  Quranic literacy, STEM and coding classes, creative workshops, and seasonal camps. 
-                  Our goal is to foster academic success and spiritual growth through authentic scholarship and meaningful community connection.
+                <p className="text-brand-text-muted mb-4">
+                  Today, we offer a variety of educational experiences,
+                  including Islamic and Quranic studies, Quranic literacy, STEM
+                  and coding classes, creative workshops, and seasonal camps.
+                  Our goal is to foster academic success and spiritual growth
+                  through authentic scholarship and meaningful community
+                  connection.
                 </p>
-                <p className="text-[#666666]">
-                  We envision raising future leaders—young Muslims who are intellectually curious, morally grounded, 
-                  and ready to make a positive impact in today's world.
+                <p className="text-brand-text-muted">
+                  We envision raising future leaders—young Muslims who are
+                  intellectually curious, morally grounded, and ready to make a
+                  positive impact in today's world.
                 </p>
               </div>
               <div className="relative h-64 md:h-full rounded-lg overflow-hidden flex items-center justify-center">
@@ -242,75 +253,82 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-[#F5E8D8] p-6 rounded-lg">
+              <div className="bg-brand-accent p-6 rounded-lg">
                 <div className="flex items-center gap-4 mb-4">
-                  <BookOpen className="h-8 w-8 text-[#B05834]" />
-                  <h2 className="text-2xl font-bold text-[#333333]">
+                  <BookOpen className="h-8 w-8 text-brand-primary" />
+                  <h2 className="text-2xl font-bold text-brand-text-dark">
                     Our Mission
                   </h2>
                 </div>
-                <p className="text-[#666666] mb-4">
-                  To nurture the intellectual, ethical, social, physical, emotional, and spiritual development of young American Muslims, producing confident, spiritual, and professional Muslim leaders who will be an asset to our society.
+                <p className="text-brand-text-muted mb-4">
+                  To nurture the intellectual, ethical, social, physical,
+                  emotional, and spiritual development of young American
+                  Muslims, producing confident, spiritual, and professional
+                  Muslim leaders who will be an asset to our society.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
-                    <span className="text-[#666666]">
+                    <CheckCircle className="h-5 w-5 text-brand-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-brand-text-muted">
                       Nurture intellectual and academic excellence
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
-                    <span className="text-[#666666]">
+                    <CheckCircle className="h-5 w-5 text-brand-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-brand-text-muted">
                       Develop strong ethical and spiritual foundations
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
-                    <span className="text-[#666666]">
+                    <CheckCircle className="h-5 w-5 text-brand-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-brand-text-muted">
                       Foster social and emotional growth
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
-                    <span className="text-[#666666]">
+                    <CheckCircle className="h-5 w-5 text-brand-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-brand-text-muted">
                       Promote physical well-being and development
                     </span>
                   </li>
                 </ul>
               </div>
-              <div className="bg-[#F5E8D8] p-6 rounded-lg">
+              <div className="bg-brand-accent p-6 rounded-lg">
                 <div className="flex items-center gap-4 mb-4">
-                  <Star className="h-8 w-8 text-[#B05834]" />
-                  <h2 className="text-2xl font-bold text-[#333333]">
+                  <Star className="h-8 w-8 text-brand-primary" />
+                  <h2 className="text-2xl font-bold text-brand-text-dark">
                     Our Vision
                   </h2>
                 </div>
-                <p className="text-[#666666] mb-4">
-                  Our vision is to establish an institution dedicated to the dissemination of religious and worldly knowledge rooted in traditional Islamic values; providing a high quality of education to improve the quality of life of Muslim communities in America.
+                <p className="text-brand-text-muted mb-4">
+                  Our vision is to establish an institution dedicated to the
+                  dissemination of religious and worldly knowledge rooted in
+                  traditional Islamic values; providing a high quality of
+                  education to improve the quality of life of Muslim communities
+                  in America.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
-                    <span className="text-[#666666]">
+                    <CheckCircle className="h-5 w-5 text-brand-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-brand-text-muted">
                       Integrate religious and worldly knowledge
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
-                    <span className="text-[#666666]">
+                    <CheckCircle className="h-5 w-5 text-brand-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-brand-text-muted">
                       Uphold traditional Islamic values
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
-                    <span className="text-[#666666]">
+                    <CheckCircle className="h-5 w-5 text-brand-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-brand-text-muted">
                       Deliver high-quality education
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-[#B05834] flex-shrink-0 mt-0.5" />
-                    <span className="text-[#666666]">
+                    <CheckCircle className="h-5 w-5 text-brand-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-brand-text-muted">
                       Enhance Muslim community life in America
                     </span>
                   </li>
@@ -325,19 +343,19 @@ export default function AboutPage() {
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-lg p-8 shadow-md mb-8">
-            <h2 className="text-2xl font-bold text-[#B05834] mb-6">
+            <h2 className="text-2xl font-bold text-brand-primary mb-6">
               Core Values
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Card className="bg-[#F5E8D8] border-none">
+              <Card className="bg-brand-accent border-none">
                 <CardHeader className="flex flex-row items-center gap-4 pb-2">
                   <div className="bg-white rounded-full p-2">
-                    <BookOpen className="h-5 w-5 text-[#B05834]" />
+                    <BookOpen className="h-5 w-5 text-brand-primary" />
                   </div>
                   <CardTitle>Excellence</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-[#666666]">
+                  <CardDescription className="text-brand-text-muted">
                     We strive for excellence in all aspects of education,
                     continuously improving our programs and practices to provide
                     the highest quality learning experience.
@@ -345,60 +363,60 @@ export default function AboutPage() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-[#F5E8D8] border-none">
+              <Card className="bg-brand-accent border-none">
                 <CardHeader className="flex flex-row items-center gap-4 pb-2">
                   <div className="bg-white rounded-full p-2">
-                    <Heart className="h-5 w-5 text-[#B05834]" />
+                    <Heart className="h-5 w-5 text-brand-primary" />
                   </div>
                   <CardTitle>Compassion</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-[#666666]">
+                  <CardDescription className="text-brand-text-muted">
                     We foster a culture of kindness, empathy, and respect,
                     treating each member of our community with dignity and care.
                   </CardDescription>
                 </CardContent>
               </Card>
 
-              <Card className="bg-[#F5E8D8] border-none">
+              <Card className="bg-brand-accent border-none">
                 <CardHeader className="flex flex-row items-center gap-4 pb-2">
                   <div className="bg-white rounded-full p-2">
-                    <Users className="h-5 w-5 text-[#B05834]" />
+                    <Users className="h-5 w-5 text-brand-primary" />
                   </div>
                   <CardTitle>Community</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-[#666666]">
+                  <CardDescription className="text-brand-text-muted">
                     We build strong partnerships between home, school, and the
                     broader community to support student success and well-being.
                   </CardDescription>
                 </CardContent>
               </Card>
 
-              <Card className="bg-[#F5E8D8] border-none">
+              <Card className="bg-brand-accent border-none">
                 <CardHeader className="flex flex-row items-center gap-4 pb-2">
                   <div className="bg-white rounded-full p-2">
-                    <CheckCircle className="h-5 w-5 text-[#B05834]" />
+                    <CheckCircle className="h-5 w-5 text-brand-primary" />
                   </div>
                   <CardTitle>Integrity</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-[#666666]">
+                  <CardDescription className="text-brand-text-muted">
                     We uphold the highest standards of honesty, ethics, and
                     accountability in all our actions and decisions.
                   </CardDescription>
                 </CardContent>
               </Card>
 
-              <Card className="bg-[#F5E8D8] border-none">
+              <Card className="bg-brand-accent border-none">
                 <CardHeader className="flex flex-row items-center gap-4 pb-2">
                   <div className="bg-white rounded-full p-2">
-                    <Star className="h-5 w-5 text-[#B05834]" />
+                    <Star className="h-5 w-5 text-brand-primary" />
                   </div>
                   <CardTitle>Growth</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-[#666666]">
+                  <CardDescription className="text-brand-text-muted">
                     We embrace a growth mindset, encouraging continuous
                     learning, resilience, and personal development for students
                     and staff.
@@ -406,15 +424,15 @@ export default function AboutPage() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-[#F5E8D8] border-none">
+              <Card className="bg-brand-accent border-none">
                 <CardHeader className="flex flex-row items-center gap-4 pb-2">
                   <div className="bg-white rounded-full p-2">
-                    <BookOpen className="h-5 w-5 text-[#B05834]" />
+                    <BookOpen className="h-5 w-5 text-brand-primary" />
                   </div>
                   <CardTitle>Taqwa</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-[#666666]">
+                  <CardDescription className="text-brand-text-muted">
                     We cultivate God-consciousness and spiritual awareness,
                     guiding students to develop a meaningful relationship with
                     Allah.
@@ -429,14 +447,14 @@ export default function AboutPage() {
       {/* Religious Team */}
       <div className="bg-white py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-[#B05834] mb-8">
+          <h2 className="text-3xl font-bold text-center text-brand-primary mb-8">
             Spiritual Advisors
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {leadershipTeam.map((leader, index) => (
               <div
                 key={index}
-                className="bg-[#F5E8D8] p-6 rounded-lg shadow-md flex flex-col"
+                className="bg-brand-accent p-6 rounded-lg shadow-md flex flex-col"
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="relative w-16 h-16 flex-shrink-0">
@@ -451,26 +469,32 @@ export default function AboutPage() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-bold text-[#333333]">{leader.name}</h3>
-                    <p className="text-[#666666] text-sm">{leader.title}</p>
+                    <h3 className="font-bold text-brand-text-dark">
+                      {leader.name}
+                    </h3>
+                    <p className="text-brand-text-muted text-sm">
+                      {leader.title}
+                    </p>
                   </div>
                 </div>
 
-                <p className="text-[#666666] mb-4">{leader.bio.split("\n")[0]}</p>
+                <p className="text-brand-text-muted mb-4">
+                  {leader.bio.split("\n")[0]}
+                </p>
 
                 <div className="mt-auto">
                   <Dialog>
                     <DialogTrigger asChild>
                       <Button
                         variant="outline"
-                        className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
+                        className="w-full border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white"
                       >
                         Read Full Bio
                       </Button>
                     </DialogTrigger>
                     <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto py-8 [&>button[data-state]]:h-10 [&>button[data-state]]:w-10 [&>button[data-state]_svg]:h-8 [&>button[data-state]_svg]:w-8">
                       <DialogHeader>
-                        <DialogTitle className="text-2xl font-bold text-[#B05834] mb-4">
+                        <DialogTitle className="text-2xl font-bold text-brand-primary mb-4">
                           {leader.name}
                         </DialogTitle>
                       </DialogHeader>
@@ -487,13 +511,15 @@ export default function AboutPage() {
                           </div>
                         </div>
                         <div>
-                          <h3 className="font-bold text-xl text-[#333333]">
+                          <h3 className="font-bold text-xl text-brand-text-dark">
                             {leader.name}
                           </h3>
-                          <p className="text-[#666666]">{leader.title}</p>
+                          <p className="text-brand-text-muted">
+                            {leader.title}
+                          </p>
                         </div>
                       </div>
-                      <div className="text-[#666666] whitespace-pre-line">
+                      <div className="text-brand-text-muted whitespace-pre-line">
                         {leader.bio}
                       </div>
                     </DialogContent>
@@ -507,7 +533,7 @@ export default function AboutPage() {
 
       {/* Board of Directors */}
       <div className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl font-bold text-center text-[#B05834] mb-8">
+        <h2 className="text-3xl font-bold text-center text-brand-primary mb-8">
           Executive Board of Directors
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -529,26 +555,32 @@ export default function AboutPage() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="font-bold text-[#333333]">{member.name}</h3>
-                  <p className="text-[#666666] text-sm">{member.title}</p>
+                  <h3 className="font-bold text-brand-text-dark">
+                    {member.name}
+                  </h3>
+                  <p className="text-brand-text-muted text-sm">
+                    {member.title}
+                  </p>
                 </div>
               </div>
 
-              <p className="text-[#666666] mb-4">{member.bio.split("\n")[0]}</p>
+              <p className="text-brand-text-muted mb-4">
+                {member.bio.split("\n")[0]}
+              </p>
 
               <div className="mt-auto">
                 <Dialog>
                   <DialogTrigger asChild>
                     <Button
                       variant="outline"
-                      className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
+                      className="w-full border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white"
                     >
                       Read Full Bio
                     </Button>
                   </DialogTrigger>
                   <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto py-8 [&>button[data-state]]:h-10 [&>button[data-state]]:w-10 [&>button[data-state]_svg]:h-8 [&>button[data-state]_svg]:w-8">
                     <DialogHeader>
-                      <DialogTitle className="text-2xl font-bold text-[#B05834] mb-4">
+                      <DialogTitle className="text-2xl font-bold text-brand-primary mb-4">
                         {member.name}
                       </DialogTitle>
                     </DialogHeader>
@@ -565,13 +597,13 @@ export default function AboutPage() {
                         </div>
                       </div>
                       <div>
-                        <h3 className="font-bold text-xl text-[#333333]">
+                        <h3 className="font-bold text-xl text-brand-text-dark">
                           {member.name}
                         </h3>
-                        <p className="text-[#666666]">{member.title}</p>
+                        <p className="text-brand-text-muted">{member.title}</p>
                       </div>
                     </div>
-                    <div className="text-[#666666] whitespace-pre-line">
+                    <div className="text-brand-text-muted whitespace-pre-line">
                       {member.bio}
                     </div>
                   </DialogContent>
@@ -583,9 +615,9 @@ export default function AboutPage() {
       </div>
 
       {/* Faculty & Staff Highlights */}
-      <div id="faculty" className="bg-[#F5E8D8] py-12">
+      <div id="faculty" className="bg-brand-accent py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-[#B05834] mb-8">
+          <h2 className="text-3xl font-bold text-center text-brand-primary mb-8">
             Faculty & Staff
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -609,14 +641,16 @@ export default function AboutPage() {
                       </div>
                     </div>
                     <div>
-                      <h3 className="font-bold text-[#333333]">
+                      <h3 className="font-bold text-brand-text-dark">
                         {faculty.name}
                       </h3>
-                      <p className="text-[#666666] text-sm">{faculty.title}</p>
+                      <p className="text-brand-text-muted text-sm">
+                        {faculty.title}
+                      </p>
                     </div>
                   </div>
 
-                  <p className="text-[#666666] mb-4">
+                  <p className="text-brand-text-muted mb-4">
                     {faculty.bio.split("\n")[0]}
                   </p>
 
@@ -625,14 +659,14 @@ export default function AboutPage() {
                       <DialogTrigger asChild>
                         <Button
                           variant="outline"
-                          className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
+                          className="w-full border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white"
                         >
                           Read Full Bio
                         </Button>
                       </DialogTrigger>
                       <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto py-8 [&>button[data-state]]:h-10 [&>button[data-state]]:w-10 [&>button[data-state]_svg]:h-8 [&>button[data-state]_svg]:w-8">
                         <DialogHeader>
-                          <DialogTitle className="text-2xl font-bold text-[#B05834] mb-4">
+                          <DialogTitle className="text-2xl font-bold text-brand-primary mb-4">
                             {faculty.name}
                           </DialogTitle>
                         </DialogHeader>
@@ -649,13 +683,15 @@ export default function AboutPage() {
                             </div>
                           </div>
                           <div>
-                            <h3 className="font-bold text-xl text-[#333333]">
+                            <h3 className="font-bold text-xl text-brand-text-dark">
                               {faculty.name}
                             </h3>
-                            <p className="text-[#666666]">{faculty.title}</p>
+                            <p className="text-brand-text-muted">
+                              {faculty.title}
+                            </p>
                           </div>
                         </div>
-                        <div className="text-[#666666] whitespace-pre-line">
+                        <div className="text-brand-text-muted whitespace-pre-line">
                           {faculty.bio}
                         </div>
                       </DialogContent>
@@ -667,7 +703,7 @@ export default function AboutPage() {
 
           <div className="text-center mt-8">
             <Button
-              className="bg-[#B05834] hover:bg-[#8A4526] text-white"
+              className="bg-brand-primary hover:bg-brand-primary/80 text-white"
               onClick={() => setShowAllFaculty(!showAllFaculty)}
             >
               {showAllFaculty ? "Show Less" : "View All Faculty & Staff"}
@@ -770,7 +806,7 @@ export default function AboutPage() {
       </div> */}
 
       {/* Call to Action */}
-      <div className="bg-[#B05834] py-12 text-white">
+      <div className="bg-brand-primary py-12 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Visit Our Campus</h2>
@@ -780,7 +816,7 @@ export default function AboutPage() {
               more about our programs.
             </p>
             <Link href="/contact">
-              <Button className="bg-white text-[#B05834] hover:bg-[#F5E8D8]">
+              <Button className="bg-white text-brand-primary hover:bg-brand-accent">
                 Contact Us
               </Button>
             </Link>
