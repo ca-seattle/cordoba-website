@@ -75,9 +75,9 @@ const config: Config = {
           border: "var(--navbar-border)",
           text: "var(--navbar-text)",
         },
-		footer: {
-			text: "var(--footer-text)",
-		}
+		    footer: {
+			    text: "var(--footer-text)",
+		    }
       },
       borderRadius: {
         lg: "var(--radius)",
