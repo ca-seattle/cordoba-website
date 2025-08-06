@@ -161,7 +161,7 @@ export default function FAQPage() {
   ]
 
   return (
-    <div className="bg-[#FFF2E6]">
+    <div className="bg-brand-secondary">
       {/* Hero Section */}
       <PageHero title="Frequently Asked Questions" subtitle="Find answers to common questions about Cordoba Academy" />
 
@@ -188,9 +188,9 @@ export default function FAQPage() {
               <TabsContent value="general">
                 <div className="space-y-6">
                   {generalFAQs.map((faq, index) => (
-                    <div key={index} className="border-b border-[#E5D5C5] pb-6">
-                      <h3 className="font-bold text-[#B05834] text-lg mb-2">{faq.question}</h3>
-                      <p className="text-[#666666]">{faq.answer}</p>
+                    <div key={index} className="border-b border-navbar-border pb-6">
+                      <h3 className="font-bold text-brand-primary text-lg mb-2">{faq.question}</h3>
+                      <p className="text-brand-text-muted">{faq.answer}</p>
                     </div>
                   ))}
                 </div>
@@ -199,9 +199,9 @@ export default function FAQPage() {
               <TabsContent value="academics">
                 <div className="space-y-6">
                   {academicsFAQs.map((faq, index) => (
-                    <div key={index} className="border-b border-[#E5D5C5] pb-6">
-                      <h3 className="font-bold text-[#B05834] text-lg mb-2">{faq.question}</h3>
-                      <p className="text-[#666666]">{faq.answer}</p>
+                    <div key={index} className="border-b border-navbar-border pb-6">
+                      <h3 className="font-bold text-brand-primary text-lg mb-2">{faq.question}</h3>
+                      <p className="text-brand-text-muted">{faq.answer}</p>
                     </div>
                   ))}
                 </div>
@@ -210,9 +210,9 @@ export default function FAQPage() {
               <TabsContent value="admissions">
                 <div className="space-y-6">
                   {admissionsFAQs.map((faq, index) => (
-                    <div key={index} className="border-b border-[#E5D5C5] pb-6">
-                      <h3 className="font-bold text-[#B05834] text-lg mb-2">{faq.question}</h3>
-                      <p className="text-[#666666]">{faq.answer}</p>
+                    <div key={index} className="border-b border-navbar-border pb-6">
+                      <h3 className="font-bold text-brand-primary text-lg mb-2">{faq.question}</h3>
+                      <p className="text-brand-text-muted">{faq.answer}</p>
                     </div>
                   ))}
                 </div>
@@ -221,28 +221,28 @@ export default function FAQPage() {
               <TabsContent value="parents">
                 <div className="space-y-6">
                   {parentFAQs.map((faq, index) => (
-                    <div key={index} className="border-b border-[#E5D5C5] pb-6">
-                      <h3 className="font-bold text-[#B05834] text-lg mb-2">{faq.question}</h3>
-                      <p className="text-[#666666]">{faq.answer}</p>
+                    <div key={index} className="border-b border-navbar-border pb-6">
+                      <h3 className="font-bold text-brand-primary text-lg mb-2">{faq.question}</h3>
+                      <p className="text-brand-text-muted">{faq.answer}</p>
                     </div>
                   ))}
                 </div>
               </TabsContent>
             </Tabs>
 
-            <div className="bg-[#F5E8D8] p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-[#FF4A00] mb-4">Still Have Questions?</h3>
-              <p className="text-[#666666] mb-6">
+            <div className="bg-brand-accent p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-brand-accent-orange mb-4">Still Have Questions?</h3>
+              <p className="text-brand-text-muted mb-6">
                 If you didn't find the answer to your question, please don't hesitate to contact us. We're here to help!
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact">
-                  <Button className="bg-[#B05834] hover:bg-[#8A4526] text-white w-full sm:w-auto">Contact Us</Button>
+                  <Button className="bg-brand-primary hover:bg-brand-primary-dark text-white w-full sm:w-auto">Contact Us</Button>
                 </Link>
                 <Link href="/enrollment/inquire">
                   <Button
                     variant="outline"
-                    className="border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white w-full sm:w-auto"
+                    className="border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white w-full sm:w-auto"
                   >
                     Request Information
                   </Button>
@@ -254,20 +254,20 @@ export default function FAQPage() {
       </div>
 
       {/* Additional Resources */}
-      <div className="bg-white py-12">
+      {/* <div className="bg-white py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-[#B05834] mb-8">Additional Resources</h2>
+          <h2 className="text-3xl font-bold text-center text-brand-primary mb-8">Additional Resources</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-[#F5E8D8] p-6 rounded-lg">
-              <h3 className="font-bold text-[#333333] text-xl mb-3">Parent Handbook</h3>
-              <p className="text-[#666666] mb-4">
+            <div className="bg-brand-accent p-6 rounded-lg">
+              <h3 className="font-bold text-brand-text-dark text-xl mb-3">Parent Handbook</h3>
+              <p className="text-brand-text-muted mb-4">
                 Our comprehensive Parent Handbook provides detailed information about school policies, procedures, and
                 expectations.
               </p>
               <Link href="/resources/parent-handbook">
                 <Button
                   variant="outline"
-                  className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
+                  className="w-full border-brand-primary text-[#B05834] hover:bg-[#B05834] hover:text-white"
                 >
                   Download Handbook
                 </Button>
@@ -305,10 +305,10 @@ export default function FAQPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Call to Action */}
-      <div className="container mx-auto px-4 py-12">
+      {/* <div className="container mx-auto px-4 py-12">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-[#B05834] mb-4">Experience Cordoba Academy</h2>
           <p className="text-[#666666] mb-6">
@@ -319,7 +319,7 @@ export default function FAQPage() {
             <Button className="bg-[#B05834] hover:bg-[#8A4526] text-white">Schedule a Tour</Button>
           </Link>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

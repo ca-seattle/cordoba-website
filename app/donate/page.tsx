@@ -44,7 +44,7 @@ export default function DonatePage() {
       description:
         "Help make Islamic education accessible to deserving families through Zakat and Sadaqah eligible scholarships.",
       icon: BookOpen,
-      color: "#B05834",
+      color: "#FF4A00",
     },
     {
       title: "Facility Operations",
@@ -74,7 +74,7 @@ export default function DonatePage() {
   ];
 
   return (
-    <div className="bg-[#FFF2E6]">
+    <div className="bg-brand-secondary">
       {/* Hero Section */}
       <PageHero
         title="Support Our Mission"
@@ -85,10 +85,10 @@ export default function DonatePage() {
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-lg p-8 shadow-md mb-8">
-            <h2 className="text-2xl font-bold text-[#B05834] mb-6">
+            <h2 className="text-2xl font-bold text-brand-primary mb-6">
               Make a Difference Today
             </h2>
-            <p className="text-[#666666] mb-6">
+            <p className="text-brand-text-muted mb-6">
               Your support enables Cordoba Academy to provide an exceptional
               educational experience that nurtures academic excellence, Islamic
               identity, and character development. As a 501(c)(3) nonprofit
@@ -96,9 +96,9 @@ export default function DonatePage() {
               allowed by law.
             </p>
 
-            <div className="bg-[#F5E8D8] rounded-lg p-8 mb-8">
+            <div className="bg-brand-accent rounded-lg p-8 mb-8">
               <div className="max-w-3xl mx-auto">
-                <p className="text-[#666666] mb-6 leading-relaxed">
+                <p className="text-brand-text-muted mb-6 leading-relaxed">
                   We appeal today to ask for your support in our mission to
                   provide educational resources to as many Muslim students as
                   possible. Your donation will help us create a safe space for
@@ -106,16 +106,16 @@ export default function DonatePage() {
                   educational programs including summer camps, field trips, and
                   professional workshops fostering community engagement.
                 </p>
-                <div className="border-l-4 border-[#FF4A00] pl-6 py-2 mb-6">
-                  <p className="text-[#333333] italic font-medium">
+                <div className="border-l-4 border-brand-accent-orange pl-6 py-2 mb-6">
+                  <p className="text-brand-text-dark italic font-medium">
                     "The believer's shade on the Day of Resurrection will be his
                     charity."
                   </p>
-                  <p className="text-[#666666] text-sm mt-2">
+                  <p className="text-brand-text-muted text-sm mt-2">
                     — Prophet Muhammad ﷺ (Al-Tirmidhi)
                   </p>
                 </div>
-                <p className="text-[#666666]">
+                <p className="text-brand-text-muted">
                   Your tax-deductible donation will go directly towards our
                   programs and initiatives. We value every contribution, no
                   matter how big or small, and we assure you that it will be put
@@ -124,7 +124,7 @@ export default function DonatePage() {
               </div>
             </div>
 
-            <h3 className="text-xl font-bold text-[#FF4A00] mb-6">
+            <h3 className="text-xl font-bold text-brand-accent-orange mb-6">
               Ways to Give
             </h3>
 
@@ -132,7 +132,7 @@ export default function DonatePage() {
               {donationOptions.map((option, index) => (
                 <Card key={index}>
                   <CardHeader className="flex flex-row items-center gap-4">
-                    <div className="bg-[#F5E8D8] rounded-full p-2">
+                    <div className="bg-brand-accent rounded-full p-2">
                       <option.icon
                         className="h-5 w-5"
                         style={{ color: option.color }}
@@ -143,7 +143,7 @@ export default function DonatePage() {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-[#666666]">
+                    <CardDescription className="text-brand-text-muted">
                       {option.description}
                     </CardDescription>
                   </CardContent>
@@ -151,16 +151,16 @@ export default function DonatePage() {
               ))}
             </div>
 
-            <div className="bg-[#F5E8D8] p-6 rounded-lg mb-8">
+            <div className="bg-brand-accent p-6 rounded-lg mb-8">
               <div className="flex items-center gap-4 mb-4">
-                <Gift className="h-8 w-8 text-[#B05834]" />
-                <h3 className="text-xl font-bold text-[#FF4A00]">
+                <Gift className="h-8 w-8 text-brand-primary" />
+                <h3 className="text-xl font-bold text-brand-accent-orange">
                   Other Ways to Support
                 </h3>
               </div>
-              <ul className="space-y-4 text-[#666666]">
+                <ul className="space-y-4 text-brand-text-muted">
                 <li className="flex items-start gap-3">
-                  <div className="font-bold text-[#333333] w-32 flex-shrink-0">
+                  <div className="font-bold text-brand-text-dark w-32 flex-shrink-0">
                     Planned Giving
                   </div>
                   <div>
@@ -169,7 +169,7 @@ export default function DonatePage() {
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="font-bold text-[#333333] w-32 flex-shrink-0">
+                  <div className="font-bold text-brand-text-dark w-32 flex-shrink-0">
                     Matching Gifts
                   </div>
                   <div>
@@ -178,7 +178,7 @@ export default function DonatePage() {
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="font-bold text-[#333333] w-32 flex-shrink-0">
+                  <div className="font-bold text-brand-text-dark w-32 flex-shrink-0">
                     Stock Gifts
                   </div>
                   <div>
@@ -187,7 +187,7 @@ export default function DonatePage() {
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="font-bold text-[#333333] w-32 flex-shrink-0">
+                  <div className="font-bold text-brand-text-dark w-32 flex-shrink-0">
                     In-Kind Donations
                   </div>
                   <div>
@@ -197,7 +197,7 @@ export default function DonatePage() {
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="font-bold text-[#333333] w-32 flex-shrink-0">
+                  <div className="font-bold text-brand-text-dark w-32 flex-shrink-0">
                     Volunteer
                   </div>
                   <div>
@@ -208,22 +208,22 @@ export default function DonatePage() {
               </ul>
             </div>
 
-            <h3 className="text-xl font-bold text-[#FF4A00] mb-6">
+            <h3 className="text-xl font-bold text-brand-accent-orange mb-6">
               Make a Donation
             </h3>
 
             {/* Mobile Payment Options */}
-            <div className="bg-white border-2 border-[#E5D5C5] p-6 rounded-lg mb-6">
-              <h4 className="text-lg font-bold text-[#B05834] mb-4">
+            <div className="bg-white border-2 border-brand-accent p-6 rounded-lg mb-6">
+              <h4 className="text-lg font-bold text-brand-primary mb-4">
                 Donation Options
               </h4>
-              <p className="text-[#666666] mb-6">
+              <p className="text-brand-text-muted mb-6">
                 Scan the QR codes or use the links below to donate instantly via
                 PayPal, Venmo or Zelle.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center">
-                  <div className="bg-[#F5E8D8] p-4 rounded-lg mb-4 h-24 flex flex-col justify-between">
+                  <div className="bg-brand-accent p-4 rounded-lg mb-4 h-24 flex flex-col justify-between">
                     <Image
                       src="/paypal.png"
                       alt="PayPal"
@@ -231,11 +231,11 @@ export default function DonatePage() {
                       height={45}
                       className="mx-auto"
                     />
-                    <p className="text-[#666666] text-sm">
+                    <p className="text-brand-text-muted text-sm">
                       One-time or Monthly
                     </p>
                   </div>
-                  <div className="bg-white border-2 border-[#E5D5C5] p-4 rounded-lg mb-3 h-48 flex items-center justify-center">
+                  <div className="bg-white border-2 border-brand-accent p-4 rounded-lg mb-3 h-48 flex items-center justify-center">
                     <div className="text-center">
                       <Link
                         href="https://www.paypal.com/donate/?hosted_button_id=AJFCNVUGCZEJU"
@@ -277,12 +277,12 @@ export default function DonatePage() {
                       </form>
                     </div>
                   </div>
-                  <p className="text-[#666666] text-sm">
+                  <p className="text-brand-text-muted text-sm">
                     Click or scan to donate via PayPal
                   </p>
                 </div>
                 <div className="text-center">
-                  <div className="bg-[#F5E8D8] p-4 rounded-lg mb-4 h-24 flex flex-col justify-between">
+                    <div className="bg-brand-accent p-4 rounded-lg mb-4 h-24 flex flex-col justify-between">
                     <Image
                       src="/venmo_blue.png"
                       alt="Venmo"
@@ -290,9 +290,9 @@ export default function DonatePage() {
                       height={40}
                       className="mx-auto mt-2"
                     />
-                    <p className="text-[#666666] text-sm">@cordobaacadmy</p>
+                    <p className="text-brand-text-muted text-sm">@cordobaacadmy</p>
                   </div>
-                  <div className="bg-white border-2 border-[#E5D5C5] p-4 rounded-lg mb-3 h-48 flex items-center justify-center">
+                  <div className="bg-white border-2 border-brand-accent p-4 rounded-lg mb-3 h-48 flex items-center justify-center">
                     <Link
                       href="https://account.venmo.com/u/cordobaacadmy"
                       target="_blank"
@@ -308,12 +308,12 @@ export default function DonatePage() {
                       />
                     </Link>
                   </div>
-                  <p className="text-[#666666] text-sm">
+                  <p className="text-brand-text-muted text-sm">
                     Click or scan to donate via Venmo
                   </p>
                 </div>
                 <div className="text-center">
-                  <div className="bg-[#F5E8D8] p-4 rounded-lg mb-4 h-24 flex flex-col justify-between">
+                  <div className="bg-brand-accent p-4 rounded-lg mb-4 h-24 flex flex-col justify-between">
                     <Image
                       src="/zelle.png"
                       alt="Zelle"
@@ -321,11 +321,11 @@ export default function DonatePage() {
                       height={40}
                       className="mx-auto"
                     />
-                    <p className="text-[#666666] text-sm">
+                    <p className="text-brand-text-muted text-sm">
                       donate@cordobaacademy.org
                     </p>
                   </div>
-                  <div className="bg-white border-2 border-[#E5D5C5] p-4 rounded-lg mb-3 h-48 flex items-center justify-center">
+                  <div className="bg-white border-2 border-brand-accent p-4 rounded-lg mb-3 h-48 flex items-center justify-center">
                     <Image
                       src="/zelle_qr.jpg"
                       alt="Zelle QR Code"
@@ -334,7 +334,7 @@ export default function DonatePage() {
                       className="mx-auto"
                     />
                   </div>
-                  <p className="text-[#666666] text-sm">
+                  <p className="text-brand-text-muted text-sm">
                     Scan to donate via Zelle
                   </p>
                 </div>
@@ -440,42 +440,42 @@ export default function DonatePage() {
       {/* Impact Section */}
       <div className="bg-white py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-[#B05834] mb-8">
+          <h2 className="text-3xl font-bold text-center text-brand-primary mb-8">
             Your Impact
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="text-center">
-              <div className="bg-[#F5E8D8] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-[#B05834]">25%</span>
+              <div className="bg-brand-accent w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-brand-primary">25%</span>
               </div>
-              <h3 className="font-bold text-[#333333] mb-2">
+              <h3 className="font-bold text-brand-text-dark mb-2">
                 Scholarship Support
               </h3>
-              <p className="text-[#666666]">
+              <p className="text-brand-text-muted">
                 of our students receive need-based financial assistance, making
                 Islamic education accessible to all families.
               </p>
             </div>
             <div className="text-center">
-              <div className="bg-[#F5E8D8] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-[#B05834]">100%</span>
+              <div className="bg-brand-accent w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-brand-primary">100%</span>
               </div>
-              <h3 className="font-bold text-[#333333] mb-2">
+              <h3 className="font-bold text-brand-text-dark mb-2">
                 Faculty Development
               </h3>
-              <p className="text-[#666666]">
+              <p className="text-brand-text-muted">
                 of our teachers participate in professional development
                 opportunities to enhance their teaching skills.
               </p>
             </div>
             <div className="text-center">
-              <div className="bg-[#F5E8D8] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-[#B05834]">15+</span>
+              <div className="bg-brand-accent w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-brand-primary">15+</span>
               </div>
-              <h3 className="font-bold text-[#333333] mb-2">
+              <h3 className="font-bold text-brand-text-dark mb-2">
                 Enrichment Programs
               </h3>
-              <p className="text-[#666666]">
+              <p className="text-brand-text-muted">
                 including Quran competition, STEAM activities, and community
                 service projects funded by donations.
               </p>
@@ -581,14 +581,14 @@ export default function DonatePage() {
 
       {/* Corporate Matching */}
       <div className="container mx-auto px-4 py-12">
-        <div className="bg-[#B05834] rounded-lg p-8 text-white max-w-4xl mx-auto text-center">
+        <div className="bg-brand-primary rounded-lg p-8 text-white max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Double Your Impact</h2>
           <p className="mb-6 max-w-2xl mx-auto">
             Many employers match charitable contributions made by their
             employees. Check with your company's HR department to see if they
             offer a matching gift program and potentially double your impact!
           </p>
-          <Button className="bg-white text-[#B05834] hover:bg-[#F5E8D8]">
+          <Button className="bg-white text-brand-primary hover:bg-brand-accent">
             Check Employer Match
           </Button>
         </div>
@@ -597,16 +597,16 @@ export default function DonatePage() {
       {/* Contact Section */}
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-[#B05834] mb-4">
+          <h2 className="text-2xl font-bold text-brand-primary mb-4">
             Questions About Giving?
           </h2>
-          <p className="text-[#666666] mb-6">
+          <p className="text-brand-text-muted mb-6">
             Our team is here to help with any questions about donations, planned
             giving, or other ways to support Cordoba Academy.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button className="bg-[#B05834] hover:bg-[#8A4526] text-white w-full sm:w-auto">
+              <Button className="bg-brand-primary hover:bg-brand-primary-dark text-white w-full sm:w-auto">
                 Contact Us
               </Button>
             </Link>

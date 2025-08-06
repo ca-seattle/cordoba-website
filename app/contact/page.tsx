@@ -1,23 +1,30 @@
-import type { Metadata } from "next"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import PageHero from "@/components/page-hero";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Get in touch with Cordoba Academy, your local Islamic school in Lynnwood, serving Seattle & Mountlake Terrace areas. Contact us for enrollment information, campus visits, or general inquiries.",
+  description:
+    "Get in touch with Cordoba Academy, your local Islamic school in Lynnwood, serving Seattle & Mountlake Terrace areas. Contact us for enrollment information, campus visits, or general inquiries.",
   openGraph: {
     title: "Contact Cordoba Academy | Islamic School in Seattle Area",
-    description: "Reach out to Cordoba Academy in Lynnwood. We serve the Seattle, Lynnwood & Mountlake Terrace communities with excellence in Islamic education.",
-    images: ['/logo-full.png']
+    description:
+      "Reach out to Cordoba Academy in Lynnwood. We serve the Seattle, Lynnwood & Mountlake Terrace communities with excellence in Islamic education.",
+    images: ["/logo-full.png"],
   },
-  keywords: ['Contact Islamic School Seattle', 'Cordoba Academy Contact', 'Islamic School Lynnwood Contact', 'Muslim School Information Seattle']
+  keywords: [
+    "Contact Islamic School Seattle",
+    "Cordoba Academy Contact",
+    "Islamic School Lynnwood Contact",
+    "Muslim School Information Seattle",
+  ],
 };
 
 export default function ContactPage() {
   return (
-    <div className="bg-[#FFF2E6]">
+    <div className="bg-brand-secondary">
       {/* Hero Section */}
       <PageHero title="Contact Us" subtitle="We'd love to hear from you" />
 
@@ -28,10 +35,10 @@ export default function ContactPage() {
             {/* Contact Information */}
             <div className="max-w-2xl">
               <div className="bg-white rounded-lg p-8 shadow-md mb-8">
-                <h2 className="text-2xl font-bold text-[#B05834] mb-6">
+                <h2 className="text-2xl font-bold text-brand-primary mb-6">
                   Get in Touch
                 </h2>
-                <p className="text-[#666666] mb-6">
+                <p className="text-brand-text-muted mb-6">
                   We're here to answer any questions you may have about Cordoba
                   Academy. Please feel free to reach out using the contact
                   information below or the form on this page.
@@ -39,48 +46,58 @@ export default function ContactPage() {
 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-[#F5E8D8] rounded-full p-3 flex-shrink-0">
-                      <MapPin className="h-5 w-5 text-[#B05834]" />
+                    <div className="bg-brand-accent rounded-full p-3 flex-shrink-0">
+                      <MapPin className="h-5 w-5 text-brand-primary" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-[#333333] mb-1">Address</h3>
-                      <p className="text-[#666666]">3210 200th Pl SW</p>
-                      <p className="text-[#666666]">Lynnwood, WA 98036</p>
+                      <h3 className="font-bold text-brand-text-dark mb-1">
+                        Address
+                      </h3>
+                      <p className="text-brand-text-muted">3210 200th Pl SW</p>
+                      <p className="text-brand-text-muted">
+                        Lynnwood, WA 98036
+                      </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="bg-[#F5E8D8] rounded-full p-3 flex-shrink-0">
-                      <Phone className="h-5 w-5 text-[#B05834]" />
+                    <div className="bg-brand-accent rounded-full p-3 flex-shrink-0">
+                      <Phone className="h-5 w-5 text-brand-primary" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-[#333333] mb-1">Phone</h3>
-                      <p className="text-[#666666]">(425) 954-3687</p>
+                      <h3 className="font-bold text-brand-text-dark mb-1">
+                        Phone
+                      </h3>
+                      <p className="text-brand-text-muted">(425) 954-3687</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="bg-[#F5E8D8] rounded-full p-3 flex-shrink-0">
-                      <Mail className="h-5 w-5 text-[#B05834]" />
+                    <div className="bg-brand-accent rounded-full p-3 flex-shrink-0">
+                      <Mail className="h-5 w-5 text-brand-primary" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-[#333333] mb-1">Email</h3>
-                      <p className="text-[#666666]">info@cordobaacademy.org</p>
+                      <h3 className="font-bold text-brand-text-dark mb-1">
+                        Email
+                      </h3>
+                      <p className="text-brand-text-muted">
+                        info@cordobaacademy.org
+                      </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="bg-[#F5E8D8] rounded-full p-3 flex-shrink-0">
-                      <Clock className="h-5 w-5 text-[#B05834]" />
+                    <div className="bg-brand-accent rounded-full p-3 flex-shrink-0">
+                      <Clock className="h-5 w-5 text-brand-primary" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-[#333333] mb-1">
+                      <h3 className="font-bold text-brand-text-dark mb-1">
                         Office Hours
                       </h3>
-                      <p className="text-[#666666]">
+                      <p className="text-brand-text-muted">
                         Monday - Friday: 8:00 AM - 4:00 PM
                       </p>
-                      <p className="text-[#666666]">
+                      <p className="text-brand-text-muted">
                         Saturday - Sunday: Closed
                       </p>
                     </div>
@@ -245,7 +262,9 @@ export default function ContactPage() {
       {/* Map Section */}
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#B05834] mb-6">Find Us</h2>
+          <h2 className="text-2xl font-bold text-brand-primary mb-6">
+            Find Us
+          </h2>
           <div className="bg-white rounded-lg p-4 shadow-md">
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               {/* Replace with actual map or iframe */}
@@ -265,7 +284,7 @@ export default function ContactPage() {
       </div>
 
       {/* Visit Us Section */}
-      <div className="bg-[#B05834] py-12 text-white">
+      <div className="bg-brand-primary py-12 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Visit Our Campus</h2>
@@ -275,7 +294,7 @@ export default function ContactPage() {
               facilities, meet our staff, and learn more about our programs.
             </p>
             <Link href="/enrollment/tour">
-              <Button className="bg-white text-[#B05834] hover:bg-[#F5E8D8]">
+              <Button className="bg-white text-brand-primary hover:bg-brand-accent">
                 Schedule a Tour
               </Button>
             </Link>
@@ -286,34 +305,34 @@ export default function ContactPage() {
       {/* FAQ Section */}
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#B05834] mb-6 text-center">
+          <h2 className="text-2xl font-bold text-brand-primary mb-6 text-center">
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-[#333333] mb-2">
+              <h3 className="font-bold text-brand-text-dark mb-2">
                 What are your school hours?
               </h3>
-              <p className="text-[#666666]">
-                Our school day runs from 8:30 AM to 3:30 PM, Monday through Thursday 
-                and 8:30 AM to 11:30 AM, Friday.
+              <p className="text-brand-text-muted">
+                Our school day runs from 8:30 AM to 3:30 PM, Monday through
+                Thursday and 8:30 AM to 11:30 AM, Friday.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-[#333333] mb-2">
+              <h3 className="font-bold text-brand-text-dark mb-2">
                 How can I apply for admission?
               </h3>
-              <p className="text-[#666666]">
+              <p className="text-brand-text-muted">
                 You can begin the application process by visiting our Enrollment
                 page or contacting our Admissions Office directly. We recommend
                 scheduling a tour before applying.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-[#333333] mb-2">
+              <h3 className="font-bold text-brand-text-dark mb-2">
                 Do you offer financial aid?
               </h3>
-              <p className="text-[#666666]">
+              <p className="text-brand-text-muted">
                 Yes, we offer need-based financial aid to eligible families. You
                 can learn more about our financial aid program on our Enrollment
                 page or by contacting our Admissions Office.
@@ -324,7 +343,7 @@ export default function ContactPage() {
             <Link href="/faq">
               <Button
                 variant="outline"
-                className="border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
+                className="border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white"
               >
                 View All FAQs
               </Button>
