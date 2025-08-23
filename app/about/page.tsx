@@ -109,7 +109,7 @@ export default function AboutPage() {
       name: "Hana Khan",
       title: "3rd Grade ELA Learning Coach",
       image: "/hana_khan.jpg",
-      bio: "Sr. Hana holds a Bachelor's degree in Psychology Studies from Western Connecticut State University and has also pursued advanced Islamic studies, working toward an Aalima degree in New York. With over seven years of experience working with children, she has always been passionate about nurturing young minds and helping them grow with confidence and compassion.\n\nHer greatest joy comes from seeing her students every day—their curiosity, energy, and smiles continue to inspire her. Teaching at Cordoba Academy is especially meaningful for her, as it allows her to integrate Islamic values into her daily instruction and help children develop both academically and spiritually in a supportive, faith-centered environment.",
+      bio: "Sr. Hana holds a Bachelor's degree in Psychology Studies from Western Connecticut State University and has also pursued advanced Islamic studies, completing an Aalima degree in New York. With over seven years of experience working with children, she has always been passionate about nurturing young minds and helping them grow with confidence and compassion.\n\nHer greatest joy comes from seeing her students every day—their curiosity, energy, and smiles continue to inspire her. Teaching at Cordoba Academy is especially meaningful for her, as it allows her to integrate Islamic values into her daily instruction and help children develop both academically and spiritually in a supportive, faith-centered environment.",
     },
     {
       name: "Sadia Rizvi",
@@ -145,32 +145,14 @@ export default function AboutPage() {
       name: "Afshan Qureshi",
       title: "5th Grade Quran Instructor",
       image: "/avatar_female.png",
-      bio: "NO BIO AVAILABLE",
+      bio: "Sr. Afshan holds a degree in Psychology from Pakistan and has also pursued advanced Islamic Studies, completing an Aalima degree in the United States. She has further dedicated herself to the study of Quranic tafseer, hadith, and Arabic grammar, and has completed advanced Tajweed courses. Her ongoing learning with authentic teachers reflects her deep commitment to lifelong growth in sacred knowledge.\n\nHer greatest passion is the Quran, teaching it in the way it has been preserved and passed down since the time of the Prophet ﷺ. For Sr. Afshan, nothing is more fulfilling than witnessing her students put effort into connecting with the Quran; each step they take fills her heart with gratitude and joy. Teaching at Cordoba Academy allows her to share this love of the Quran and inspire students to build a lasting relationship with it.",
     },
-    // {
-    //   name: "Aisha Ahmad",
-    //   title: "5th Grade Quran Instructor",
-    //   image: "/aisha_ahmad.jpg",
-    //   bio: "NO BIO AVAILABLE",
-    // },
     {
       name: "Saima Samad",
       title: "6th Grade Math Learning Coach",
       image: "/saima_samad.jpg",
       bio: "Sr. Saima Samad holds a B.S. in Applied Mathematics from UMBC, along with certifications in Software Testing from the University of Washington and LEAP Management Training. With a background in quality assurance and software testing for companies like Oracle and Microsoft, she brings a detail-oriented, analytical, and problem-solving approach to the classroom, helping students develop critical thinking skills and a strong foundation in math and technology.\n\nHer passion for education led her to Fairfax County Public Schools as a substitute teacher across all grades and subjects, as well as a math and English tutor at Huntington Learning Center. She finds immense joy in helping students unlock their full potential and takes pride in seeing them strive, grow, and succeed.\n\nAt Cordoba Academy, she is inspired by the positive, encouraging, and supportive atmosphere, where students and teachers alike flourish together. She is honored to be part of a school that not only fosters academic excellence and personal growth but also nurtures faith and a strong Islamic identity in its students.",
     },
-    // {
-    //   name: "Faizan Samad",
-    //   title: "6th Grade Science Learning Coach",
-    //   image: "/avatar_male.png",
-    //   bio: "NO BIO AVAILABLE",
-    // },
-    // {
-    //   name: "Dr Tahira",
-    //   title: "Title",
-    //   image: "/avatar_female.png",
-    //   bio: "Dr. Tahira brings decades of expertise in applied and computational mathematics to the classroom. With a Ph.D. in Applied/Computational Mathematics from Quaid-i-Azam University and post-doctoral research from Swansea University in the UK, Dr. Haroon has made significant contributions in fluid mechanics, numerical analysis, and mathematical modeling. She has held prominent positions in academia, including Head of the Department of Mathematics at COMSATS Institute of Information Technology in Pakistan, where he supervised graduate students and taught courses ranging from numerical computations and linear algebra to fluid mechanics and magneto-hydrodynamics.\nDr. Tahira is also an accomplished researcher with a history of innovation, she developed new mathematical methods such as the Reduction to First Order (RFO) and Exponential Transform Method (ETM) for solving complex differential equations. She has received numerous accolades, including the Best Teacher Award from AIOU & UNESCO and the Women Role Model Award in 2016.\nA dedicated educator and mentor, Dr. Haroon is passionate about making mathematics engaging, accessible, and deeply meaningful for students at all levels.",
-    // },
     {
       name: "Mahwish Nadeem",
       title: "Art Instructor",
@@ -233,13 +215,13 @@ export default function AboutPage() {
                   positive impact in today's world.
                 </p>
               </div>
-              <div className="relative h-64 md:h-full rounded-lg overflow-hidden flex items-center justify-center">
+              <div className="relative w-full rounded-lg overflow-hidden flex items-center justify-center">
                 <Image
                   src="/timeline.png"
                   alt="Cordoba Academy History"
                   height={650}
                   width={550}
-                  className="object-contain"
+                  className="object-contain w-full h-auto max-h-[400px] md:max-h-[600px]"
                   priority
                 />
               </div>
