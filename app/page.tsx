@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Carousel } from "@/components/ui/carousel";
 import {
   Card,
   CardContent,
@@ -180,104 +181,30 @@ export default async function Home() {
             <h2 className="text-3xl font-bold text-brand-primary">
               News & Events
             </h2>
-            {/* <Link href="/news">
-              <Button
-                variant="outline"
-                className="border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white flex items-center gap-2"
-              >
-                View All <ArrowRight size={16} />
-              </Button>
-            </Link> */}
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {events.map((event) => {
-              const nextEventDate = getNextUpcomingDate(event.event_dates);
-              if (!nextEventDate) return null; // Skip if no upcoming dates
-
-              return (
-                <div
-                  key={event.event_id}
-                  className="bg-brand-accent rounded-lg overflow-hidden shadow-md"
-                >
-                  <div className="relative h-96">
-                    <Image
-                      src={event.event_image_url}
-                      alt={event.event_title}
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-start gap-2 text-brand-text-muted text-sm mb-2">
-                      <Calendar className="h-4 w-4" />
-                      <div className="flex flex-col">
-                        {event.recurring ? (
-                          <>
-                            <span>
-                              {formatDate(event.event_dates[0])} –{" "}
-                              {formatDate(
-                                event.event_dates[event.event_dates.length - 1]
-                              )}{" "}
-                              ({event.frequency})
-                            </span>
-                          </>
-                        ) : (
-                          <span>{formatDate(event.event_dates[0])}</span>
-                        )}
-                        <span>
-                          {formatTime(event.start_time)} -{" "}
-                          {formatTime(event.end_time)}
-                        </span>
-                      </div>
-                    </div>
-                    <h3 className="text-lg font-bold text-brand-accent-orange mb-3">
-                      {event.event_title}
-                    </h3>
-                    <p className="text-brand-text-muted mb-4 whitespace-pre-line">
-                      {event.event_description}
-                    </p>
-                    {event.registration_link && (
-                      <Link href={event.registration_link} target="_blank">
-                        <Button
-                          variant="outline"
-                          className="w-full border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white"
-                        >
-                          Register Now
-                        </Button>
-                      </Link>
-                    )}
-                    {/* Learn More button commented out for future use
-                    {!event.registration_link && (
-                      <Button
-                        variant="outline"
-                        className="w-full border-[#B05834] text-[#B05834] hover:bg-[#B05834] hover:text-white"
-                      >
-                        Learn More
-                      </Button>
-                    )}
-                    */}
-                  </div>
-                </div>
-              );
-            })}
-            {/* Add placeholder cards for remaining spaces */}
-            {Array.from({ length: Math.max(0, 4 - events.length) }).map(
-              (_, index) => (
-                <div
-                  key={`placeholder-${index}`}
-                  className="bg-brand-accent rounded-lg overflow-hidden shadow-md flex flex-col items-center justify-center p-8 text-center min-h-[200px]"
-                >
-                  <Calendar className="h-12 w-12 text-brand-primary mb-4 opacity-50" />
-                  <h3 className="text-lg font-bold text-brand-accent-orange mb-2">
-                    Stay Tuned!
-                  </h3>
-                  <p className="text-brand-text-muted">
-                    More exciting events coming soon...
-                  </p>
-                </div>
-              )
-            )}
-          </div>
+          {events.length > 0 && (
+            <Carousel
+              className="max-w-6xl mx-auto"
+              slides={events
+                .filter(event => getNextUpcomingDate(event.event_dates))
+                .map(event => {
+                  const nextEventDate = getNextUpcomingDate(event.event_dates);
+                  return {
+                    src: event.event_image_url,
+                    title: event.event_title,
+                    description: event.event_description,
+                    date: nextEventDate 
+                      ? formatDate(`${nextEventDate.getFullYear()}-${String(nextEventDate.getMonth() + 1).padStart(2, '0')}-${String(nextEventDate.getDate()).padStart(2, '0')}`) + 
+                        " | " + 
+                        formatTime(event.start_time) + 
+                        " - " + 
+                        formatTime(event.end_time)
+                      : undefined,
+                    link: event.registration_link,
+                  };
+                })}
+            />
+          )}
         </div>
       </div>
 
