@@ -177,7 +177,7 @@ export default async function Home() {
       {/* News and Events */}
       <div className="bg-white py-12">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+          <div className="flex justify-center mb-8">
             <h2 className="text-3xl font-bold text-brand-primary">
               News & Events
             </h2>
@@ -194,12 +194,9 @@ export default async function Home() {
                     title: event.event_title,
                     description: event.event_description,
                     date: nextEventDate 
-                      ? formatDate(`${nextEventDate.getFullYear()}-${String(nextEventDate.getMonth() + 1).padStart(2, '0')}-${String(nextEventDate.getDate()).padStart(2, '0')}`) + 
-                        " | " + 
-                        formatTime(event.start_time) + 
-                        " - " + 
-                        formatTime(event.end_time)
+                      ? formatDate(`${nextEventDate.getFullYear()}-${String(nextEventDate.getMonth() + 1).padStart(2, '0')}-${String(nextEventDate.getDate()).padStart(2, '0')}`)
                       : undefined,
+                    time: `${formatTime(event.start_time)} - ${formatTime(event.end_time)}`,
                     link: event.registration_link,
                   };
                 })}
