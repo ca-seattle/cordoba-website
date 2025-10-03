@@ -1,262 +1,253 @@
 "use client"
 
 import * as React from "react"
-import useEmblaCarousel, {
-  type UseEmblaCarouselType,
-} from "embla-carousel-react"
-import { ArrowLeft, ArrowRight } from "lucide-react"
-
+import useEmblaCarousel from "embla-carousel-react"
+import type { EmblaCarouselType } from "embla-carousel"
+import { ArrowLeft, ArrowRight, Calendar, Clock } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
-type CarouselApi = UseEmblaCarouselType[1]
-type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
-type CarouselOptions = UseCarouselParameters[0]
-type CarouselPlugin = UseCarouselParameters[1]
-
-type CarouselProps = {
-  opts?: CarouselOptions
-  plugins?: CarouselPlugin
-  orientation?: "horizontal" | "vertical"
-  setApi?: (api: CarouselApi) => void
+interface CarouselProps {
+  slides: {
+    src: string
+    title: string
+    description?: string
+    link?: string
+    date?: string
+    time?: string
+  }[]
+  className?: string
 }
 
-type CarouselContextProps = {
-  carouselRef: ReturnType<typeof useEmblaCarousel>[0]
-  api: ReturnType<typeof useEmblaCarousel>[1]
-  scrollPrev: () => void
-  scrollNext: () => void
-  canScrollPrev: boolean
-  canScrollNext: boolean
-} & CarouselProps
+export function Carousel({
+  slides,
+  className,
+}: CarouselProps) {
+  const [selectedIndex, setSelectedIndex] = React.useState(0)
+  const [emblaMainRef, emblaMainApi] = useEmblaCarousel({
+    loop: true
+  })
+  const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
+    containScroll: "trimSnaps",
+    dragFree: true,
+    align: "start",
+    slidesToScroll: 1
+  })
+  
+  // Autoplay ref to avoid state updates
+  const autoplayRef = React.useRef<NodeJS.Timeout | null>(null)
 
-const CarouselContext = React.createContext<CarouselContextProps | null>(null)
+  // Start autoplay
+  const startAutoplay = React.useCallback(() => {
+    if (autoplayRef.current) clearInterval(autoplayRef.current)
+    autoplayRef.current = setInterval(() => {
+      if (emblaMainApi) emblaMainApi.scrollNext()
+    }, 7000)
+  }, [emblaMainApi])
 
-function useCarousel() {
-  const context = React.useContext(CarouselContext)
+  // Stop autoplay on user interaction
+  const stopAutoplay = React.useCallback(() => {
+    if (autoplayRef.current) {
+      clearInterval(autoplayRef.current)
+      autoplayRef.current = null
+    }
+  }, [])
+  
+  const [prevBtnDisabled, setPrevBtnDisabled] = React.useState(true)
+  const [nextBtnDisabled, setNextBtnDisabled] = React.useState(true)
 
-  if (!context) {
-    throw new Error("useCarousel must be used within a <Carousel />")
-  }
+  const scrollPrev = React.useCallback(() => {
+    if (emblaMainApi) {
+      emblaMainApi.scrollPrev()
+      // Reset autoplay timer after manual navigation
+      startAutoplay()
+    }
+  }, [emblaMainApi, startAutoplay])
 
-  return context
-}
+  const scrollNext = React.useCallback(() => {
+    if (emblaMainApi) {
+      emblaMainApi.scrollNext()
+      // Reset autoplay timer after manual navigation
+      startAutoplay()
+    }
+  }, [emblaMainApi, startAutoplay])
 
-const Carousel = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement> & CarouselProps
->(
-  (
-    {
-      orientation = "horizontal",
-      opts,
-      setApi,
-      plugins,
-      className,
-      children,
-      ...props
+  const onThumbClick = React.useCallback(
+    (index: number) => {
+      if (!emblaMainApi || !emblaThumbsApi) return
+      emblaMainApi.scrollTo(index)
+      // Reset autoplay timer after manual navigation
+      startAutoplay()
     },
-    ref
-  ) => {
-    const [carouselRef, api] = useEmblaCarousel(
-      {
-        ...opts,
-        axis: orientation === "horizontal" ? "x" : "y",
-      },
-      plugins
-    )
-    const [canScrollPrev, setCanScrollPrev] = React.useState(false)
-    const [canScrollNext, setCanScrollNext] = React.useState(false)
+    [emblaMainApi, emblaThumbsApi, startAutoplay]
+  )
 
-    const onSelect = React.useCallback((api: CarouselApi) => {
-      if (!api) {
-        return
-      }
+  const onSelect = React.useCallback(() => {
+    if (!emblaMainApi || !emblaThumbsApi) return
+    setSelectedIndex(emblaMainApi.selectedScrollSnap())
+    emblaThumbsApi.scrollTo(emblaMainApi.selectedScrollSnap())
+  }, [emblaMainApi, emblaThumbsApi])
 
-      setCanScrollPrev(api.canScrollPrev())
-      setCanScrollNext(api.canScrollNext())
-    }, [])
+  const updateButtonDisabled = React.useCallback(() => {
+    if (!emblaMainApi) return
+    setPrevBtnDisabled(!emblaMainApi.canScrollPrev())
+    setNextBtnDisabled(!emblaMainApi.canScrollNext())
+  }, [emblaMainApi])
 
-    const scrollPrev = React.useCallback(() => {
-      api?.scrollPrev()
-    }, [api])
+  React.useEffect(() => {
+    if (!emblaMainApi) return
 
-    const scrollNext = React.useCallback(() => {
-      api?.scrollNext()
-    }, [api])
+    emblaMainApi.on('select', onSelect)
+    emblaMainApi.on('reInit', onSelect)
+    emblaMainApi.on('select', updateButtonDisabled)
+    emblaMainApi.on('reInit', updateButtonDisabled)
+    
+    // Start autoplay when component mounts
+    startAutoplay()
+    
+    // Setup interaction listeners
+    emblaMainApi.on('pointerDown', stopAutoplay)
+    emblaMainApi.on('pointerUp', startAutoplay)
+    
+    onSelect()
+    updateButtonDisabled()
+    
+    return () => {
+      if (!emblaMainApi) return
+      if (autoplayRef.current) clearInterval(autoplayRef.current)
+      emblaMainApi.off('select', onSelect)
+      emblaMainApi.off('reInit', onSelect)
+      emblaMainApi.off('select', updateButtonDisabled)
+      emblaMainApi.off('reInit', updateButtonDisabled)
+      emblaMainApi.off('pointerDown', stopAutoplay)
+      emblaMainApi.off('pointerUp', startAutoplay)
+    }
+  }, [emblaMainApi, onSelect, updateButtonDisabled, startAutoplay, stopAutoplay])
 
-    const handleKeyDown = React.useCallback(
-      (event: React.KeyboardEvent<HTMLDivElement>) => {
-        if (event.key === "ArrowLeft") {
-          event.preventDefault()
-          scrollPrev()
-        } else if (event.key === "ArrowRight") {
-          event.preventDefault()
-          scrollNext()
-        }
-      },
-      [scrollPrev, scrollNext]
-    )
-
-    React.useEffect(() => {
-      if (!api || !setApi) {
-        return
-      }
-
-      setApi(api)
-    }, [api, setApi])
-
-    React.useEffect(() => {
-      if (!api) {
-        return
-      }
-
-      onSelect(api)
-      api.on("reInit", onSelect)
-      api.on("select", onSelect)
-
-      return () => {
-        api?.off("select", onSelect)
-      }
-    }, [api, onSelect])
-
-    return (
-      <CarouselContext.Provider
-        value={{
-          carouselRef,
-          api: api,
-          opts,
-          orientation:
-            orientation || (opts?.axis === "y" ? "vertical" : "horizontal"),
-          scrollPrev,
-          scrollNext,
-          canScrollPrev,
-          canScrollNext,
-        }}
-      >
-        <div
-          ref={ref}
-          onKeyDownCapture={handleKeyDown}
-          className={cn("relative", className)}
-          role="region"
-          aria-roledescription="carousel"
-          {...props}
-        >
-          {children}
-        </div>
-      </CarouselContext.Provider>
-    )
-  }
-)
-Carousel.displayName = "Carousel"
-
-const CarouselContent = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => {
-  const { carouselRef, orientation } = useCarousel()
+  if (!slides?.length) return null
 
   return (
-    <div ref={carouselRef} className="overflow-hidden">
-      <div
-        ref={ref}
-        className={cn(
-          "flex",
-          orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
-          className
-        )}
-        {...props}
-      />
+    <div className={cn("relative", className)}>
+      {/* Main Carousel */}
+      <div 
+        className="relative rounded-lg overflow-hidden"
+        onMouseEnter={stopAutoplay}
+        onMouseLeave={startAutoplay}
+      >
+        <div ref={emblaMainRef} className="overflow-hidden">
+          <div className="flex">
+            {slides.map((slide, index) => (
+              <div
+                className="relative flex-[0_0_100%] min-w-0 h-[550px] md:h-[500px] flex flex-col md:flex-row"
+                key={index}
+              >
+                <div className="w-full md:w-1/2 h-[250px] md:h-full relative bg-brand-primary flex items-center justify-center">
+                  <img
+                    src={slide.src}
+                    alt={slide.title}
+                    className="max-w-full max-h-full w-auto h-auto object-contain p-4"
+                  />
+                </div>
+                <div className="w-full md:w-1/2 h-[300px] md:h-full bg-brand-accent px-6 md:px-16 py-6 md:py-8 flex flex-col text-brand-primary">
+                  <div className="w-full max-w-xl h-full overflow-y-auto md:overflow-visible md:mt-auto md:mb-auto md:h-auto">
+                    <h3 className="text-xl md:text-3xl font-bold mb-3 md:mb-4">{slide.title}</h3>
+                    {slide.description && (
+                      <p className="text-sm md:text-base mb-4 md:mb-6 text-brand-text-muted">{slide.description}</p>
+                    )}
+                    <div className="space-y-2 mb-4 md:mb-6">
+                      {slide.date && (
+                        <div className="flex items-center gap-2 text-sm">
+                          <Calendar className="h-4 w-4" />
+                          <span>{slide.date}</span>
+                        </div>
+                      )}
+                      {slide.time && (
+                        <div className="flex items-center gap-2 text-sm">
+                          <Clock className="h-4 w-4" />
+                          <span>{slide.time}</span>
+                        </div>
+                      )}
+                    </div>
+                    {slide.link && (
+                      <div>
+                        <Button
+                          asChild
+                          className="bg-brand-accent-orange hover:bg-brand-primary text-white"
+                        >
+                          <Link href={slide.link} target="_blank">
+                            Register
+                          </Link>
+                        </Button>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Carousel Navigation */}
+        <div className="absolute left-4 right-4 top-[125px] md:top-1/2 -translate-y-1/2 flex justify-between pointer-events-none">
+          <Button
+            variant="outline"
+            size="icon"
+            disabled={prevBtnDisabled}
+            className={cn(
+              "h-8 w-8 rounded-full bg-white/80 hover:bg-white pointer-events-auto transition-opacity shadow-sm",
+              prevBtnDisabled && "opacity-50 cursor-not-allowed hover:bg-white/80"
+            )}
+            onClick={scrollPrev}
+          >
+            <ArrowLeft className="h-4 w-4" />
+          </Button>
+          <Button
+            variant="outline"
+            size="icon"
+            disabled={nextBtnDisabled}
+            className={cn(
+              "h-8 w-8 rounded-full bg-white/80 hover:bg-white pointer-events-auto transition-opacity shadow-sm",
+              nextBtnDisabled && "opacity-50 cursor-not-allowed hover:bg-white/80"
+            )}
+            onClick={scrollNext}
+          >
+            <ArrowRight className="h-4 w-4" />
+          </Button>
+        </div>
+      </div>
+
+      {/* Thumbnails */}
+      <div className="relative mt-4">
+        <div ref={emblaThumbsRef} className="overflow-hidden px-3">
+          <div className="flex gap-4 py-3">
+              {slides.map((slide, index) => (
+                <button
+                  key={index}
+                  onClick={() => onThumbClick(index)}
+                  className={cn(
+                    "relative flex-[0_0_auto] w-[160px] md:w-[200px] cursor-pointer transition-all",
+                    selectedIndex === index 
+                      ? "opacity-100 ring-2 ring-brand-accent-orange ring-offset-2 rounded-lg" 
+                      : "opacity-70 hover:opacity-100"
+                  )}
+                  type="button"
+                >
+                  <div className="aspect-[4/3] rounded-lg overflow-hidden bg-brand-accent shadow-sm">
+                    <img
+                      src={slide.src}
+                      alt={slide.title}
+                      className="w-full h-full object-contain bg-white"
+                    />
+                  </div>
+                </button>
+              ))}
+          </div>
+        </div>
+        {/* Thumbnail Navigation Hints */}
+        <div className="absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-white to-transparent pointer-events-none z-10" />
+        <div className="absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-white to-transparent pointer-events-none z-10" />
+      </div>
     </div>
   )
-})
-CarouselContent.displayName = "CarouselContent"
-
-const CarouselItem = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => {
-  const { orientation } = useCarousel()
-
-  return (
-    <div
-      ref={ref}
-      role="group"
-      aria-roledescription="slide"
-      className={cn(
-        "min-w-0 shrink-0 grow-0 basis-full",
-        orientation === "horizontal" ? "pl-4" : "pt-4",
-        className
-      )}
-      {...props}
-    />
-  )
-})
-CarouselItem.displayName = "CarouselItem"
-
-const CarouselPrevious = React.forwardRef<
-  HTMLButtonElement,
-  React.ComponentProps<typeof Button>
->(({ className, variant = "outline", size = "icon", ...props }, ref) => {
-  const { orientation, scrollPrev, canScrollPrev } = useCarousel()
-
-  return (
-    <Button
-      ref={ref}
-      variant={variant}
-      size={size}
-      className={cn(
-        "absolute  h-8 w-8 rounded-full",
-        orientation === "horizontal"
-          ? "-left-12 top-1/2 -translate-y-1/2"
-          : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
-        className
-      )}
-      disabled={!canScrollPrev}
-      onClick={scrollPrev}
-      {...props}
-    >
-      <ArrowLeft className="h-4 w-4" />
-      <span className="sr-only">Previous slide</span>
-    </Button>
-  )
-})
-CarouselPrevious.displayName = "CarouselPrevious"
-
-const CarouselNext = React.forwardRef<
-  HTMLButtonElement,
-  React.ComponentProps<typeof Button>
->(({ className, variant = "outline", size = "icon", ...props }, ref) => {
-  const { orientation, scrollNext, canScrollNext } = useCarousel()
-
-  return (
-    <Button
-      ref={ref}
-      variant={variant}
-      size={size}
-      className={cn(
-        "absolute h-8 w-8 rounded-full",
-        orientation === "horizontal"
-          ? "-right-12 top-1/2 -translate-y-1/2"
-          : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
-        className
-      )}
-      disabled={!canScrollNext}
-      onClick={scrollNext}
-      {...props}
-    >
-      <ArrowRight className="h-4 w-4" />
-      <span className="sr-only">Next slide</span>
-    </Button>
-  )
-})
-CarouselNext.displayName = "CarouselNext"
-
-export {
-  type CarouselApi,
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
 }
