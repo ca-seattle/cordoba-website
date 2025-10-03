@@ -77,7 +77,19 @@ export default function EnrollmentPage() {
       <PageHero
         title="Enrollment"
         subtitle="Join our vibrant learning community"
-      />
+      >
+        <div className="mt-6">
+          <Button
+            asChild
+            size="lg"
+            className="bg-brand-accent-orange hover:bg-brand-accent-orange/90 text-white"
+          >
+            <Link href="https://ca-seattle.client.renweb.com/oa/inquiry.cfm?memberid=16330">
+              Apply Now
+            </Link>
+          </Button>
+        </div>
+      </PageHero>
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12">

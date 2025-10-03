@@ -19,7 +19,7 @@ export default function Header() {
     { name: "Enrollment", href: "/enrollment", icon: UserPlus },
     // { name: "Events & News", href: "/events", icon: Calendar },
     { name: "About Us", href: "/about", icon: Info },
-    { name: "Contact Us", href: "/contact", icon: Phone },
+    // { name: "Contact Us", href: "/contact", icon: Phone },
   ]
 
   // Update the secondaryItems array to include Parent Portal and Donate
