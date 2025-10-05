@@ -142,7 +142,7 @@ export default async function Home() {
             src="/students_cover.jpg"
             alt="Cordoba Academy students"
             fill
-            className="object-cover opacity-80"
+            className="object-cover opacity-90"
             priority
           />
         </div>
