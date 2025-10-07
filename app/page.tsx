@@ -35,7 +35,6 @@ type Event = {
   event_dates: string[];
 };
 
-// Add these functions before the getEvents function
 function formatDate(dateStr: string): string {
   // Split the date string and create date in UTC to avoid timezone issues
   const [year, month, day] = dateStr.split("-").map(Number);
@@ -119,8 +118,7 @@ async function getEvents(): Promise<Event[]> {
         const dateA = getNextUpcomingDate(a.event_dates);
         const dateB = getNextUpcomingDate(b.event_dates);
         return (dateA?.getTime() || 0) - (dateB?.getTime() || 0);
-      })
-      .slice(0, 4);
+      });
 
     console.log("Filtered events:", filteredEvents);
     return filteredEvents;
