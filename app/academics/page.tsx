@@ -1,10 +1,10 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { BookOpen, Users, Calendar, Award, CheckCircle } from "lucide-react";
-import PageHero from "@/components/page-hero";
+import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { BookOpen, Users, Calendar, Award, CheckCircle } from 'lucide-react';
+import PageHero from '@/components/page-hero';
 
 export default function AcademicsPage() {
   return (
