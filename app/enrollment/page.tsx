@@ -84,7 +84,10 @@ export default function EnrollmentPage() {
             size="lg"
             className="bg-brand-accent-orange hover:bg-brand-accent-orange/90 text-white"
           >
-            <Link href="https://ca-seattle.client.renweb.com/oa/inquiry.cfm?memberid=16330">
+            <Link
+              href="https://portal.schoolcues.com/Portal/PreEnrollment/Index/EEB26BB8-40BA-4195-BAD5-36353AB41C77"
+              target="_blank"
+            >
               Apply Now
             </Link>
           </Button>
