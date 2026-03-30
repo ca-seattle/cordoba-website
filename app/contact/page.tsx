@@ -62,18 +62,6 @@ export default function ContactPage() {
 
                   <div className="flex items-start gap-4">
                     <div className="bg-brand-accent rounded-full p-3 flex-shrink-0">
-                      <Phone className="h-5 w-5 text-brand-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-brand-text-dark mb-1">
-                        Phone
-                      </h3>
-                      <p className="text-brand-text-muted">(425) 954-3687</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="bg-brand-accent rounded-full p-3 flex-shrink-0">
                       <Mail className="h-5 w-5 text-brand-primary" />
                     </div>
                     <div>
