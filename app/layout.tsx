@@ -70,7 +70,7 @@ const jsonLd = {
     addressCountry: 'US'
   },
   url: 'https://cordobaacademy.org',
-  telephone: '(425) 954-3687',
+  telephone: '(425) 640-0477',
   areaServed: ['Seattle', 'Lynnwood', 'Mountlake Terrace', 'Edmonds', 'Shoreline', 'Bothell', 'Everett'],
   keywords: 'Islamic School, Muslim Education, Seattle Islamic School, Lynnwood Islamic School',
   eduLevels: 'Preschool, Kindergarten, Elementary and Middle School',
