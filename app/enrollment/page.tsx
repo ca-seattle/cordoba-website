@@ -206,11 +206,11 @@ export default function EnrollmentPage() {
               </p>
             </div>
 
-            <div className="bg-brand-accent p-6 rounded-lg mb-8">
+            {/* <div className="bg-brand-accent p-6 rounded-lg mb-8">
               <h3 className="text-xl font-bold text-brand-accent-orange mb-4">
                 2025-2026 Enrollment Timeline
               </h3>
-              {/* <ul className="space-y-4">
+              <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <div className="w-24 flex-shrink-0 font-bold text-[#B05834]">January 15</div>
                   <div className="text-[#666666]">Re-enrollment begins for current families</div>
@@ -241,8 +241,8 @@ export default function EnrollmentPage() {
                   <div className="w-24 flex-shrink-0 font-bold text-[#B05834]">May-August</div>
                   <div className="text-[#666666]">Rolling admissions based on space availability</div>
                 </li>
-              </ul> */}
-            </div>
+              </ul>
+            </div> */}
 
             <div className="bg-brand-accent p-6 rounded-lg mb-8">
               <h3 className="text-xl font-bold text-brand-accent-orange mb-4">
@@ -260,7 +260,7 @@ export default function EnrollmentPage() {
             </div>
 
             <h3 className="text-xl font-bold text-brand-accent-orange mb-4">
-              Tuition & Fees
+              Tuition & Fees (2025-2026 School Year)
             </h3>
             <p className="text-brand-text-muted mb-6">
               Cordoba Academy strives to provide high-quality education at an
