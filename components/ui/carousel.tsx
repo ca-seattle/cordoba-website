@@ -153,7 +153,7 @@ export function Carousel({
                   <div className="w-full max-w-xl h-full overflow-y-auto md:overflow-visible md:mt-auto md:mb-auto md:h-auto">
                     <h3 className="text-xl md:text-3xl font-bold mb-3 md:mb-4">{slide.title}</h3>
                     {slide.description && (
-                      <p className="text-sm md:text-base mb-4 md:mb-6 text-brand-text-muted">{slide.description}</p>
+                      <p className="text-sm md:text-base mb-4 md:mb-6 text-brand-text-muted whitespace-pre-line">{slide.description}</p>
                     )}
                     <div className="space-y-2 mb-4 md:mb-6">
                       {slide.date && (
