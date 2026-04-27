@@ -9,31 +9,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { CheckCircle, Calendar, BookOpen, Users, Heart } from "lucide-react";
-
-// Define types for the event data
-type Organizer = {
-  name: string;
-  phone: string;
-  email: string;
-};
-
-type Event = {
-  created_at: string;
-  registration_link: string;
-  end_date: string;
-  event_description: string;
-  frequency: string;
-  start_time: string;
-  end_time: string;
-  organizer: Organizer;
-  start_date: string;
-  event_image_url: string;
-  event_title: string;
-  recurring: boolean;
-  event_id: string;
-  event_dates: string[];
-};
+import { CheckCircle, BookOpen, Users, Heart } from "lucide-react";
+import { getEvents } from "@/lib/events";
 
 function formatDate(dateStr: string): string {
   // Split the date string and create date in UTC to avoid timezone issues
@@ -87,49 +64,20 @@ function getNextUpcomingDate(dates: string[]): Date | null {
   return null;
 }
 
-async function getEvents(): Promise<Event[]> {
-  try {
-    const response = await fetch(
-      "https://mwmliya547.execute-api.us-east-1.amazonaws.com/submit-website-event",
-      {
-        next: { revalidate: 3600 }, // Revalidate every hour
-        headers: {
-          Accept: "application/json",
-          "Cache-Control": "no-cache",
-        },
-      }
-    );
-
-    if (!response.ok) {
-      throw new Error("Failed to fetch events");
-    }
-
-    const text = await response.text();
-    const events: Event[] = JSON.parse(text);
-    console.log("Parsed events:", events);
-
-    // Filter and sort events to get the top 4 upcoming events
-    const filteredEvents = events
-      .filter((event) => {
-        const nextDate = getNextUpcomingDate(event.event_dates);
-        return nextDate !== null; // Only include events with upcoming dates
-      })
-      .sort((a, b) => {
-        const dateA = getNextUpcomingDate(a.event_dates);
-        const dateB = getNextUpcomingDate(b.event_dates);
-        return (dateA?.getTime() || 0) - (dateB?.getTime() || 0);
-      });
-
-    console.log("Filtered events:", filteredEvents);
-    return filteredEvents;
-  } catch (error) {
-    console.error("Error fetching events:", error);
-    return [];
-  }
-}
-
 export default async function Home() {
-  const events = await getEvents();
+  const allEvents = await getEvents();
+
+  // Filter and sort events to get the top 4 upcoming events
+  const events = allEvents
+    .filter((event) => {
+      const nextDate = getNextUpcomingDate(event.event_dates);
+      return nextDate !== null; // Only include events with upcoming dates
+    })
+    .sort((a, b) => {
+      const dateA = getNextUpcomingDate(a.event_dates);
+      const dateB = getNextUpcomingDate(b.event_dates);
+      return (dateA?.getTime() || 0) - (dateB?.getTime() || 0);
+    });
 
   return (
     <div className="bg-brand-secondary">
@@ -184,7 +132,6 @@ export default async function Home() {
             <Carousel
               className="max-w-6xl mx-auto"
               slides={events
-                .filter(event => getNextUpcomingDate(event.event_dates))
                 .map(event => {
                   const nextEventDate = getNextUpcomingDate(event.event_dates);
                   return {
