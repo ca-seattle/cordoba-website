@@ -82,10 +82,18 @@ export async function getEventsClient(): Promise<Event[]> {
 
 export async function addEvent(payload: unknown): Promise<any> {
   try {
+    // Get the Cognito token from localStorage
+    const token = localStorage.getItem("id_token");
+
+    if (!token) {
+      throw new Error("Not authenticated. Please log in first.");
+    }
+
     const response = await fetch("/api/events", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`, // Pass Cognito token
       },
       body: JSON.stringify(payload),
     });

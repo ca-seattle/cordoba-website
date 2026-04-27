@@ -40,12 +40,24 @@ export async function GET() {
 
 export async function POST(req: Request) {
   try {
+    // Extract Cognito token from Authorization header
+    const authHeader = req.headers.get("Authorization");
+    const token = authHeader?.replace("Bearer ", "");
+
+    if (!token) {
+      return new NextResponse(
+        JSON.stringify({ message: "Unauthorized: No authentication token provided" }),
+        { status: 401 }
+      );
+    }
+
     const body = await req.json();
 
     const response = await fetch(EVENTS_API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`, // Forward token to AWS
       },
       body: JSON.stringify(body),
     });

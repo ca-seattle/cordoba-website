@@ -1,9 +1,12 @@
-export const COGNITO_DOMAIN =
-  "https://us-east-1vsq1gbctn.auth.us-east-1.amazoncognito.com";
+export const COGNITO_DOMAIN = process.env.NEXT_PUBLIC_COGNITO_DOMAIN || "";
+export const CLIENT_ID = process.env.NEXT_PUBLIC_COGNITO_CLIENT_ID || "";
+export const REDIRECT_URI = process.env.NEXT_PUBLIC_COGNITO_REDIRECT_URI || "";
 
-export const CLIENT_ID = "571ibht8rjunu0voc2ildv8csc";
-
-export const REDIRECT_URI = "http://localhost:3000/admin";
+if (!COGNITO_DOMAIN || !CLIENT_ID || !REDIRECT_URI) {
+  throw new Error(
+    "Missing required Cognito environment variables: NEXT_PUBLIC_COGNITO_DOMAIN, NEXT_PUBLIC_COGNITO_CLIENT_ID, or NEXT_PUBLIC_COGNITO_REDIRECT_URI"
+  );
+}
 
 export const LOGIN_URL =
   `${COGNITO_DOMAIN}/login?client_id=${CLIENT_ID}` +
