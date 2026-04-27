@@ -134,7 +134,10 @@ export default function AdminPage() {
     }
   }, [email]);
 
-  function formatTime12Hr(timeStr: string) {
+  function formatTime12Hr(timeStr: string | null) {
+    if (!timeStr) {
+      return "N/A";
+    }
     const [hours, minutes] = timeStr.split(":").map(Number);
     if (Number.isNaN(hours) || Number.isNaN(minutes)) {
       return timeStr;
@@ -166,6 +169,37 @@ export default function AdminPage() {
 
     return dates;
   }
+
+  const handlePhoneChange = (value: string) => {
+    // Remove all non-digit characters
+    const digits = value.replace(/\D/g, "");
+    
+    // Limit to 10 digits
+    const limited = digits.slice(0, 10);
+    
+    // Format as (XXX) XXX-XXXX
+    let formatted = "";
+    if (limited.length > 0) {
+      formatted = "(" + limited.slice(0, 3);
+      if (limited.length > 3) {
+        formatted += ") " + limited.slice(3, 6);
+      }
+      if (limited.length > 6) {
+        formatted += "-" + limited.slice(6, 10);
+      }
+    }
+    
+    setOrganizerPhone(formatted);
+  };
+
+  const isValidUrl = (urlString: string): boolean => {
+    try {
+      new URL(urlString);
+      return true;
+    } catch {
+      return false;
+    }
+  };
 
   const resetForm = () => {
     setOrganizerName("");
@@ -229,6 +263,11 @@ export default function AdminPage() {
       return;
     }
 
+    if (registrationLink.trim() && !isValidUrl(registrationLink)) {
+      setFormError("Registration link must be a valid URL (e.g., http://example.com).");
+      return;
+    }
+
     if (!startTime.trim() || !endTime.trim()) {
       setFormError("Start and end time are required.");
       return;
@@ -252,7 +291,8 @@ export default function AdminPage() {
 
     let eventImageData: string | undefined = undefined;
     if (eventImageFile) {
-      eventImageData = await readFileAsDataUrl(eventImageFile);
+      const fullDataUrl = await readFileAsDataUrl(eventImageFile);
+      eventImageData = fullDataUrl.split(",")[1];
     }
 
     const eventDates =
@@ -353,7 +393,7 @@ export default function AdminPage() {
                   <Input
                     type="tel"
                     value={organizerPhone}
-                    onChange={(event) => setOrganizerPhone(event.target.value)}
+                    onChange={(event) => handlePhoneChange(event.target.value)}
                     placeholder="(555) 123-4567"
                     required
                   />
@@ -382,7 +422,7 @@ export default function AdminPage() {
               <label className="space-y-2 text-sm font-medium text-slate-700">
                 Registration Link
                 <Input
-                  type="url"
+                  type="text"
                   value={registrationLink}
                   onChange={(event) => setRegistrationLink(event.target.value)}
                   placeholder="https://example.com/register"
@@ -500,6 +540,7 @@ export default function AdminPage() {
             <TableHead className="min-w-[380px]">Description</TableHead>
             <TableHead>Start Date</TableHead>
             <TableHead>End Date</TableHead>
+            <TableHead>Event Date</TableHead>
             <TableHead>Start Time</TableHead>
             <TableHead>End Time</TableHead>
             <TableHead>Frequency</TableHead>
@@ -523,6 +564,7 @@ export default function AdminPage() {
               </TableCell>
               <TableCell>{event.start_date}</TableCell>
               <TableCell>{event.end_date}</TableCell>
+              <TableCell>{event.event_dates?.join(", ") || "N/A"}</TableCell>
               <TableCell>{formatTime12Hr(event.start_time)}</TableCell>
               <TableCell>{formatTime12Hr(event.end_time)}</TableCell>
               <TableCell>{event.frequency}</TableCell>
