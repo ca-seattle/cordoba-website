@@ -1,10 +1,3 @@
-// Define types for the event data
-export type Organizer = {
-  name: string;
-  phone: string;
-  email: string;
-};
-
 export type Event = {
   created_at: string;
   registration_link: string;
@@ -13,7 +6,6 @@ export type Event = {
   frequency: string;
   start_time: string;
   end_time: string;
-  organizer: Organizer;
   start_date: string;
   event_image_url: string;
   event_title: string;

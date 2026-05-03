@@ -36,9 +36,6 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(true);
   const [events, setEvents] = useState<Event[]>([]);
   const [formOpen, setFormOpen] = useState(false);
-  const [organizerName, setOrganizerName] = useState("");
-  const [organizerEmail, setOrganizerEmail] = useState("");
-  const [organizerPhone, setOrganizerPhone] = useState("");
   const [eventTitle, setEventTitle] = useState("");
   const [eventDescription, setEventDescription] = useState("");
   const [registrationLink, setRegistrationLink] = useState("");
@@ -170,28 +167,6 @@ export default function AdminPage() {
     return dates;
   }
 
-  const handlePhoneChange = (value: string) => {
-    // Remove all non-digit characters
-    const digits = value.replace(/\D/g, "");
-    
-    // Limit to 10 digits
-    const limited = digits.slice(0, 10);
-    
-    // Format as (XXX) XXX-XXXX
-    let formatted = "";
-    if (limited.length > 0) {
-      formatted = "(" + limited.slice(0, 3);
-      if (limited.length > 3) {
-        formatted += ") " + limited.slice(3, 6);
-      }
-      if (limited.length > 6) {
-        formatted += "-" + limited.slice(6, 10);
-      }
-    }
-    
-    setOrganizerPhone(formatted);
-  };
-
   const isValidUrl = (urlString: string): boolean => {
     try {
       new URL(urlString);
@@ -202,9 +177,6 @@ export default function AdminPage() {
   };
 
   const resetForm = () => {
-    setOrganizerName("");
-    setOrganizerEmail("");
-    setOrganizerPhone("");
     setEventTitle("");
     setEventDescription("");
     setRegistrationLink("");
@@ -237,21 +209,6 @@ export default function AdminPage() {
   const handleUploadSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setFormError(null);
-
-    if (!organizerName.trim()) {
-      setFormError("Organizer name is required.");
-      return;
-    }
-
-    if (!organizerEmail.trim()) {
-      setFormError("Organizer email is required.");
-      return;
-    }
-
-    if (!organizerPhone.trim()) {
-      setFormError("Organizer phone is required.");
-      return;
-    }
 
     if (!eventTitle.trim()) {
       setFormError("Event title is required.");
@@ -303,9 +260,6 @@ export default function AdminPage() {
         : [];
 
     const payload = {
-      OrganizerName: organizerName,
-      OrganizerEmail: organizerEmail,
-      OrganizerPhone: organizerPhone,
       EventTitle: eventTitle,
       EventDescription: eventDescription,
       RegistrationLink: registrationLink,
@@ -369,35 +323,6 @@ export default function AdminPage() {
                 </div>
               ) : null}
               <div className="grid gap-4 sm:grid-cols-2">
-                <label className="space-y-2 text-sm font-medium text-slate-700">
-                  Organizer Name
-                  <Input
-                    value={organizerName}
-                    onChange={(event) => setOrganizerName(event.target.value)}
-                    placeholder="Organizer name"
-                    required
-                  />
-                </label>
-                <label className="space-y-2 text-sm font-medium text-slate-700">
-                  Organizer Email
-                  <Input
-                    type="email"
-                    value={organizerEmail}
-                    onChange={(event) => setOrganizerEmail(event.target.value)}
-                    placeholder="organizer@example.com"
-                    required
-                  />
-                </label>
-                <label className="space-y-2 text-sm font-medium text-slate-700">
-                  Organizer Phone
-                  <Input
-                    type="tel"
-                    value={organizerPhone}
-                    onChange={(event) => handlePhoneChange(event.target.value)}
-                    placeholder="(555) 123-4567"
-                    required
-                  />
-                </label>
                 <label className="space-y-2 text-sm font-medium text-slate-700">
                   Event Title
                   <Input
