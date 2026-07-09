@@ -149,8 +149,8 @@ export function Carousel({
                     className="max-w-full max-h-full w-auto h-auto object-contain p-4"
                   />
                 </div>
-                <div className="w-full md:w-1/2 h-[300px] md:h-full bg-brand-accent px-6 md:px-16 py-6 md:py-8 flex flex-col text-brand-primary">
-                  <div className="w-full max-w-xl h-full overflow-y-auto md:overflow-visible md:mt-auto md:mb-auto md:h-auto">
+                <div className="w-full md:w-1/2 h-[300px] md:h-full bg-brand-accent px-6 md:px-16 py-6 md:py-8 flex flex-col text-brand-primary min-h-0">
+                  <div className="w-full max-w-xl h-full overflow-y-auto scrollbar-none">
                     <h3 className="text-xl md:text-3xl font-bold mb-3 md:mb-4">{slide.title}</h3>
                     {slide.description && (
                       <p className="text-sm md:text-base mb-4 md:mb-6 text-brand-text-muted whitespace-pre-line">{slide.description}</p>
