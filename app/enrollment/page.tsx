@@ -302,14 +302,14 @@ export default function EnrollmentPage() {
                         10 months
                       </span>
                     </div>
-                    <div className="flex justify-between">
+                    {/* <div className="flex justify-between">
                       <span className="text-brand-text-muted">
                         Sibling Discount
                       </span>
                       <span className="font-bold text-brand-text-dark">
                         10% off
                       </span>
-                    </div>
+                    </div> */}
                   </div>
                 </CardContent>
               </Card>
@@ -341,14 +341,14 @@ export default function EnrollmentPage() {
                         10 months
                       </span>
                     </div>
-                    <div className="flex justify-between">
+                    {/* <div className="flex justify-between">
                       <span className="text-brand-text-muted">
                         Sibling Discount
                       </span>
                       <span className="font-bold text-brand-text-dark">
                         10% off
                       </span>
-                    </div>
+                    </div> */}
                     <div className="mt-6 p-4 bg-brand-accent rounded-lg">
                       <p className="text-brand-text-muted mb-2 font-medium">
                         First and last month's tuition is due in August.
@@ -383,14 +383,14 @@ export default function EnrollmentPage() {
                         10 months
                       </span>
                     </div>
-                    <div className="flex justify-between">
+                    {/* <div className="flex justify-between">
                       <span className="text-brand-text-muted">
                         Sibling Discount
                       </span>
                       <span className="font-bold text-brand-text-dark">
                         10% off
                       </span>
-                    </div>
+                    </div> */}
                     <div className="mt-6 p-4 bg-brand-accent rounded-lg">
                       <p className="text-brand-text-muted mb-2 font-medium">
                         First and last month's tuition is due in August.
