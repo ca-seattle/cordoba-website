@@ -260,7 +260,7 @@ export default function EnrollmentPage() {
             </div>
 
             <h3 className="text-xl font-bold text-brand-accent-orange mb-4">
-              Tuition & Fees (2025-2026 School Year)
+              Tuition & Fees (2026-2027 School Year)
             </h3>
             <p className="text-brand-text-muted mb-6">
               Cordoba Academy strives to provide high-quality education at an
@@ -272,7 +272,7 @@ export default function EnrollmentPage() {
               <Card>
                 <CardHeader className="bg-brand-accent">
                   <CardTitle className="text-brand-primary">
-                    Preschool Program (Half-Day)
+                    Preschool Program
                   </CardTitle>
                   <CardDescription>Ages 3-5</CardDescription>
                 </CardHeader>
@@ -280,10 +280,18 @@ export default function EnrollmentPage() {
                   <div className="space-y-4">
                     <div className="flex justify-between">
                       <span className="text-brand-text-muted">
-                        Monthly Tuition
+                        Monthly Tuition (Half-Day)
                       </span>
                       <span className="font-bold text-brand-text-dark">
-                        $525/month
+                        $750/month
+                      </span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-brand-text-muted">
+                        Monthly Tuition (Full-Day)
+                      </span>
+                      <span className="font-bold text-brand-text-dark">
+                        $1500/month
                       </span>
                     </div>
                     <div className="flex justify-between">
@@ -309,10 +317,10 @@ export default function EnrollmentPage() {
               <Card>
                 <CardHeader className="bg-brand-accent">
                   <CardTitle className="text-brand-primary">
-                    K-6 Program
+                    Elementary Program
                   </CardTitle>
                   <CardDescription>
-                    Kindergarten through 6th Grade
+                    Kindergarten - 5th Grade
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="pt-6">
@@ -322,7 +330,7 @@ export default function EnrollmentPage() {
                         Monthly Tuition
                       </span>
                       <span className="font-bold text-brand-text-dark">
-                        $600/month
+                        $675/month
                       </span>
                     </div>
                     <div className="flex justify-between">
@@ -341,6 +349,11 @@ export default function EnrollmentPage() {
                         10% off
                       </span>
                     </div>
+                    <div className="mt-6 p-4 bg-brand-accent rounded-lg">
+                      <p className="text-brand-text-muted mb-2 font-medium">
+                        First and last month's tuition is due in August.
+                      </p>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -348,9 +361,9 @@ export default function EnrollmentPage() {
               <Card>
                 <CardHeader className="bg-brand-accent">
                   <CardTitle className="text-brand-primary">
-                    7th-8th Grade Program
+                    Intermediate Program
                   </CardTitle>
-                  <CardDescription>Middle School</CardDescription>
+                  <CardDescription>6th - 8th Grade</CardDescription>
                 </CardHeader>
                 <CardContent className="pt-6">
                   <div className="space-y-4">
@@ -359,7 +372,7 @@ export default function EnrollmentPage() {
                         Monthly Tuition
                       </span>
                       <span className="font-bold text-brand-text-dark">
-                        $725/month
+                        $800/month
                       </span>
                     </div>
                     <div className="flex justify-between">
@@ -378,6 +391,11 @@ export default function EnrollmentPage() {
                         10% off
                       </span>
                     </div>
+                    <div className="mt-6 p-4 bg-brand-accent rounded-lg">
+                      <p className="text-brand-text-muted mb-2 font-medium">
+                        First and last month's tuition is due in August.
+                      </p>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -385,29 +403,41 @@ export default function EnrollmentPage() {
               <Card>
                 <CardHeader className="bg-brand-accent">
                   <CardTitle className="text-brand-primary">
-                    Additional Fees
+                    Annual Fees
                   </CardTitle>
                   <CardDescription>
-                    Annual Registration and Other Fees
+                    One-time fees due every September
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="pt-6">
                   <div className="space-y-4">
                     <div className="flex justify-between">
                       <span className="text-brand-text-muted">
-                        Registration Fee (annual)
+                        Registration Fee
                       </span>
                       <span className="font-bold text-brand-text-dark">
                         $100
                       </span>
                     </div>
+                    <div className="flex justify-between">
+                      <span className="text-brand-text-muted">
+                        Supply Fee
+                      </span>
+                      <span className="font-bold text-brand-text-dark">
+                        $200
+                      </span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-brand-text-muted">
+                        Technology Fee
+                      </span>
+                      <span className="font-bold text-brand-text-dark">
+                        $200
+                      </span>
+                    </div>
                     <div className="mt-6 p-4 bg-brand-accent rounded-lg">
                       <p className="text-brand-text-muted mb-2 font-medium">
-                        Please note that additional nonrefundable yearly fees
-                        are required and must be paid upfront.
-                      </p>
-                      <p className="text-brand-text-muted text-sm">
-                        These fees will be outlined in the enrollment package.
+                        These are non-refundable fees that are seperate from tuition.
                       </p>
                     </div>
                   </div>
@@ -506,7 +536,7 @@ export default function EnrollmentPage() {
             </h3>
             <p className="text-brand-text-muted">
               We maintain small class sizes to ensure personalized attention.
-              Our average class size is 16-18 students, with a maximum of 20
+              Our average class size is 6-8 students, with a maximum of 10
               students per class.
             </p>
           </div>
