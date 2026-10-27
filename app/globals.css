@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer utilities {
@@ -56,21 +58,21 @@ body {
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
-    
+
     /* Cordoba Academy Brand Colors */
-    --brand-primary: #B05834; /* Main brand color */
-    --brand-primary-dark: #8A4526; /* Darker shade for hover states */
-    --brand-secondary: #FFF2E6; /* Light cream background */
-    --brand-accent: #F5E8D8; /* Lighter cream for cards */
-    --brand-accent-orange: #FF4A00; /* Orange accent */
+    --brand-primary: #b05834; /* Main brand color */
+    --brand-primary-dark: #8a4526; /* Darker shade for hover states */
+    --brand-secondary: #fff2e6; /* Light cream background */
+    --brand-accent: #f5e8d8; /* Lighter cream for cards */
+    --brand-accent-orange: #ff4a00; /* Orange accent */
     --brand-text-dark: #333333; /* Dark text */
     --brand-text-muted: #666666; /* Muted text */
 
-    --navbar-background: #E5E5E5;
-    --navbar-border: #E5D5C5;
+    --navbar-background: #e5e5e5;
+    --navbar-border: #e5d5c5;
     --navbar-text: #969696;
 
-    --footer-text: #CCCCCC;
+    --footer-text: #cccccc;
   }
 }
 
