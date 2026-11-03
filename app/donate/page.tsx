@@ -76,7 +76,6 @@ export default function DonatePage() {
         'Give appreciated securities to make a tax-efficient gift that directly supports our mission.',
       action: 'Learn More',
       href: '/donate/stock-gifts',
-      featured: true,
     },
     {
       title: 'Matching Gifts',
@@ -192,27 +191,15 @@ export default function DonatePage() {
                 {givingMethods.map((method) => (
                   <div
                     key={method.title}
-                    className={`rounded-xl border p-5 ${
-                      method.featured
-                        ? 'bg-brand-primary text-white border-brand-primary shadow-md'
-                        : 'bg-white border-[#ead8c4] text-brand-text-dark'
-                    }`}
+                    className="rounded-xl border p-5 bg-white border-[#ead8c4] text-brand-text-dark"
                   >
                     <h4 className="text-xl font-bold mb-3">{method.title}</h4>
-                    <p
-                      className={`leading-relaxed mb-5 ${
-                        method.featured
-                          ? 'text-white/90'
-                          : 'text-brand-text-muted'
-                      }`}
-                    >
+                    <p className="leading-relaxed mb-5 text-brand-text-muted">
                       {method.description}
                     </p>
                     <Link
                       href={method.href}
-                      className={`inline-flex items-center font-semibold ${
-                        method.featured ? 'text-white' : 'text-brand-primary'
-                      }`}
+                      className="inline-flex items-center font-semibold text-brand-primary"
                     >
                       {method.action}
                     </Link>
